@@ -7,7 +7,7 @@
 <div align="center">
   <h1>Fisheye</h1>
   <a href="https://github.com/Erik-42">
-    <img src="./assets/images/logo.png" alt="Logo Fisheye" width="300" height="100">
+    <img src="./assets/images/logo.png" alt="Logo Fisheye" width="300" height="80">
   </a>
 </div>
 
@@ -32,19 +32,26 @@
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Issues][issues-shield]][issues-url]
-[![wakatime](https://wakatime.com/badge/github/Erik-42/openclassroom-fisheye.svg)](https://wakatime.com/badge/github/Erik-42/openclassroom-fisheye)
+[![wakatime](https://wakatime.com/badge/user/f84d00d8-fee3-4ca3-803d-3daa3c7053a5/project/018cea5a-22c5-467a-a60c-90263368d19a.svg)](https://wakatime.com/badge/user/f84d00d8-fee3-4ca3-803d-3daa3c7053a5/project/018cea5a-22c5-467a-a60c-90263368d19a)
 
 </div>
 FishEye est un site web qui permet aux photographes indépendants de présenter leurs meilleurs travaux.
-<p>
+<p></p>
 
 Vous etes chargé de fournir tout le HTML, le CSS et le JavaScript nécessaires au prototype. L'équipe de back-end intégrera le système existant de FishEye une fois que vous aurez terminé le code pour cette partie du projet.
 
 il faudra que tu utilises un pattern Factory Method pour créer les media en distinguant les vidéos des photos.
 
+<a href="https://course.oc-static.com/projects/Front-End+V2/P5+Javascript+%26+Accessibility/Notes+de+reunion.pdf">Notes de réunion</a>
+
+<a href="https://github.com/Erik-42/openclassroom-fisheye/issues?q=is%3Aissue+is%3Aopen+sort%3Acreated-asc">Issues du projet</a>
+
+
+<a href="https://www.figma.com/file/Q3yNeD7WTK9QHDldg9vaRl/UI-Design-FishEye-FR?type=design&node-id=0-1&mode=design&t=swkr9op7KE6Uga0Z-0"> Maquette Figma</a>
+
 ## Built with
 
-<p> </p>
+<p></p>
 <a href= https://github.com/Erik-42?tab=repositories&q=&type=&language=html&sort= > <img width ='32px' height='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/html.svg'> </a>
 <a href= https://github.com/Erik-42?tab=repositories&q=&type=&language=css&sort= > <img width ='32px' height='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/css.svg'> </a>
 <a href= https://github.com/Erik-42?tab=repositories&q=&type=&language=sass&sort= > <img width ='32px' height='32px' src ='https://raw.githubusercontent.com/rahulbanerjee26/githubAboutMeGenerator/main/icons/sass.svg'> </a>
@@ -81,6 +88,7 @@ Formation OpenClassRoom Développeur d'application - JavaScript React
 [![GitHub followers][github followers-shield]][github followers-url]
 [![Stargazers][stars-shield]][stars-url]
 [![GitHub repo][github repo-shield]][github repo-url]
+[![wakatime](https://wakatime.com/badge/user/f84d00d8-fee3-4ca3-803d-3daa3c7053a5.svg)](https://wakatime.com/@f84d00d8-fee3-4ca3-803d-3daa3c7053a5)
 
 </div>
 
