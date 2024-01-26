@@ -1,4 +1,9 @@
-@import url("photographer.css");
+@import url("./photographer.css");
+@import url("./modal.css");
+
+:root{
+    --firstColor : #901C1C;
+}
 
 body {
     font-family: "DM Sans", sans-serif;

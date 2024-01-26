@@ -28,37 +28,84 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans">
     <link rel="preload" fetchpriority="high" as="image" href="#" type="image/webp">
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="./css/style.css" rel="stylesheet" type="text/css" />
 
-    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link href="./css/style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <header>
-      <img src="assets/images/logo.png" class="logo" />
+      <a href="./index.html" tabindex="0" aria-label="Page d'accueil"><img src="./assets/images/logo.png" class="logo" alt="fisheye logo"/></a>
     </header>
     <main id="main">
       <div class="photograph-header">
-        <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+        <div class="photograph__meta__text"></div>
+        <button class="contact_button contact-me-btn" aria-label="Contact me" tabindex="1" onclick="displayModal()">Contactez-moi</button>
+        <div class="photograph__meta__image"></div>
+      </div>
+      <div class="photograph__media">
+        <div class="photograph__media__sort">
+          <span id="sort-by" class="photograph__media__sort-label"> Trier par </span>
+          <button id="dropdown-selector" role="button" aria-haspopup="listbox" aria-expanded="false" aria-labelledby="sort-by" tabindex="8">
+            <ul id="dropdown-selector__options" role="listbox" aria-labelledby="sort-by" aria-activedescendant="" aria-selected="true"> 
+              <li id="popularity" data-value="popularity" class="active" role="option" tabindex="9"> 
+                  <span class="row">
+                    <span class="text"> Popularité </span>
+                    <span class="icon"> <i class="fas fa-chevron-down"></i> <i class="fas fa-chevron-up"></i> </i> </span> 
+                  </span>
+              </li>
+              <li id="date" data-value="date" role="option" tabindex="10" > 
+                <span class="row">
+                  <span class="text"> Date </span>
+                  <span class="icon"> <i class="fas fa-chevron-down"></i>  </span>
+                </span>
+              </li>
+              <li id="title" data-value="title" role="option" tabindex="11"  > 
+                <span class="row">
+                  <span class="text"> Titre </span>      
+                  <span class="icon"> <i class="fas fa-chevron-down"></i> </span> 
+                </span>
+              </li>
+            </ul>
+          </button>
+        </div>
+        <div class="cards"> </div>
       </div>
     </main>
-    <div id="contact_modal">
+    <div class="photograph__popup"></div>
+    <div id="lightbox">
+      <div class="lightbox__content" aria-label="image closeup view"> 
+        <button class="close-btn" role="button" aria-label="Close Dialog"> X </button>
+        <a class="lightbox__previous" role="button" aria-label="previous image" tabindex="0"> <i class="fa-solid fa-chevron-left" tabindex="0"></i> </a>
+        <div class="lightbox__media"></div>
+        <a class="lightbox__next" role="button" aria-label="Next image" tabindex="0"> <i class="fa-solid fa-chevron-right" tabindex="0"></i> </a>
+      </div>
+      <p class="lightbox__title"></p>
+    </div>
+    <div id="contact_modal" aria-label="Modal de contact" >
 			<div class="modal">
 				<header>
           <h2>Contactez-moi</h2>
-          <img src="assets/icons/close.svg" onclick="closeModal()" />
+          <img class="close-btn" src="./assets/icons/close.svg"  tabindex="7" onclick="closeModal()"/>
         </header>
+        <h3 class="modal__photograph-name"> </h3>
 				<form>
-					<div>
-						<label>Prénom</label>
-						<input />
+					<div class="form-inputs">
+						<label form="firstname">Prénom</label>
+						<input id="firstname" aria-label="firstname"  tabindex="2"  >
+            <label for="lastname" >Nom</label>
+						<input id="lastname" aria-label="lastname"  tabindex="3"  />
+            <label form="email" >Email</label>
+						<input id="email" aria-label="email"  tabindex="4" />
+            <label for="message" >Votre message</label>
+						<input id="message" aria-label="Your message"  tabindex="5"  />
 					</div>
-          <button class="contact_button">Envoyer</button>
+          <button class="contact_button submit-btn" type="submit" aria-label="Send" tabindex="6">Envoyer</button>
 				</form>
 			</div>
 		</div>
-    <script src="/scripts/pages/photographer.js"></script>
-    <script src="/scripts/utils/contactForm.js"></script>
+    <script src="./scripts/pages/photographer.js" type="module"></script>
+    <script src="./scripts/utils/contactForm.js"></script>
   </body>
 </html>
