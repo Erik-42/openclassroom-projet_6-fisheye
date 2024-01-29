@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Fisheye - photographe</title>
+  <!-- HTML Meta Tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="permet aux photographes indépendants de présenter leurs meilleurs travaux">
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://erik-42.github.io/openclassroom-fisheye">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fisheye">
+  <meta property="og:description" content="permet aux photographes indépendants de présenter leurs meilleurs travaux">
+  <meta property="og:image" content="./assets/images/logo.png">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="erik-42.github.io">
+  <meta property="twitter:url" content="https://erik-42.github.io/openclassroom-fisheye">
+  <meta name="twitter:title" content="Fisheye">
+  <meta name="twitter:description" content="permet aux photographes indépendants de présenter leurs meilleurs travaux">
+  <meta name="twitter:image" content="./assets/images/logo.png">
+
+  <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans">
+  <link rel="preload" fetchpriority="high" as="image" href="#" type="image/webp">
+
+  <link rel="icon" type="image/png" href="../../assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header>
+    <a href="../../index.html" tabindex="0" aria-label="Page d'accueil"><img src="../../assets/images/logo.png"
+        class="logo" alt="fisheye logo" /></a>
+  </header>
+  <main id="main">
+    <div class="photograph-header">
+      <div class="photograph__card">
+        <div class="photograph__card__title">nom photographer</div>
+        <div class="photograph__card__location">location photographer</div>
+        <div class="photograph__card__text">texte photographe</div>
+      </div>
+      <button class="contact_button contact-me-btn" aria-label="Contact me" tabindex="1"
+        onclick="displayModal()">Contactez-moi</button>
+      <div class="photograph__meta__image">
+        <img src="../../assets/photographers/account.png" alt="logo account">
+      </div>
+    </div>
+    <div class="photograph__media">
+
+      <div class="photograph__media__sort">
+        <span id="sortBy">Trier Par</span>
+
+        <button id="dropdownSelector" role="button">
+          <ul id="dropdownSelector__options" role="listbox">
+            <li id="popularity" role="option">
+              <span class="text">Popularité</span>
+              <i class="fas fa-chevron-up"></i>
+            </li>
+            <li id="popularity" role="option">
+              <span class="text">Date</span>
+              <i class="fas fa-chevron-up"></i>
+            </li>
+            <li id="popularity" role="option">
+              <span class="text">Titre</span>
+              <i class="fas fa-chevron-up"></i>
+            </li>
+          </ul>
+        </button>
+      </div>
+
+      <div class="photograph__gallery">
+
+        <div class="photograph__gallery__card">
+          <img class="photograph__gallery__card__photo" src="../../assets/images/Sample Photos/Mimi/Animals_Rainbow.jpg"
+            alt="photo 1">
+          <div class="photograph__gallery__card__photo__info">
+            <div class="photograph__gallery__card__photo__info__titre">titre</div>
+            <div class="photograph__gallery__card__photo__info__like">
+              <div class="photograph__gallery__card__photo__info__nbr">nbr like</div>
+              <i class="photograph__gallery__card__photo__info__heart fas fa-heart"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="photograph__gallery__card">
+          <img class="photograph__gallery__card__photo"
+            src="../../assets/images/Sample Photos/Mimi/Animals_Wild_Horses_in_the_mountains.mp4" alt="video 1">
+          <div class="photograph__gallery__card__photo__info">
+            <div class="photograph__gallery__card__photo__info__titre">titre</div>
+            <div class="photograph__gallery__card__photo__info__like">
+              <div class="photograph__gallery__card__photo__info__like">nbr like</div>
+              <i class="photograph__gallery__card__photo__info__heart fas fa-heart"></i>
+            </div>
+          </div>
+        </div>
+        <div class="photograph__gallery__card">
+          <img class="photograph__gallery__card__photo"
+            src="../../assets/images/Sample Photos/Mimi//Event_BenevidesWedding.jpg" alt="photo 2">
+          <div class="photograph__gallery__card__photo__info">
+            <div class="photograph__gallery__card__photo__info__titre">titre</div>
+            <div class="photograph__gallery__card__photo__info__like">
+              <div class="photograph__gallery__card__photo__info__like">nbr like</div>
+              <i class="photograph__gallery__card__photo__info__heart fas fa-heart"></i>
+            </div>
+          </div>
+        </div>
+        <div class="photograph__gallery__card">
+          <img class="photograph__gallery__card__photo"
+            src="../../assets/images/Sample Photos/Mimi/Event_PintoWedding.jpg" alt="photo 3">
+          <div class="photograph__gallery__card__photo__info">
+            <div class="photograph__gallery__card__photo__info__titre">titre</div>
+            <div class="photograph__gallery__card__photo__info__like">
+              <div class="photograph__gallery__card__photo__info__like">nbr like</div>
+              <i class="photograph__gallery__card__photo__info__heart fas fa-heart"></i>
+            </div>
+          </div>
+        </div>
+        <div class="photograph__gallery__card">
+          <img class="photograph__gallery__card__photo"
+            src="../../assets/images/Sample Photos/Mimi/Event_SeasideWedding.jpg" alt="photo 4">
+          <div class="photograph__gallery__card__photo__info">
+            <div class="photograph__gallery__card__photo__info__titre">titre</div>
+            <div class="photograph__gallery__card__photo__info__like">
+              <div class="photograph__gallery__card__photo__info__like">nbr like</div>
+              <i class="photograph__gallery__card__photo__info__heart fas fa-heart"></i>
+            </div>
+          </div>
+        </div>
+        <div class="photograph__gallery__card">
+          <img class="photograph__gallery__card__photo"
+            src="../../assets/images/Sample Photos/Mimi/Portrait_Background.jpg" alt="photo 5">
+          <div class="photograph__gallery__card__photo__info">
+            <div class="photograph__gallery__card__photo__info__titre">titre</div>
+            <div class="photograph__gallery__card__photo__info__like">
+              <div class="photograph__gallery__card__photo__info__like">nbr like</div>
+              <i class="photograph__gallery__card__photo__info__heart fas fa-heart"></i>
+            </div>
+          </div>
+        </div>
+        <div class="photograph__gallery__card">
+          <img class="photograph__gallery__card__photo" src="../../assets/images/Sample Photos/Mimi/Portrait_Nora.jpg"
+            alt="photo 6">
+          <div class="photograph__gallery__card__photo__info">
+            <div class="photograph__gallery__card__photo__info__titre">titre</div>
+            <div class="photograph__gallery__card__photo__info__like">
+              <div class="photograph__gallery__card__photo__info__like">nbr like</div>
+              <i class="photograph__gallery__card__photo__info__heart fas fa-heart"></i>
+            </div>
+          </div>
+        </div>
+        <div class="photograph__gallery__card">
+          <img class="photograph__gallery__card__photo"
+            src="../../assets/images/Sample Photos/Mimi/Portrait_Wednesday.jpg" alt="photo 7">
+          <div class="photograph__gallery__card__photo__info">
+            <div class="photograph__gallery__card__photo__info__titre">titre</div>
+            <div class="photograph__gallery__card__photo__info__like">
+              <div class="photograph__gallery__card__photo__info__like">nbr like</div>
+              <i class="photograph__gallery__card__photo__info__heart fas fa-heart"></i>
+            </div>
+          </div>
+        </div>
+        <div class="photograph__gallery__card">
+          <img class="photograph__gallery__card__photo"
+            src="../../assets/images/Sample Photos/Mimi/Travel_HillsideColor.jpg" alt="photo 8">
+          <div class="photograph__gallery__card__photo__info">
+            <div class="photograph__gallery__card__photo__info__titre">titre</div>
+            <div class="photograph__gallery__card__photo__info__like">
+              <div class="photograph__gallery__card__photo__info__like">nbr like</div>
+              <i class="photograph__gallery__card__photo__info__heart fas fa-heart"></i>
+            </div>
+          </div>
+        </div>
+        <div class="photograph__gallery__card">
+          <img class="photograph__gallery__card__photo" src="../../assets/images/Sample Photos/Mimi/Travel_Lonesome.jpg"
+            alt="photo 9">
+          <div class="photograph__gallery__card__photo__info">
+            <div class="photograph__gallery__card__photo__info__titre">titre</div>
+            <div class="photograph__gallery__card__photo__info__like">
+              <div class="photograph__gallery__card__photo__info__like">nbr like</div>
+              <i class="photograph__gallery__card__photo__info__heart fas fa-heart"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="photograph__info">
+      <div class="photograph__info__like">
+        <div class="photograph__info__like__nbr">nombre de like</div>
+        <div class="photograph__info__like__heart"><i class="fas fa-heart"></i></div>
+      </div>
+      <div class="photograph__info__price">tarif/jour</div>
+    </div>
+
+    <!-- <div id="ligtbox_modal">
+      <div class="container">
+        <button class="close-btn" role="button">X</button>
+        <div class="nav">nav</div>
+        <a href="#" class="previous">Previous <i class="fa-solid fa-chevron-left"></i></a>
+        <img src="../../assets/images/Sample Photos/Mimi/Animals_Rainbow.jpg" alt="Describ photo">
+        <a href="#" class="next">Next <i class="fa-solid fa-chevron-right"></i> </a>
+        <h3>Titre photo</h3>
+      </div>
+    </div> -->
+
+    <div id="contact_modal" aria-label="Modal de contact">
+      <div class="modal">
+        <header>
+          <h2>Contactez-moi</h2>
+          <img class="close-btn" src="../../assets/icons/close.svg" tabindex="7" onclick="closeModal()" />
+        </header>
+        <h3 class="modal__photograph-name"> </h3>
+        <form>
+          <div class="form-inputs">
+            <label form="firstname">Prénom</label>
+            <input id="firstname" aria-label="firstname" tabindex="2">
+            <label for="lastname">Nom</label>
+            <input id="lastname" aria-label="lastname" tabindex="3" />
+            <label form="email">Email</label>
+            <input id="email" aria-label="email" tabindex="4" />
+            <label for="message">Votre message</label>
+            <input id="message" aria-label="Your message" tabindex="5" />
+          </div>
+          <button class="contact_button submit-btn" type="submit" aria-label="Send" tabindex="6">Envoyer</button>
+        </form>
+      </div>
+    </div>
+    <script src="../../pages/photographer/photographer.js" type="module"></script>
+    <script src="../../scripts/utils/contactForm.js"></script>
+</body>
+
+</html>

@@ -1,49 +1,55 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <title>Fisheye</title>
-    <!-- HTML Meta Tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="description" content="permet aux photographes indépendants de présenter leurs meilleurs travaux">
 
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://erik-42.github.io/openclassroom-fisheye">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Fisheye">
-    <meta property="og:description" content="permet aux photographes indépendants de présenter leurs meilleurs travaux">
-    <meta property="og:image" content="./assets/images/logo.png">
+<head>
+  <title>Fisheye</title>
+  <!-- HTML Meta Tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="permet aux photographes indépendants de présenter leurs meilleurs travaux">
 
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="twitter:domain" content="erik-42.github.io">
-    <meta property="twitter:url" content="https://erik-42.github.io/openclassroom-fisheye">
-    <meta name="twitter:title" content="Fisheye">
-    <meta name="twitter:description" content="permet aux photographes indépendants de présenter leurs meilleurs travaux">
-    <meta name="twitter:image" content="./assets/images/logo.png">
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://erik-42.github.io/openclassroom-fisheye">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fisheye">
+  <meta property="og:description" content="permet aux photographes indépendants de présenter leurs meilleurs travaux">
+  <meta property="og:image" content="./assets/images/logo.png">
 
-    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
-    
-    <link rel="stylesheet" href="./public/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans">
-    <link rel="preload" fetchpriority="high" as="image" href="#" type="image/webp">
-    <link href="./css/style.css" rel="stylesheet" type="text/css" />
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="erik-42.github.io">
+  <meta property="twitter:url" content="https://erik-42.github.io/openclassroom-fisheye">
+  <meta name="twitter:title" content="Fisheye">
+  <meta name="twitter:description" content="permet aux photographes indépendants de présenter leurs meilleurs travaux">
+  <meta name="twitter:image" content="./assets/images/logo.png">
 
-    <link rel="icon" type="image/png" href="./assets/favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <header>
-      <a href="./index.html" tabindex="0" aria-label="Page d'accueil">
-        <img src="./assets/images/logo.png" class="logo" alt="Fisheye logo"/>
-      </a> 
-      <a href="./photographer.html"><h1>Nos photographes</h1></a>
-    </header>
-    <main id="main">
-        <div class="photographer_section"></div>
-    </main>
-    <script src="./scripts/templates/photographer.js"></script>
-    <script src="./scripts/pages/index.js"></script>
-  </body>
+  <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans">
+  <link rel="preload" fetchpriority="high" as="image" href="#" type="image/webp">
+
+  <link rel="icon" type="image/png" href="./assets/favicon.png">
+  <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+
+  <link href="./css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header>
+    <a href="./index.html" tabindex="0" aria-label="Page d'accueil">
+      <img src="./assets/images/logo.png" class="logo" alt="Fisheye logo" />
+    </a>
+    <a href="./pages/photographer/photographer.html">
+      <h1>Nos photographes</h1>
+    </a>
+  </header>
+  <main id="main">
+    <div class="photographer_section"></div>
+    <div class="infos-photographe"></div>
+  </main>
+  <script src="./scripts/templates/photographerTemplate.js"></script>
+  <script src="./pages/accueil/index.js"></script>
+</body>
+
 </html>
