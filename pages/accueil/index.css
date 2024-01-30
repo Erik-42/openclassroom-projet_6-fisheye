@@ -1,8 +1,43 @@
-.photographer__section {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    row-gap: 2em;
-    margin-top: 100px;
+.photographer_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4.375rem;
+    margin-top: 6.25rem;
 }
 
+.photographer_section article {
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.photographer_section_img {
+    height: 12.5rem;
+    width: 12.5rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.photographer_section_name {
+    color: var(--primaryFontColor);
+    font-size: 2.25rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.photographer_section_city{
+     color: var(--primaryFontColor);
+    font-size: 0.813rem;
+    font-weight: 400;
+}
+.photographer_section_tagline{
+    font-size: 0.625rem;
+    font-weight: bold;
+}
+.photographer_section_price{
+    font-size: 0.563rem;
+    color: rgba(117, 117, 117, 1);
+}

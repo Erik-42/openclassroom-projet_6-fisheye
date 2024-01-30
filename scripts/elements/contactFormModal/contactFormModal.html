@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../css/style.css">
+    <title>contactFormModal</title>
+</head>
+
+<body>
+    <div id="contact_modal" aria-label="Modal de contact">
+        <div class="modal">
+            <header>
+                <h2>Contactez-moi</h2>
+                <img class="close-btn" src="../../../assets/icons/close.svg" tabindex="7" onclick="closeModal()" />
+            </header>
+            <h3 class="modal__photograph-name"> </h3>
+            <form>
+                <div class="form-inputs">
+                    <label form="firstname">Prénom</label>
+                    <input id="firstname" aria-label="firstname" tabindex="2">
+                    <label for="lastname">Nom</label>
+                    <input id="lastname" aria-label="lastname" tabindex="3" />
+                    <label form="email">Email</label>
+                    <input id="email" aria-label="email" tabindex="4" />
+                    <label for="message">Votre message</label>
+                    <input id="message" aria-label="Your message" tabindex="5" />
+                </div>
+                <button class="contact_button submit-btn" type="submit" aria-label="Send" tabindex="6">Envoyer</button>
+            </form>
+        </div>
+    </div>
+    <script src="./contactFormModal.js"></script>
+
+</body>
+
+</html>

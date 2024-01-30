@@ -1,5 +1,5 @@
 async function getPhotographers() {
-   
+
     const localeURL = '../../data/photographersData.json'
 
     const response = await fetch(localeURL)
@@ -21,9 +21,10 @@ async function displayData(photographers) {
 
 async function init() {
     // Récupère les datas des photographes
-    const { photographers } = await getPhotographers();
+    const {
+        photographers
+    } = await getPhotographers();
     displayData(photographers);
 }
 
 init();
-

@@ -1,9 +1,13 @@
-@import url("../css/templates/root.css");
-@import url("../pages/accueil/index.css");
-@import url("../pages/photographer/photographer.css");
-@import url("../css/elements/modal.css");
+@import url("../css/base/root.css");
 @import url("../css/elements/button.css");
-@import url("../css/elements/dropdown.css");
 @import url("../css/elements/photoCard.css");
-@import url("../css/elements/lightbox-modal.css")
+@import url("../css/elements/photographerCard.css");
+@import url("../css/elements/photographerHeader.css");
+@import url("../scripts/elements/contactFormModal/contactFormModal.css");
+@import url("../scripts/elements/dropdownSort/.css");
+@import url("../scripts/elements/lightboxModal/lightboxModal.css");
+@import url("../scripts/elements/photographerPopup/photographerPopup.css");
+@import url("../pages/accueil/index.css");
+@import url("../pages/photographer/photographerPage.css");
+
 
