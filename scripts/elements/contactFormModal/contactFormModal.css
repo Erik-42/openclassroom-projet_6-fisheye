@@ -2,7 +2,7 @@
 #contact_modal {
     display: none;
     position: fixed;
-    top: 5%;
+    top: 6%;
     left: 5%;
     right: 5%;
     bottom: 1%;
@@ -14,7 +14,7 @@
     width: 80vw;
     min-width: 300px;
     max-width: 600px;
-    max-height: 700px;
+    /* max-height: 700px; */
     display: flex;
     flex-direction: column;
     align-items: center;

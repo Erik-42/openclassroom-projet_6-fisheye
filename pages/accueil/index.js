@@ -9,6 +9,9 @@ async function getPhotographers() {
     return data
 }
 
+// import getPhotographers from '../../data/photographersData.json'
+// import getData from '../../data/photographersData.json'
+
 async function displayData(photographers) {
     const photographersSection = document.querySelector(".photographer_section");
 

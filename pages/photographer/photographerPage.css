@@ -2,7 +2,7 @@
     display: none;
 }
 
-.photograph-header {
+/* .photograph-header {
     background-color: #FAFAFA;
     height: 300px;
     margin: 0 100px;
@@ -16,7 +16,7 @@
 .photogaph__card{
     color:var(--primaryFontColor);
 }
-.photograph__card__title{
+.photograph__card__name{
     color:var(--primaryFontColor);
     font-size: 4rem;
 }
@@ -32,7 +32,7 @@
     height: 200px;
     border-radius : 50%;
     overflow: hidden;
-}
+} */
 .photograph__media{
     margin: 0 6.25rem;
 }

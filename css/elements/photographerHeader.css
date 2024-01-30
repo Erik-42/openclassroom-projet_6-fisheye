@@ -1,0 +1,35 @@
+.photographer_header {
+    background-color: #FAFAFA;
+    height: 300px;
+    margin: 0 100px;
+    padding: 0 2rem;
+    row-gap: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.photographer__card{
+    color:var(--primaryFontColor);
+}
+.photographer__card__name{
+    color:var(--primaryFontColor);
+    font-size: 4rem;
+}
+.photographer__card__location{
+    color:var(--primaryFontColor);
+    font-size: 2rem;
+}
+.photographer__card__text{
+color: var(--secondaryFontColors) ;
+}
+
+.photographer__portrait{
+    width : 12.5rem;
+    height: 12.5rem;
+    border-radius : 50%;
+    overflow: hidden;
+}
+.photographer__portrait__img{
+
+}
