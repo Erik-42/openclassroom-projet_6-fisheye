@@ -5,32 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../css/style.css">
+    <link rel="stylesheet" href="./dropdownSort.css">
+    <script src="https://kit.fontawesome.com/4ec6d39a0c.js" crossorigin="anonymous"></script>
+
     <title>dropdownSort</title>
 </head>
 
 <body>
+    <h2>Clickable Dropdown</h2>
+    <p>Click on the button to open the dropdown menu.</p>
+
     <div class="photograph__media__sort">
         <span id="sortBy">Trier Par</span>
 
-        <button id="dropdownSelector" role="button">
-            <ul id="dropdownSelector__options" role="listbox">
-                <li id="popularity" role="option">
-                    <span class="text">Popularité</span>
-                    <i class="fas fa-chevron-up"></i>
+        <button onclick="dropdownMenu()" id="dropdownSelector" class="dropdownBtn" role="button">Popularité
+            <i class="fa-solid fa-chevron-down"></i>
+
+            <ul id="dropdownSelector__list" class="dropdownContent" role="listbox">
+                <li id="popularity" class="dropdownSelector__list__option" role="option">
+                    <a class="dropdownSelector__list__option" href="#popularité">Popularité</a>
+                    <i class="fa-solid fa-chevron-up"></i>
                 </li>
-                <li id="popularity" role="option">
-                    <span class="text">Date</span>
-                    <i class="fas fa-chevron-up"></i>
+                <p class="dropdownSelector__list__line"></p>
+                <li id="date" class="dropdownSelector__list__option" role="option">
+                    <a class="dropdownSelector__list__option" href="#date">Date</a>
+                    <i class="fa-solid fa-chevron-up"></i>
                 </li>
-                <li id="popularity" role="option">
-                    <span class="text">Titre</span>
-                    <i class="fas fa-chevron-up"></i>
+                <p class="dropdownSelector__list__line"></p>
+                <li id="titre" class="dropdownSelector__list__option" role="option">
+                    <a class="dropdownSelector__list__option" href="#titre">Titre</a>
+                    <i class="fa-solid fa-chevron-up"></i>
                 </li>
             </ul>
         </button>
     </div>
-    <script src="./dropdownSort.js"></script>
+
+<!-- ======================= -->
+
+    <h2>Clickable Dropdown 2</h2>
+    <p>Click on the button to open the dropdown menu.</p>
+
+    <div class="photograph__media__sort2">
+        <span id="sortBy">Trier Par</span>
+
+        <button id="dropdownSelector2" class="dropdownBtn2" role="button">Afficher l'option choisi</button>
+        <ul id="dropdownSelector__list2" class="dropdownContent2" role="listbox">
+            <li id="popularity" class="dropdownSelector__list__option" role="option"><a class="dropdownSelector__list__option" href="#popularité">Popularité afficher chevron à droite</a>
+                <i class="fa-solid fa-chevron-up"></i>
+            </li>
+            <p class="dropdownSelector__list__line">==========</p>
+            <li id="date" class="dropdownSelector__list__option" role="option"><a class="dropdownSelector__list__option" href="#date">Date afficher chevron à droite</a>
+                <i class="fa-solid fa-chevron-up"></i>
+            </li>
+            <p class="dropdownSelector__list__line">==========</p>
+            <li id="titre" class="dropdownSelector__list__option" role="option"><a class="dropdownSelector__list__option" href="#titre">Titre afficher chevron à droite</a>
+                <i class="fa-solid fa-chevron-up"></i>
+            </li>
+        </ul>
+    </div>
+
+<script src="./dropdownSort.js"></script>
 
 </body>
-
 </html>

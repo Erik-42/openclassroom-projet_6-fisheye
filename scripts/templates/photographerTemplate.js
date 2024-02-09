@@ -1,4 +1,4 @@
-function photographerTemplate(data) {
+export function photographerTemplate(data) {
     const {
         name,
         id,
@@ -13,7 +13,7 @@ function photographerTemplate(data) {
 
     function photographerId() {
         // Redirige vers la page photographer.html en passant l'ID comme paramètre
-        window.location.href = `../../pages/photographer/photographer.html?id=${id}`;
+        window.location.href = `../../pages/photographer/photographerPage.html?id=${id}`;
     }
 
     function getUserCardDOM() {

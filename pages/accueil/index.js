@@ -1,16 +1,6 @@
-async function getPhotographers() {
+import {photographerTemplate} from '../../scripts/templates/photographerTemplate.js'
 
-    const localeURL = '../../data/photographersData.json'
-
-    const response = await fetch(localeURL)
-
-    const data = await response.json()
-
-    return data
-}
-
-// import getPhotographers from '../../data/photographersData.json'
-// import getData from '../../data/photographersData.json'
+import {getPhotographers} from '../../scripts/utils/getData.js'
 
 async function displayData(photographers) {
     const photographersSection = document.querySelector(".photographer_section");

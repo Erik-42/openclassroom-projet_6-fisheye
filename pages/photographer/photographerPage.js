@@ -1,16 +1,10 @@
-async function getPhotographers() {
 
-    const localeURL = '../../data/photographersData.json'
-
-    const response = await fetch(localeURL)
-
-    const data = await response.json()
-
-    return data
-}
+import {getPhotographers} from '../../scripts/utils/getData.js'
 
 async function displayData(photographers) {
-    const photographersHeader = document.querySelector(".photographer_header");
+    const photographersHeader = document.querySelector(
+      ".photographer_container"
+    );
 
     photographers.forEach((photographer) => {
         // const photographerModel = new photographerPageTemplate(photographer);
@@ -24,9 +18,16 @@ async function displayData(photographers) {
 }
 
 async function init() {
+    const url = new URL(window.location);
+    const idPhotographer = url.searchParams.get('id')
     // Récupère les datas des photographes
-    const photographers = await getPhotographers();
-    displayData(photographers);
+    const data = await getPhotographers();
+    const photographer = data.photographers.filter(p => p.id == idPhotographer)[0]
+    const medias = data.media.filter(m =>m.photographerId==idPhotographer)
+    console.log(medias)
+    // displayData(photographers);
+    displayHeader(photographer)
+    displayMedias(medias)
 }
 
 init();

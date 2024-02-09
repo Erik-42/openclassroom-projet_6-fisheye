@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../css/style.css">
+    <!-- <link rel="stylesheet" href="../../../css/style.css"> -->
+    <link rel="stylesheet" href="./lightboxModal.css">
+
+    <script src="https://kit.fontawesome.com/4ec6d39a0c.js" crossorigin="anonymous"></script>
+
     <title>lightboxModal</title>
 </head>
 
@@ -13,19 +17,46 @@
 
     </header>
     <main>
-        <div id="lightboxModal">
-            <div class="lightbox__container">
-                <button class="lightbox__close" role="button">X</button>
-                <a href="#" class="lightbox__previous"><i class="fa-solid fa-chevron-left"></i></a>
-                <div class="lightbox__media">
-                    <img src="../../assets/images/Sample Photos/Mimi/Animals_Rainbow.jpg" alt="Describ photo">
-                    <h3 class="lightbox__title">Titre photo</h3>
-                </div>
-                <a href="#" class="lightbox__next"><i class="fa-solid fa-chevron-right"></i> </a>
+  <div class="images__container">
+              <a href="../../../assets/images/Sample Photos/Mimi/Portrait_Nora.jpg">
+                <img src="../../../assets/images/Sample Photos/Mimi/Portrait_Nora.jpg" alt="Nora">
+              </a>
+              <a href="../../../assets/images/Sample Photos/Mimi/Event_PintoWedding.jpg">
+                <img src="../../../assets/images/Sample Photos/Mimi/Event_PintoWedding.jpg" alt="Nora">
+              </a>
+              <a href="../../../assets/images/Sample Photos/Mimi/Portrait_Background.jpg">
+                <img src="../../../assets/images/Sample Photos/Mimi/Portrait_Background.jpg" alt="Nora">
+              </a>
+              <a href="../../../assets/images/Sample Photos/Mimi/Portrait_Wednesday.jpg">
+                <img src="../../../assets/images/Sample Photos/Mimi/Portrait_Wednesday.jpg" alt="Nora">
+              </a>
+              <a href="../../../assets/images/Sample Photos/Mimi/Travel_Lonesome.jpg">
+                <img src="../../../assets/images/Sample Photos/Mimi/Travel_Lonesome.jpg" alt="Nora">
+              </a>
+              <a href="../../../assets/images/Sample Photos/Mimi/Travel_HillsideColor.jpg">
+                <img src="../../../assets/images/Sample Photos/Mimi/Travel_HillsideColor.jpg" alt="Nora">
+              </a>
+              <a href="../../../assets/images/Sample Photos/Mimi/Animals_Rainbow.jpg">
+                <img src="../../../assets/images/Sample Photos/Mimi/Animals_Rainbow.jpg" alt="Nora">
+              </a>
+              <a href="../../../assets/images/Sample Photos/Mimi/Event_SeasideWedding.jpg">
+                <img src="../../../assets/images/Sample Photos/Mimi/Event_SeasideWedding.jpg" alt="Nora">
+              </a>
+              <a href="../../../assets/images/Sample Photos/Mimi/Animals_Wild_Horses_in_the_mountains.mp4">
+                <img src="../../../assets/images/Sample Photos/Mimi/Animals_Wild_Horses_in_the_mountains.mp4" alt="Nora">
+              </a>
+
             </div>
-        </div>
+          <!-- ============Lightbox3================ -->
+          <aside id="lightboxModal3">
+            <button class="lightboxModal3__close">Fermer</button>
+            <button class="lightboxModal3__next">Suivant</button>
+            <button class="lightboxModal3__prev">Précédent</button>
+          
+        </aside>
     </main>
-    <script src="./ligthboxModal.js"></script>
+    
+    <script src="./lightboxModal.js" type="module" defer></script>
 </body>
 
 </html>
