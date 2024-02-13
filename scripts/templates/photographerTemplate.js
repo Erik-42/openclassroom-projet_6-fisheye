@@ -52,6 +52,23 @@ export function photographerTemplate(data) {
 
         return article;
     }
+    function getUserHeaderDOM() {
+        const photographerBannerStructure = `
+            <h2 class = "photographer_header__name">${name}</h2>
+            <p class="photographer_header__location">${city}, ${country}</p>
+            <p class = "photographer_header__text" >${tagline}</p>
+            <button class="contact_button contact-me-btn" aria-label="Contact me" tabindex="1" onclick="displayModal()" >Contactez-moi</button>
+            <div class = "photographer_header__portrait" >
+                <img src="${picture}" alt="portrait photographe" class="photographer_header__portrait__img" >
+            </div>
+        `;
+
+    const container = document.createElement("section");
+    container.classList.add("photographer_header");
+    container.innerHTML = photographerBannerStructure;
+
+    return container;
+    }
     return {
         name,
         picture,
@@ -59,6 +76,7 @@ export function photographerTemplate(data) {
         country,
         tagline,
         price,
-        getUserCardDOM
+        getUserCardDOM,
+        getUserHeaderDOM
     }
 }

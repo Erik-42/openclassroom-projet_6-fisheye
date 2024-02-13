@@ -14,7 +14,7 @@ export class photographerPageFactory {
         < section class = "photographer_header">
             < h2 class = "photographer_header__name">${this.photographerName}</h2>
             <p class="photographer_header__location">${this.location}</p>
-            <p class = "pphotographer_header__text" >${this.tagline}</p>
+            <p class = "photographer_header__text" >${this.tagline}</p>
             < button class="contact_button contact-me-btn" aria-label="Contact me" tabindex="1" onclick="displayModal()" >Contactez-moi</button>
             < div class = "photographer_header__portrait" >
                 < img src="${this.photographerPortrait}" alt="portrait photographe" class="photographer_header__portrait__img" >
@@ -22,7 +22,8 @@ export class photographerPageFactory {
         </section>
         `;
 
-    const container = document.createElement("div");
+    const container = document.createElement("section");
+    container.classList.add("photographer_header");
     container.innerHTML = photographerBannerStructure;
 
     return container.firstChild;

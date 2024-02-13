@@ -31,5 +31,10 @@ color: var(--secondaryFontColors) ;
     overflow: hidden;
 }
 .photographer__portrait__img{
-
+}
+.photographer_header__portrait__img{
+    border-radius: 50%;
+    width: 12.5rem;
+    height: 12.5rem;
+    overflow: hidden;
 }

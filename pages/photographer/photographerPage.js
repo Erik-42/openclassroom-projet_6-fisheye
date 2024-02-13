@@ -1,18 +1,27 @@
 import { getPhotographers } from "../../scripts/utils/getData.js";
-import { photographerPageTemplate } from "../../scripts/templates/photographerPageTemplate.js";
+import {photographerTemplate} from '../../scripts/templates/photographerTemplate.js'
+import {mediaFactory} from "../../scripts/utils/mediaFactory.js"
 
-async function displayData(photographers) {
+async function displayHeader(photographer) {
   const photographersHeader = document.querySelector(".photographer_container");
 
-  photographers.forEach((photographer) => {
-    // const photographerModel = new photographerPageTemplate(photographer);
-    // const userCardDOM = photographerModel.getUserCardDOM();
-    // photographersHeader.appendChild(userCardDOM);
-    const photographerPageModel = new photographerPageFactory(photographer);
-    const photographerBanner = photographerPageModel.photographerDomBanner();
-
+photographersHeader.innerHTML=""
+    const photographerPage = new photographerTemplate(photographer);
+    const photographerBanner = photographerPage.getUserHeaderDOM();
+    
     photographersHeader.appendChild(photographerBanner);
-  });
+
+}
+async function displayMedias(medias,photographerName) {
+  const mediasContainer = document.querySelector(".photograph__gallery");
+  mediasContainer.innerHTML=""
+  medias.forEach(media =>{
+    const mediaPage = mediaFactory(media,photographerName);
+    const mediaCard = mediaPage.getMediaCardDOM();
+    
+    mediasContainer.appendChild(mediaCard);
+  })
+
 }
 
 async function init() {
@@ -20,14 +29,13 @@ async function init() {
   const idPhotographer = url.searchParams.get("id");
   // Récupère les datas des photographes
   const data = await getPhotographers();
-  const photographer = data.photographers.filter(
+  const f = data.photographers.filter(
     (p) => p.id == idPhotographer
   )[0];
   const medias = data.media.filter((m) => m.photographerId == idPhotographer);
-  console.log(medias);
-  displayData(photographers);
-  displayHeader(photographer);
-  displayMedias(medias);
+//   displayData(photographers);
+  displayHeader(f);
+  displayMedias(medias,f.name);
 }
 
 init();
