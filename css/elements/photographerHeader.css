@@ -1,40 +1,34 @@
 .photographer_header {
-    background-color: #FAFAFA;
-    height: 300px;
-    margin: 0 100px;
-    padding: 0 2rem;
-    row-gap: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.photographer__card{
-    color:var(--primaryFontColor);
-}
-.photographer__card__name{
-    color:var(--primaryFontColor);
-    font-size: 4rem;
-}
-.photographer__card__location{
-    color:var(--primaryFontColor);
-    font-size: 2rem;
-}
-.photographer__card__text{
-color: var(--secondaryFontColors) ;
+  background-color: var(--tertiaryFontColor);
+  height: 300px;
+  margin: 0 100px;
+  padding: 0 2rem;
+  row-gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  color: var(--primaryFontColor);
 }
 
-.photographer__portrait{
-    width : 12.5rem;
-    height: 12.5rem;
-    border-radius : 50%;
-    overflow: hidden;
+.photographer_header__info {
 }
-.photographer__portrait__img{
+.photographer_header__name {
+  color: var(--primaryFontColor);
+  font-size: 4rem;
 }
-.photographer_header__portrait__img{
-    border-radius: 50%;
-    width: 12.5rem;
-    height: 12.5rem;
-    overflow: hidden;
+.photographer_header__location {
+  color: var(--fourthFontColor);
+  font-size: 2rem;
+}
+.photographer_header__text {
+  color: var(--secondaryFontColor);
+}
+
+.photographer_header__portrait__img {
+  border-radius: 50%;
+  width: 12.5rem;
+  height: 12.5rem;
+  overflow: hidden;
+  object-fit: cover;
 }
