@@ -1,6 +1,6 @@
 function dropdownDOM() {
   const photographMediaSort = document.querySelector(".photograph__media__sort");
-  dropdownStructure.innerHTML = "";
+  photographMediaSort.innerHTML = "";
 
   const dropdownStructure = `
     <button onclick="dropdownMenu()" id="dropdownSelector" class="dropdownBtn" role="button">Popularité
@@ -29,18 +29,15 @@ function dropdownDOM() {
   container.classList.add("dropdownMenu");
   container.innerHTML = dropdownStructure;
 
-  photographMediaSort.appendChild(dropdownStructure);
-
-
   return container;
+  console.log('dropdownDOM')
 }
 
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
+
 function dropdownMenu() {
   document.getElementById("dropdownSelector__list").classList.toggle("show");
 }
-// Close the dropdown if the user clicks outside of it
+// Ferme le dropdown si ont clique à coté
 window.onclick = function (event) {
   if (!event.target.matches(".dropdownBtn")) {
     const dropdowns = document.getElementsByClassName("dropdownContent");
