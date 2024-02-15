@@ -44,6 +44,7 @@ export function photographerTemplate(data) {
 
     return article;
   }
+
   function getUserHeaderDOM() {
     const photographerBannerStructure = `
                 <div class="photographer_header__info">
