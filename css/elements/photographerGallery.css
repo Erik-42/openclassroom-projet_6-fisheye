@@ -1,0 +1,17 @@
+.photograph__gallery {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.photograph__gallery__card {
+}
+.photograph__gallery__card__photo__info {
+}
+.photograph__gallery__card__photo__info__titre {
+}
+.photograph__gallery__card__photo__info__like {
+}
+.photograph__gallery__card__photo__info__nbr {
+}

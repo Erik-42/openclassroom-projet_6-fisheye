@@ -1,43 +1,41 @@
-.photograph__gallery__card{
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-    width: 400px;
-    height: 400px;
+.photograph__gallery__card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 400px;
+  height: 400px;
 }
 
-.photograph__gallery__card__photo{
-    height: 20vw;
-    min-width: 350px;
-    min-height: 350px;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    gap: 1rem;
+.photograph__gallery__card__photo {
+  height: 20vw;
+  min-width: 350px;
+  min-height: 350px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  gap: 1rem;
+  object-fit: cover;
 }
 
-.photograph__gallery__card__photo__info{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--primaryFontColor);
-    font-size: 1.25rem;
-    font-weight: 900;
+.photograph__gallery__card__photo__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--primaryFontColor);
+  font-size: 1.25rem;
+  font-weight: 900;
 }
 
-.photograph__gallery__card__photo__info__titre{
-
+.photograph__gallery__card__photo__info__titre {
 }
 
-.photograph__gallery__card__photo__info__like{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 1rem;
+.photograph__gallery__card__photo__info__like {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
 }
-.photograph__gallery__card__photo__info__nbr{
-
+.photograph__gallery__card__photo__info__nbr {
 }
-.photograph__gallery__card__photo__info__heart{
-
+.photograph__gallery__card__photo__info__heart {
 }
