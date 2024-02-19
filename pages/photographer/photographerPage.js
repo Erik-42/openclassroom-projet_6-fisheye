@@ -12,7 +12,7 @@ photographersHeader.innerHTML=""
     photographersHeader.appendChild(photographerBanner);
 
 }
-async function displayMedias(medias,photographerName) {
+export async function displayMedias(medias,photographerName) {
   const mediasContainer = document.querySelector(".photograph__gallery");
   mediasContainer.innerHTML=""
   medias.forEach(media =>{

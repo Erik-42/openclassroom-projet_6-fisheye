@@ -46,9 +46,11 @@
     <div class="photographer_container">
 
       <section class="photographer_header">
-        <h2 class="photographer_header__name">nom photographer</h2>
-        <p class="photographer_header__location">location photographer</p>
-        <p class="photographer_header__text">texte photographe</p>
+        <div class="photographer_header__info">
+          <h2 class="photographer_header__name">nom photographer</h2>
+          <p class="photographer_header__location">location photographer</p>
+          <p class="photographer_header__text">texte photographe</p>
+        </div>
         <button class="contact_button contact-me-btn" aria-label="Contact me" tabindex="1"
           onclick="displayModal()">Contactez-moi</button>
         <div class="photographer_header__portrait">
@@ -61,22 +63,26 @@
         <div class="photograph__media__sort">
           <span id="sortBy">Trier Par</span>
 
-          <button id="dropdownSelector" role="button">
-            <ul id="dropdownSelector__options" role="listbox">
-              <li id="popularity" role="option">
-                <span class="text">Popularité</span>
-                <i class="fas fa-chevron-up"></i>
-              </li>
-              <li id="popularity" role="option">
-                <span class="text">Date</span>
-                <i class="fas fa-chevron-up"></i>
-              </li>
-              <li id="popularity" role="option">
-                <span class="text">Titre</span>
-                <i class="fas fa-chevron-up"></i>
-              </li>
+          <button onclick="dropdownMenu()" id="dropdownSelector" class="dropdownBtn" role="button">Popularité
+            <i class="fa-solid fa-chevron-down"></i>
+
+            <ul id="dropdownSelector__list" class="dropdownContent" role="listbox">
+                <li id="popularity" class="dropdownSelector__list__option" role="option">
+                    <a class="dropdownSelector__list__option" href="#popularité">Popularité</a>
+                    <i class="fa-solid fa-chevron-up"></i>
+                </li>
+                <p class="dropdownSelector__list__line"></p>
+                <li id="date" class="dropdownSelector__list__option" role="option">
+                    <a class="dropdownSelector__list__option" href="#date">Date</a>
+                    <i class="fa-solid fa-chevron-up"></i>
+                </li>
+                <p class="dropdownSelector__list__line"></p>
+                <li id="titre" class="dropdownSelector__list__option" role="option">
+                    <a class="dropdownSelector__list__option" href="#titre">Titre</a>
+                    <i class="fa-solid fa-chevron-up"></i>
+                </li>
             </ul>
-          </button>
+        </button>
         </div>
 
         <div class="photograph__gallery">
@@ -237,6 +243,7 @@
       </div>
       <script src="../../pages/photographer/photographerPage.js" type="module"></script>
       <script src="../../scripts/elements/contactFormModal/contactFormModal.js"></script>
+      <script src="../../scripts/elements/dropdownSort/dropdownSort.js"></script>
       <!-- <script src="../../scripts/elements/lightboxModal/ligthboxModal.js"></script> -->
 </body>
 
