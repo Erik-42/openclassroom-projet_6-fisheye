@@ -9,7 +9,7 @@ function clearHTMLMedia (htmlMedia) {
 
 }
 
-async function sortMedia(value){
+export async function sortMedia(value){
     const sectionMedia = document.querySelector(".photograph__gallery");
     clearHTMLMedia(sectionMedia)
 

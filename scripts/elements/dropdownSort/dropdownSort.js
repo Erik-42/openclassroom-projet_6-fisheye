@@ -1,9 +1,11 @@
+
 function dropdownDOM() {
   const photographMediaSort = document.querySelector(".photograph__media__sort");
   photographMediaSort.innerHTML = "";
 
   const dropdownStructure = `
-    <button onclick="dropdownMenu()" id="dropdownSelector" class="dropdownBtn" role="button">Popularité
+    <button onclick="dropdownMenu()" id="dropdownSelector" class="dropdownBtn" role="button">
+        Popularité ${dropdownMenu (dropdowns)}
         <i class="fa-solid fa-chevron-down"></i>
 
         <ul id="dropdownSelector__list" class="dropdownContent" role="listbox">
@@ -29,8 +31,8 @@ function dropdownDOM() {
   container.classList.add("dropdownMenu");
   container.innerHTML = dropdownStructure;
 
+  dropdownStructure.appendChild(container);
   return container;
-  console.log('dropdownDOM')
 }
 
 
