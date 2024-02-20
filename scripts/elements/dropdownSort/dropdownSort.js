@@ -1,43 +1,38 @@
+import {sortMedia} from "../../utils/sortMedia.js"
+export function dropDownEvent() {
+  const nameBtn = document.getElementById('nameBtn')
+  const dropdownBtn = document.getElementById('dropdownSelector')
+dropdownBtn.addEventListener('click',()=>{
+  dropdownMenu()
+})
+const btnPop = document.getElementById('btnPop')
+btnPop.addEventListener('click',(e)=>{
+  e.preventDefault()
+  nameBtn.innerText='Popularité'
+  // console.log('tri par popularité')
+  sortMedia('popularity')
 
-function dropdownDOM() {
-  const photographMediaSort = document.querySelector(".photograph__media__sort");
-  photographMediaSort.innerHTML = "";
+})
+const btnDate = document.getElementById('btnDate')
+btnDate.addEventListener('click',(e)=>{
+  e.preventDefault()
+  nameBtn.innerText='Date'
+  // console.log('tri par date')
+  sortMedia('date')
 
-  const dropdownStructure = `
-    <button onclick="dropdownMenu()" id="dropdownSelector" class="dropdownBtn" role="button">
-        Popularité ${dropdownMenu (dropdowns)}
-        <i class="fa-solid fa-chevron-down"></i>
+})
+const btnTitre = document.getElementById('btnTitre')
+btnTitre.addEventListener('click',(e)=>{
+  e.preventDefault()
+  nameBtn.innerText='Titre'
+  // console.log('tri par titre')
+  sortMedia('title')
 
-        <ul id="dropdownSelector__list" class="dropdownContent" role="listbox">
-          <li id="popularity" class="dropdownSelector__list__option" role="option">
-            <a class="dropdownSelector__list__option" href="#popularité">Popularité</a>
-            <i class="fa-solid fa-chevron-up"></i>
-          </li>
-          <p class="dropdownSelector__list__line"></p>
-          <li id="date" class="dropdownSelector__list__option" role="option">
-            <a class="dropdownSelector__list__option" href="#date">Date</a>
-            <i class="fa-solid fa-chevron-up"></i>
-          </li>
-          <p class="dropdownSelector__list__line"></p>
-          <li id="titre" class="dropdownSelector__list__option" role="option">
-            <a class="dropdownSelector__list__option" href="#titre">Titre</a>
-            <i class="fa-solid fa-chevron-up"></i>
-          </li>
-        </ul>
-      </button>
-        `;
-
-  const container = document.createElement("div");
-  container.classList.add("dropdownMenu");
-  container.innerHTML = dropdownStructure;
-
-  dropdownStructure.appendChild(container);
-  return container;
+})
 }
-
-
 function dropdownMenu() {
-  document.getElementById("dropdownSelector__list").classList.toggle("show");
+  
+  const dropdownList = document.getElementById("dropdownSelector__list").classList.toggle("show");
 }
 // Ferme le dropdown si ont clique à coté
 window.onclick = function (event) {
@@ -52,3 +47,4 @@ window.onclick = function (event) {
     }
   }
 };
+

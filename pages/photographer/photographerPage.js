@@ -1,6 +1,12 @@
-import { getPhotographers } from "../../scripts/utils/getData.js";
+
 import {photographerTemplate} from '../../scripts/templates/photographerTemplate.js'
 import {mediaFactory} from "../../scripts/utils/mediaFactory.js"
+
+import {dropDownEvent} from "../../scripts/elements/dropdownSort/dropdownSort.js"
+import { getMediaAndName} from '../../scripts/utils/getMediaAndName.js'
+
+
+export const {medias,photographer} = await getMediaAndName()
 
 async function displayHeader(photographer) {
   const photographersHeader = document.querySelector(".photographer_container");
@@ -25,17 +31,14 @@ export async function displayMedias(medias,photographerName) {
 }
 
 async function init() {
-  const url = new URL(window.location);
-  const idPhotographer = url.searchParams.get("id");
-  // Récupère les datas des photographes
-  const data = await getPhotographers();
-  const f = data.photographers.filter(
-    (p) => p.id == idPhotographer
-  )[0];
-  const medias = data.media.filter((m) => m.photographerId == idPhotographer);
+  
+
+  dropDownEvent()
+
+ 
 //   displayData(photographers);
-  displayHeader(f);
-  displayMedias(medias,f.name);
+  displayHeader(photographer);
+  displayMedias(medias,photographer.name);
 }
 
 init();

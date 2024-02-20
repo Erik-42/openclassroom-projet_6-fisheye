@@ -53,7 +53,8 @@
           <p class="photographer_header__text">texte photographe</p>
         </div> -->
         <button class="contact_button contact-me-btn" aria-label="Contact me" tabindex="1"
-          onclick="displayModal()">Contactez-moi</button>
+          onclick="displayModal()">Contactez-moi
+        </button>
         <div class="photographer_header__portrait">
           <img class="photographer_header__portrait__img" src="../../assets/photographers/account.png" alt="logo account">
         </div>
@@ -65,26 +66,27 @@
         <div class="photograph__media__sort">
           <span id="sortBy">Trier Par</span>
 
-          <!-- <button onclick="dropdownMenu()" id="dropdownSelector" class="dropdownBtn" role="button">Popularité
+          <button  id="dropdownSelector" class="dropdownBtn" role="button">
+            <span id="nameBtn">Popularité</span>
             <i class="fa-solid fa-chevron-down"></i>
 
             <ul id="dropdownSelector__list" class="dropdownContent" role="listbox">
                 <li id="popularity" class="dropdownSelector__list__option" role="option">
-                    <a class="dropdownSelector__list__option" href="#popularité">Popularité</a>
+                    <a class="dropdownSelector__list__option" id="btnPop" href="#popularité">Popularité</a>
                     <i class="fa-solid fa-chevron-up"></i>
                 </li>
                 <p class="dropdownSelector__list__line"></p>
                 <li id="date" class="dropdownSelector__list__option" role="option">
-                    <a class="dropdownSelector__list__option" href="#date">Date</a>
+                    <a class="dropdownSelector__list__option" id="btnDate" href="#date">Date</a>
                     <i class="fa-solid fa-chevron-up"></i>
                 </li>
                 <p class="dropdownSelector__list__line"></p>
                 <li id="titre" class="dropdownSelector__list__option" role="option">
-                    <a class="dropdownSelector__list__option" href="#titre">Titre</a>
+                    <a class="dropdownSelector__list__option" id="btnTitre" href="#titre">Titre</a>
                     <i class="fa-solid fa-chevron-up"></i>
                 </li>
             </ul>
-        </button> -->
+        </button>
         </div>
 
         <div class="photograph__gallery">
@@ -199,9 +201,9 @@
                 <i class="photograph__gallery__card__photo__info__heart fas fa-heart"></i>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
-      </div> -->
+      </div> 
       <div class="photograph__info">
         <div class="photograph__info__like">
           <div class="photograph__info__like__nbr">nombre de like</div>
@@ -245,7 +247,6 @@
       </div>
       <script src="../../pages/photographer/photographerPage.js" type="module"></script>
       <script src="../../scripts/elements/contactFormModal/contactFormModal.js"></script>
-      <script src="../../scripts/elements/dropdownSort/dropdownSort.js"></script>
       <!-- <script src="../../scripts/elements/lightboxModal/ligthboxModal.js"></script> -->
 </body>
 
