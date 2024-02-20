@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Formulaire de contact</title>
+    <!-- HTML Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Formulaire de contact">
+    
+    <link rel="stylesheet" href="./contactModal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans">
+  
+    <script src="./contactModal.js" defer></script>
+  </head>
+
+  <body>
+    
+    <!-- Modale -->
+    <aside class="bground" style="display: block;">
+      <div class="content">
+        <header class="modal__header">
+                <h2>Contactez-moi</h2>
+                <img class="closeBtn" src="../../../assets/icons/close.svg" tabindex="7" onclick="closeModal()" />
+            </header>
+        <span class="close" aria-label="close button" tabindex="7"></span>
+        <h3 class="modal__photographerName">`${photographerName}`</h3>
+
+        <div class="modal-body">
+          <form name="reserve" action="" method="get">
+            <!-- Infos User -->
+            <div class="formData">
+              <label for="first">Prénom</label><br>
+              <input class="text-control" type="text" id="first" name="first" minlength="2" aria-label="Your firstname" tabindex="1"><br>
+            </div>
+
+            <div class="formData">
+              <label for="last">Nom</label><br>
+              <input class="text-control" type="text" id="last" name="last" aria-label="Your lastname" tabindex="2"><br>
+            </div>
+
+            <div class="formData">
+              <label for="email">E-mail</label><br>
+              <input class="text-control" type="email" id="email" name="email" aria-label="Your email" tabindex="3"><br>
+            </div>
+           
+            <div class="formData">
+                  <label form="message" for="message">Votre message</label><br>
+                  <textarea class="text-control" type="text" id="message" name="message" minlength="10" maxlength="1000" aria-label="Your message" tabindex="4"></textarea><br>
+			        </div>
+
+            <button class="btn-submit" type="submit" aria-label="button send" tabindex="6">Envoyer</button>
+          </form>
+
+          <!-- Modale validé -->
+          <div id="formValid">
+            <div class="modalValidForm">
+              <h4 class="valid">Merci !</h4>
+              <p>Votre message a été envoyé.</p>
+              <button class="btn-closeModal">Fermer</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </aside>
+  </body>
+ 
+</html>

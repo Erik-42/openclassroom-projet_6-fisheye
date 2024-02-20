@@ -1,6 +1,6 @@
 
 #contact_modal {
-    display: none;
+    /* display: none; */
     position: fixed;
     top: 6%;
     left: 5%;
@@ -24,7 +24,7 @@
     margin: auto;
 }
 
-.modal header {
+.modal__header {
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
@@ -33,33 +33,42 @@
     padding: 0;
 }
 
-.modal header img {
+.closeBtn {
     cursor: pointer;
 }
 
 
-.modal header h2 {
+.modal__photographerName {
     margin: 0;
     padding: 0;
     font-size: 2.5em;
     font-weight: normal;
     flex-direction: row;
+    display: block;
+    text-align: left;
+    width: 100%;
 }
 
 
-form {
+.formContact {
     display: flex;
     width: 100%;
     flex-direction: column;
     align-items: flex-start;
 }
 
-form label {
+.formInputs{
+
+}
+.formData{
+
+}
+.formData label {
     color: var(--dark-grey);
     font-size: 1.5em;
 }
 
-form .form-inputs {
+.formInputs {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -67,15 +76,9 @@ form .form-inputs {
     margin-bottom: 0;
 }
 
-.modal h3 {
-    display: block;
-    text-align: left;
-    width: 100%;
-    font-size: 1.8em;
-    margin: 0;
-}
 
-form input {
+
+.textControl {
     width: 100%;
     height: 50px;
     border: none;
@@ -83,12 +86,76 @@ form input {
     margin-bottom: 1.5em;
 }
 
-form input#message {
+#message {
     height: 80px;
 }
 
-.modal button {
+.contact_button {
     margin: 0;
+    background-color: #312e2e;
+    color: aliceblue;
+    border-radius: 0.5rem;
+}
+.modal {
+  border-radius: 5px;
+  background-color: #db8876;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 35px;
+  margin: auto;
+}
+
+.modal header {
+  justify-content: space-between;
+  width: 100%;
+}
+
+.modal header img {
+  cursor: pointer;
+}
+
+.modal header h2 {
+  font-size: 64px;
+  font-weight: normal;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+form label {
+  color: #312e2e;
+  font-size: 36px;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: self-start;
+  margin-bottom: 26px;
+}
+
+form input {
+  width: 100%;
+  height: 68px;
+  border: none;
+  border-radius: 5px;
+}
+
+.formData[data-error-visible=true]::after {
+  opacity: 1;
+}
+
+.formData[data-error-visible=true] .textControl {
+  border: 0.25rem solid #e54858;
 }
 
 @media screen and (max-width: 768px) {
@@ -110,42 +177,42 @@ form input#message {
         padding: 1em 0;
     }
 
-    .modal header {
+    .modal__header {
         width: 90%;
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-between;
     }
 
-    .modal header h2 {
+    .modal__header h2 {
         font-size: 1.6em;
         font-weight: bold;
     }
 
 
-    .modal .close-btn {
+    .modal .closeBtn {
         height: 1.2em;
     }
 
-    .modal form .form-inputs {
+    .formContact .formInputs {
         margin: 0;
     }
 
-    .modal h3 {
+    .modal__photographerName {
         margin: 0;
         padding: 0;
         text-align: center;
     }
 
-    .modal form {
+    .formContact {
         width: 90%;
     }
 
-    .modal form input {
+    .textControl {
         height: 30px;
     }
 
-    .modal form input#message {
+    #message {
         height: 50px;
     }
 

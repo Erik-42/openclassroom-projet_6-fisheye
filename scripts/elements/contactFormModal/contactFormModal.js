@@ -4,6 +4,7 @@ function displayModal() {
 }
 
 function closeModal() {
+    const closeBtn = document.querySelector(".closeBtn")
     const modal = document.getElementById("contact_modal");
     modal.style.display = "none";
 }

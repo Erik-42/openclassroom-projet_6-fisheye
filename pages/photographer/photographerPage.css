@@ -1,8 +1,4 @@
-#contact_modal {
-  display: none;
-}
-
- .photographer_header__info {
+.photographer_header__info {
        background-color: #FAFAFA;
     height: 300px;
     row-gap: 1rem;
@@ -80,7 +76,7 @@ margin: 1rem;
   margin: 1rem;
 }
 
-.modal {
+/* .modal {
   border-radius: 5px;
   background-color: #db8876;
   width: 50%;
@@ -132,4 +128,4 @@ form input {
   height: 68px;
   border: none;
   border-radius: 5px;
-}
+} */

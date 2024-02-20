@@ -8,29 +8,58 @@
     <title>contactFormModal</title>
 </head>
 
-<body>
-    <div id="contact_modal" aria-label="Modal de contact">
+<body style="display: flex;">
+
+    <aside id="contact_modal" aria-label="Modal de contact">
         <div class="modal">
-            <header>
+            <header class="modal__header">
                 <h2>Contactez-moi</h2>
-                <img class="close-btn" src="../../../assets/icons/close.svg" tabindex="7" onclick="closeModal()" />
+                <img class="closeBtn" src="../../../assets/icons/close.svg" tabindex="7" onclick="closeModal()" />
             </header>
-            <h3 class="modal__photograph-name"> </h3>
-            <form>
-                <div class="form-inputs">
-                    <label form="firstname">Prénom</label>
-                    <input id="firstname" aria-label="firstname" tabindex="2">
-                    <label for="lastname">Nom</label>
-                    <input id="lastname" aria-label="lastname" tabindex="3" />
-                    <label form="email">Email</label>
-                    <input id="email" aria-label="email" tabindex="4" />
-                    <label for="message">Votre message</label>
-                    <input id="message" aria-label="Your message" tabindex="5" />
+
+            <h3 class="modal__photographerName">`${photographerName}`</h3>
+
+            <form name="reserve" action="./index.html" method="get" class="formContact">
+
+                <div class="formInputs">
+
+                    <div class="formData">
+                        <label form="firstname" for="first">Prénom</label><br>
+                        <input class="textControl" type="text" id="firstname" name="firstname" minlength="2" aria-label="Your firstname" tabindex="2"><br>
+			        </div>
+
+                    <div class="formData">
+                        <label form="lastname" for="last">Nom</label><br>
+                        <input class="textControl" type="text" id="lastname" name="lastname" minlength="2" aria-label="Your lastname" tabindex="3"><br>
+			        </div>
+
+                    <div class="formData">
+                        <label form="email" for="email">Email</label><br>
+                        <input class="textControl" type="text" id="email" name="email" minlength="7" aria-label="Your email" tabindex="4"><br>
+			        </div>
+
+                    <div class="formData">
+                        <label form="message" for="message">Votre message</label><br>
+                        <textarea class="textControl" type="text" id="message" name="message" minlength="10" aria-label="Your message" tabindex="5"></textarea><br>
+			        </div>
+
                 </div>
-                <button class="contact_button submit-btn" type="submit" aria-label="Send" tabindex="6">Envoyer</button>
+
+                
             </form>
+
+            <button class="contact_button submit-btn" type="submit" aria-label="Send" tabindex="6">Envoyer</button>
+
         </div>
-    </div>
+        <!-- Modale validé -->
+          <div id="formValid">
+            <div class="modalValidForm">
+              <h4 class="valid">Merci !</h4>
+              <p>Votre message a été envoyé.</p>
+              <button class="btn-closeModal">Fermer</button>
+            </div>
+          </div>
+    </aside>
     <script src="./contactFormModal.js"></script>
 
 </body>
