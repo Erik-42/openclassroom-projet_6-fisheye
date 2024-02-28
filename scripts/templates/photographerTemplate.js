@@ -1,3 +1,5 @@
+import { launchModal } from "../elements/contactModal/contactModal.js";
+
 export function photographerTemplate(data) {
   const { name, id, portrait, city, country, tagline, price } = data;
 
@@ -46,22 +48,35 @@ export function photographerTemplate(data) {
   }
 
   function getUserHeaderDOM() {
-    const photographerBannerStructure = `
+    const photographer_modal_name = document.querySelector(
+      ".modal__photographerName");
+      photographer_modal_name.innerText = name;
+    const photographerBannerBeginStructure = `
                 <div class="photographer_header__info">
                     <h2 class = "photographer_header__name">${name}</h2>
                     <p class="photographer_header__location">${city}, ${country}</p>
                     <p class = "photographer_header__text" >${tagline}</p>
-                </div>
-            <button class="contact_button contact-me-btn" aria-label="Contact me" tabindex="1" onclick="displayModal()" >Contactez-moi</button>
-            <div class = "photographer_header__portrait" >
-                <img src="${picture}" alt="portrait photographe" class="photographer_header__portrait__img" >
-            </div>
-        `;
+                </div>`
+
+            const contactBtn = document.createElement('button')
+            contactBtn.className = "contact_button contact-me-btn" 
+            contactBtn.ariaLabel = "Contact me"
+            contactBtn.tabIndex = "1"
+            contactBtn.innerText = "Contactez-moi"
+            contactBtn.addEventListener('click', launchModal)
+
+            // <button class="contact_button contact-me-btn" aria-label="Contact me" tabindex="1" >Contactez-moi</button>
+
+const divPortrait = document.createElement("div");
+divPortrait.className = "photographer_header__portrait";
+divPortrait.innerHTML = `<img src="${picture}" alt="portrait photographe" class="photographer_header__portrait__img" >`;
+
 
     const container = document.createElement("section");
     container.classList.add("photographer_header");
-    container.innerHTML = photographerBannerStructure;
-
+    container.innerHTML = photographerBannerBeginStructure;
+    container.appendChild(contactBtn)
+    container.appendChild(divPortrait)
     return container;
   }
   return {

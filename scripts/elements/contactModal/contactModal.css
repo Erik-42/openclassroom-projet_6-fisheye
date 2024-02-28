@@ -12,27 +12,6 @@
   padding: 0;
 }
 
-/* Landing Page */
-/* body {
-  display: flex;
-  flex-direction: column;
-  font-family: var(--font-default);
-  font-size: 1.125rem;
-  max-width: 90rem;
-} */
-
-
-/* Main */
-/* main {
-  font-size: 1.5rem;
-  font-weight: bolder;
-  color: black;
-  margin: 0 6.25rem;
-  border-radius: 2rem;
-  text-align: justify;
-} */
-
-
 .bground {
   display: none;
   position: fixed;
@@ -87,78 +66,6 @@ input,textarea {
   min-width: 100%;
   max-width: 100%;
 }
-
-/* .checkbox-label,
-.checkbox2-label {
-  position: relative;
-  margin-left: 30px;
-  font-weight: normal;
-}
-.checkbox-label .checkbox-icon, .checkbox-label .checkbox-icon,
-.checkbox2-label .checkbox-icon,
-.checkbox2-label .checkbox-icon {
-  display: block;
-  width: 20px;
-  height: 20px;
-  border: 2px solid #279e7a;
-  border-radius: 50%;
-  text-indent: 29px;
-  white-space: nowrap;
-  position: absolute;
-  left: -30px;
-  top: -1px;
-  transition: 0.3s;
-} */
-/* .checkbox-label .checkbox-icon::after, .checkbox-label .checkbox-icon::after, .checkbox-label .checkbox-icon::after, .checkbox-label .checkbox-icon::after,
-.checkbox2-label .checkbox-icon::after,
-.checkbox2-label .checkbox-icon::after,
-.checkbox2-label .checkbox-icon::after,
-.checkbox2-label .checkbox-icon::after {
-  content: "";
-  width: 13px;
-  height: 13px;
-  background-color: #279e7a;
-  border-radius: 50%;
-  text-indent: 29px;
-  white-space: nowrap;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  transition: 0.3s;
-  opacity: 0;
-} */
-
-/* .checkbox2-label .checkbox-icon {
-  border-radius: 4px;
-  border: 0;
-  background: #c4c4c4;
-}
-.checkbox2-label .checkbox-icon::after {
-  width: 7px;
-  height: 4px;
-  border-radius: 2px;
-  background: transparent;
-  border: 2px solid transparent;
-  border-bottom-color: #fff;
-  border-left-color: #fff;
-  transform: rotate(-55deg);
-  left: 21%;
-  top: 19%;
-} */
-
-/* .checkbox-input:checked + .checkbox-label .checkbox-icon::after,
-.checkbox-input:checked + .checkbox2-label .checkbox-icon::after {
-  opacity: 1;
-}
-
-.checkbox-input:checked + .checkbox2-label .checkbox-icon {
-  background: #279e7a;
-}
-
-.checkbox-input {
-  display: none;
-} */
 
 .btn-submit {
   margin: 1rem auto;

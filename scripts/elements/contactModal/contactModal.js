@@ -1,30 +1,13 @@
-// Gestion du menu //
-// Affichage du menu déroulant lors du click sur l'icone de la navbar en mode tablette et mobile
-// function editNav() {
-//   var x = document.getElementById("myTopnav");
-//   if (x.className === "topnav") {
-//     x.className += " responsive";
-//   } else {
-//     x.className = "topnav";
-//   }
-// }
-
 // Gestion de la modale //
 //ouverture modale
 const modalbg = document.querySelector(".bground"); 
-const modalBtn = document.querySelectorAll(".btn-signup"); 
-const contactBtn = document.querySelector(".contact_modal")
-modalBtn.forEach((btn) => btn.addEventListener("click", launchModal)); 
-contactBtn.forEach((btn) => btn.addEventListener("click", launchModal)); 
 
-function launchModal() {
+export function launchModal() {
   modalbg.style.display = "block"; 
 }
 
 // Fermeture de la modale
-const closeModal = document.querySelector(".close"); 
 const closeBtn = document.querySelector(".closeBtn");
-closeModal.addEventListener("click", resetModal); 
 closeBtn.addEventListener("click", resetModal); 
 
 
@@ -87,74 +70,22 @@ function checkEmail() {
     return emailInput.value; 
   }
 }
-
-// Test date de naissance
-// const birthdateInput = document.getElementById("birthdate"); 
-// function checkBirthDate() {
-//   // Test si la date est vide
-//   if (birthdateInput.value == "") {
-//     addError(birthdateInput, "Entrez une date de naissance valide."); 
-//     return false;
-//   } else {
-//     clearError(birthdateInput); 
-//     return birthdateInput.value; 
-//   }
-// }
-
-// Test nombre de tournois de l'utilisateur
-// const quantityInput = document.getElementById("quantity"); 
-// function checkQuantity() {
-//   const quantityRegex = /^[0-9]+$/; // Condition pour un nombre positif
+// Test message
+const messageInput = document.getElementById("message"); 
+function checkMessage() {
+  const messageRegex = /^[a-zA-Z0-9]{10,1000}$/; // Condition pour un message valide
   
-//   if (!quantityRegex.test(quantityInput.value.trim())) {
-//     addError(quantityInput, "Entrez un nombre valide pour les tournois."); 
-//     return false;
-//   } else {
-//     clearError(quantityInput); 
-//     return quantityInput.value;
-//   }
-// }
-
-// Test de la localisation des tournois
-// function checkLocation() {
-//   const radioInput = document.querySelector('input[name="location"]');
-//   const radioInputChecked = document.querySelector(
-//     'input[name="location"]:checked'
-//   ); // Bouton radio qui est coché (=null s'il n'y en a pas)
-
-//   if (!radioInputChecked) {
-//     addError(radioInput, "Choisissez un tournoi."); 
-//     return false;
-//   } else {
-//     clearError(radioInput); 
-//     return radioInputChecked.checked;
-//   }
-// }
-
-// Test condition d'utilisation
-// const checkbox1Input = document.getElementById("checkbox1"); 
-// function checkCheckBox1() {
-  
-//   if (!checkbox1Input.checked) {
-//     addError(checkbox1Input, "Merci d'accepter les conditions d'utilisation."); 
-//     return false;
-//   } else {
-//     clearError(checkbox1Input); 
-//     return checkbox1Input.checked; 
-//   }
-// }
-
-// Test prevenir d'autres evenements
-const checkbox2Input = document.getElementById("checkbox2"); 
-function checkCheckBox2() {
-  let valCheckbox2 = "NOT Checked"; // Valeur par défaut de checkbox2
-  
-  if (document.querySelector('input[id="checkbox2"]:checked')) {
-    valCheckbox2 = "Checked"; // On change la valeur
+  if (!messageRegex.test(messageInput.value.trim())) {
+    addError(
+      messageInput,
+      "Entrez un message contenant au moins 10 caractéres et maximum 1000 caractéres."
+    );
+    return false;
+  } else {
+    clearError(messageInput);
+    return messageInput.value;
   }
-  return valCheckbox2; 
 }
-
 // Gestion des erreurs //
 const formData = document.querySelectorAll(".formData"); 
 
@@ -180,27 +111,23 @@ function onSubmit(event) {
   event.preventDefault(); 
 
   //controle de la validiter des champs des champs du formulaire individuellement
-  resultCheckInput = {
+  const resultCheckInput = {
     firstname: checkFirstName(),
     lastname: checkLastName(),
     email: checkEmail(),
-    // birthdate: checkBirthDate(),
-    // quantity: checkQuantity(),
-    // location: checkLocation(),
-    // checkbox1: checkCheckBox1(),
-    // checkbox2: checkCheckBox2(),
+    message: checkMessage(),
   };
   
  // Controle si tous les champs sont valide
   if (
     checkFirstName() &&
     checkLastName() &&
-    checkEmail() 
-    // checkBirthDate() &&
-    // checkQuantity() &&
-    // checkLocation() &&
-    // checkCheckBox1()
-  ) {
+    checkEmail() &&
+    checkMessage()
+    ) {
+
+    console.log(resultCheckInput);
+
     formValid.style.display = "block"; 
   } else {
     formValid.style.display = "none"; 

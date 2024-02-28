@@ -1,4 +1,5 @@
 import {sortMedia} from "../../utils/sortMedia.js"
+
 export function dropDownEvent() {
   const nameBtn = document.getElementById('nameBtn')
   const dropdownBtn = document.getElementById('dropdownSelector')
@@ -30,6 +31,7 @@ btnTitre.addEventListener('click',(e)=>{
 
 })
 }
+
 function dropdownMenu() {
   
   const dropdownList = document.getElementById("dropdownSelector__list").classList.toggle("show");

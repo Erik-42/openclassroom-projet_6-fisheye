@@ -4,6 +4,8 @@ import {mediaFactory} from "../../scripts/utils/mediaFactory.js"
 
 import {dropDownEvent} from "../../scripts/elements/dropdownSort/dropdownSort.js"
 import { getMediaAndName} from '../../scripts/utils/getMediaAndName.js'
+import { launchModal } from '../../scripts/elements/contactModal/contactModal.js'
+import {popup} from "../../scripts/elements/photographerPopup/photographerPopup.js"
 
 
 export const {medias,photographer} = await getMediaAndName()
@@ -29,9 +31,18 @@ export async function displayMedias(medias,photographerName) {
   })
 
 }
+// export async function displayPopup(likes, photographerId) {
+//   const popupContainer = document.querySelector(".photograph__popup");
+//   popupContainer.innerHTML = "";
+    
+    
+
+//     popupContainer.appendChild();
+//   };
+
 
 async function init() {
-  
+
 
   dropDownEvent()
 

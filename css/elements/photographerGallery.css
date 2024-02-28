@@ -15,3 +15,12 @@
 }
 .photograph__gallery__card__photo__info__nbr {
 }
+.photograph__gallery__card__photo__info__heart{
+  cursor: pointer;
+}
+.photograph__gallery__card__photo__info__heart:hover{
+  scale: 1.15;
+}
+.photograph__gallery__card__photo__info__heart:focus :active{
+  color: var(--fourthFontColor);
+}
