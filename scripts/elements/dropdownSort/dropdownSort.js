@@ -30,10 +30,11 @@ function dropdownDOM() {
   container.innerHTML = dropdownStructure;
 
   return container;
-  console.log('dropdownDOM')
+
+  console.log(dropdownDOM)
 }
 
-
+//Fonctionnement dropdown
 function dropdownMenu() {
   document.getElementById("dropdownSelector__list").classList.toggle("show");
 }
