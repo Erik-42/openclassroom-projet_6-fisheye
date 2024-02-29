@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /* Général */
 :root {
   --font-default: "DM Sans", Arial, Helvetica, sans-serif;
@@ -30,7 +31,7 @@
   max-width: 33.5rem;
   animation-name: modalopen;
   animation-duration: var(--modal-duration);
-  background: #d3573c;
+  background: #ff927a;
   /* background: var(--secondaryBgColor); */
   border-radius: 10px;
   overflow: hidden;
@@ -40,13 +41,31 @@
   padding: 1rem;
 }
 
+.modal__header {
+  margin: 0 25px;
+  color: var(--defaultFontColor);
+  font-size: x-large;
+}
+
+.closeBtn {
+  width: 25px;
+  cursor: pointer;
+}
+
+.modal__photographerName {
+  color: var(--defaultFontColor);
+  font-size: xx-large;
+  margin: 0 25px;
+}
+
 .modal-body {
   padding: 1.25rem 1.5rem;
 }
 
 label {
+  color: var(--defaultFontColor);
   font-family: var(--font-default);
-  font-size: 0.875rem;
+  font-size: 1.5rem;
   font-weight: normal;
   display: inline-block;
   margin-bottom: 0.625rem;
@@ -54,7 +73,8 @@ label {
   margin-right: 1rem;
 }
 
-input,textarea {
+input,
+textarea {
   padding: 0.5rem;
   border: 0.8px solid #ccc;
   outline: none;
@@ -67,9 +87,7 @@ input,textarea {
   max-width: 100%;
 }
 
-.btn-submit {
-  margin: 1rem auto;
-}
+
 
 #formValid {
   display: none;
@@ -92,7 +110,9 @@ input,textarea {
   /* background-color: var(--secondaryBgColor); */
 
 }
-.modalValidForm h4, .modalValidForm p {
+
+.modalValidForm h4,
+.modalValidForm p {
   text-align: center;
   font-size: xxx-large;
 }
@@ -105,19 +125,27 @@ input,textarea {
   display: block;
   border-radius: 0.5rem;
   font-size: 1rem;
-  padding: 0.75rem 5.25rem;
+  padding: 0.75rem 3.25rem;
   color: #fafafa;
   /* color: var(--tertiaryFontColor); */
   cursor: pointer;
   border: 0;
   outline: 0;
 }
+
+/* .btn-submit {
+  margin: 1rem auto;
+} */
+.btn-submit {
+  margin: 1rem 0;
+}
+
 .btn-submit:hover,
 .btn-signup:hover,
 .btn-closeModal:hover {
   background: #d3573c;
   /* background: var(--secondaryBgColor); */
-  color: #525252;
+  color: var(--defaultFontColor);
   color: var(--);
 }
 
@@ -155,6 +183,10 @@ input,textarea {
   border: 0.25rem solid yellow;
 }
 
+#message {
+  height: 10rem;
+}
+
 .close {
   position: absolute;
   right: 1rem;
@@ -165,7 +197,9 @@ input,textarea {
   cursor: pointer;
   transform: scale(0.7);
 }
-.close::before, .close::after {
+
+.close::before,
+.close::after {
   position: absolute;
   left: 1rem;
   content: " ";
@@ -173,9 +207,11 @@ input,textarea {
   width: 0.25rem;
   background-color: #fafafa;
 }
+
 .close::before {
   transform: rotate(45deg);
 }
+
 .close::after {
   transform: rotate(-45deg);
 }
@@ -186,6 +222,7 @@ input,textarea {
     opacity: 0;
     transform: translateY(-150px);
   }
+
   to {
     opacity: 1;
   }

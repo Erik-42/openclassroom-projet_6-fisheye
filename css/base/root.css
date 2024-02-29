@@ -1,13 +1,14 @@
-*{
+* {
     margin: 0;
     padding: 0;
     text-decoration: none;
     list-style: none;
 }
-:root{
+
+:root {
     --defaultBackgroundColor: white;
-    --defaultFontColor:black;
-    --primaryBgColor : #901C1C;
+    --defaultFontColor: black;
+    --primaryBgColor: #901C1C;
     --primaryFontColor: #d3573c;
     --secondaryBgColor: #d3573c;
     --secondaryFontColor: #525252;
@@ -25,7 +26,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 5.625rem;
+    /* height: 5.625rem; */
     margin: 0 4rem;
 }
 
@@ -33,9 +34,11 @@ h1 {
     color: #901C1C;
     /* margin-right: 6.25rem; */
 }
-ul{
+
+ul {
     list-style: none;
 }
+
 .logo {
     height: 3.125rem;
     /* margin-left: 6.25rem; */
