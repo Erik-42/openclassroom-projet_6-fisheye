@@ -29,9 +29,18 @@ btnTitre.addEventListener('click',(e)=>{
   // console.log('tri par titre')
   sortMedia('title')
 
+<<<<<<< HEAD
+  return container;
+
+  console.log(dropdownDOM)
+}
+
+//Fonctionnement dropdown
+=======
 })
 }
 
+>>>>>>> fcec21df14ec6ab4e5a0b9eb36aa241a16588d34
 function dropdownMenu() {
   
   const dropdownList = document.getElementById("dropdownSelector__list").classList.toggle("show");
