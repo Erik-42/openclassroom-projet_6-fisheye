@@ -1,42 +1,49 @@
-function dropdownDOM() {
-  const photographMediaSort = document.querySelector(".photograph__media__sort");
-  photographMediaSort.innerHTML = "";
+import {sortMedia} from "../../utils/sortMedia.js"
 
-  const dropdownStructure = `
-    <button onclick="dropdownMenu()" id="dropdownSelector" class="dropdownBtn" role="button">Popularité
-        <i class="fa-solid fa-chevron-down"></i>
+export function dropDownEvent() {
+  const nameBtn = document.getElementById('nameBtn')
+  const dropdownBtn = document.getElementById('dropdownSelector')
+dropdownBtn.addEventListener('click',()=>{
+  dropdownMenu()
+})
+const btnPop = document.getElementById('btnPop')
+btnPop.addEventListener('click',(e)=>{
+  e.preventDefault()
+  nameBtn.innerText='Popularité'
+  // console.log('tri par popularité')
+  sortMedia('popularity')
 
-        <ul id="dropdownSelector__list" class="dropdownContent" role="listbox">
-          <li id="popularity" class="dropdownSelector__list__option" role="option">
-            <a class="dropdownSelector__list__option" href="#popularité">Popularité</a>
-            <i class="fa-solid fa-chevron-up"></i>
-          </li>
-          <p class="dropdownSelector__list__line"></p>
-          <li id="date" class="dropdownSelector__list__option" role="option">
-            <a class="dropdownSelector__list__option" href="#date">Date</a>
-            <i class="fa-solid fa-chevron-up"></i>
-          </li>
-          <p class="dropdownSelector__list__line"></p>
-          <li id="titre" class="dropdownSelector__list__option" role="option">
-            <a class="dropdownSelector__list__option" href="#titre">Titre</a>
-            <i class="fa-solid fa-chevron-up"></i>
-          </li>
-        </ul>
-      </button>
-        `;
+})
+const btnDate = document.getElementById('btnDate')
+btnDate.addEventListener('click',(e)=>{
+  e.preventDefault()
+  nameBtn.innerText='Date'
+  // console.log('tri par date')
+  sortMedia('date')
 
-  const container = document.createElement("div");
-  container.classList.add("dropdownMenu");
-  container.innerHTML = dropdownStructure;
+})
+const btnTitre = document.getElementById('btnTitre')
+btnTitre.addEventListener('click',(e)=>{
+  e.preventDefault()
+  nameBtn.innerText='Titre'
+  // console.log('tri par titre')
+  sortMedia('title')
 
+<<<<<<< HEAD
   return container;
 
   console.log(dropdownDOM)
 }
 
 //Fonctionnement dropdown
+=======
+})
+}
+
+>>>>>>> fcec21df14ec6ab4e5a0b9eb36aa241a16588d34
 function dropdownMenu() {
-  document.getElementById("dropdownSelector__list").classList.toggle("show");
+  
+  const dropdownList = document.getElementById("dropdownSelector__list").classList.toggle("show");
 }
 // Ferme le dropdown si ont clique à coté
 window.onclick = function (event) {
@@ -51,3 +58,4 @@ window.onclick = function (event) {
     }
   }
 };
+

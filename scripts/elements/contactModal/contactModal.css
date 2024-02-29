@@ -1,0 +1,192 @@
+@charset "UTF-8";
+/* Général */
+:root {
+  --font-default: "DM Sans", Arial, Helvetica, sans-serif;
+  --font-slab: var(--font-default);
+  --modal-duration: 0.8s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.bground {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(26, 39, 156, 0.4);
+}
+
+.content {
+  margin: 7rem auto;
+  width: 100%;
+  max-width: 33.5rem;
+  animation-name: modalopen;
+  animation-duration: var(--modal-duration);
+  background: #d3573c;
+  /* background: var(--secondaryBgColor); */
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  color: #fafafa;
+  /* color: var(--tertiaryFontColor); */
+  padding: 1rem;
+}
+
+.modal-body {
+  padding: 1.25rem 1.5rem;
+}
+
+label {
+  font-family: var(--font-default);
+  font-size: 0.875rem;
+  font-weight: normal;
+  display: inline-block;
+  margin-bottom: 0.625rem;
+  margin-top: 0.625rem;
+  margin-right: 1rem;
+}
+
+input,textarea {
+  padding: 0.5rem;
+  border: 0.8px solid #ccc;
+  outline: none;
+  margin: 0;
+  width: 100%;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  height: 3rem;
+  min-width: 100%;
+  max-width: 100%;
+}
+
+.btn-submit {
+  margin: 1rem auto;
+}
+
+#formValid {
+  display: none;
+}
+
+.modalValidForm {
+  position: relative;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: #d3573c;
+  /* background-color: var(--secondaryBgColor); */
+
+}
+.modalValidForm h4, .modalValidForm p {
+  text-align: center;
+  font-size: xxx-large;
+}
+
+.btn-submit,
+.btn-signup,
+.btn-closeModal {
+  background: #901C1C;
+  /* background: var(--primaryBgColor); */
+  display: block;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  padding: 0.75rem 5.25rem;
+  color: #fafafa;
+  /* color: var(--tertiaryFontColor); */
+  cursor: pointer;
+  border: 0;
+  outline: 0;
+}
+.btn-submit:hover,
+.btn-signup:hover,
+.btn-closeModal:hover {
+  background: #d3573c;
+  /* background: var(--secondaryBgColor); */
+  color: #525252;
+  color: var(--);
+}
+
+.btn-signup {
+  outline: none;
+  font-size: 1.6rem;
+  padding: 1rem 1.5rem;
+  margin: 0;
+  margin-top: 3.75rem;
+  z-index: 1;
+}
+
+.btn-closeModal {
+  position: absolute;
+  bottom: 5rem;
+}
+
+.formData[data-error]::after {
+  content: attr(data-error);
+  font-size: 1rem;
+  color: yellow;
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.formData[data-error-visible=true]::after {
+  opacity: 1;
+}
+
+.formData[data-error-visible=true] .text-control {
+  border: 0.25rem solid yellow;
+}
+
+.close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  width: 2rem;
+  height: 2rem;
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(0.7);
+}
+.close::before, .close::after {
+  position: absolute;
+  left: 1rem;
+  content: " ";
+  height: 2rem;
+  width: 0.25rem;
+  background-color: #fafafa;
+}
+.close::before {
+  transform: rotate(45deg);
+}
+.close::after {
+  transform: rotate(-45deg);
+}
+
+
+@keyframes modalopen {
+  from {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+  to {
+    opacity: 1;
+  }
+}
