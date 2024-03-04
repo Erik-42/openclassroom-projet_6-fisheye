@@ -1,45 +1,44 @@
 * {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
 }
 
 :root {
-    --defaultBackgroundColor: white;
-    --defaultFontColor: black;
-    --primaryBgColor: #901C1C;
-    --primaryFontColor: #d3573c;
-    --secondaryBgColor: #d3573c;
-    --secondaryFontColor: #525252;
-    --tertiaryFontColor: #fafafa;
-    --fourthFontColor: #901c1c;
+  --defaultBackgroundColor: white;
+  --defaultFontColor: black;
+  --primaryBgColor: #901c1c;
+  --primaryFontColor: #d3573c;
+  --secondaryBgColor: #d3573c;
+  --secondaryFontColor: #525252;
+  --tertiaryFontColor: #fafafa;
+  --fourthFontColor: #901c1c;
 }
 
 body {
-    font-family: "DM Sans", sans-serif;
+  font-family: "DM Sans", sans-serif;
 }
 
-
 header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    /* height: 5.625rem; */
-    margin: 0 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* height: 5.625rem; */
+  margin: 0 3rem;
 }
 
 h1 {
-    color: #901C1C;
-    /* margin-right: 6.25rem; */
+  color: #901c1c;
+  /* margin-right: 6.25rem; */
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 .logo {
-    height: 3.125rem;
-    /* margin-left: 6.25rem; */
+  height: 3.125rem;
+  /* margin-left: 6.25rem; */
 }

@@ -1,7 +1,7 @@
 .photographer_header {
   background-color: var(--tertiaryFontColor);
   height: 18.75rem;
-  margin: 3rem 6.25rem;
+  margin: 3rem;
   padding: 0 2rem;
   row-gap: 1rem;
   display: flex;
