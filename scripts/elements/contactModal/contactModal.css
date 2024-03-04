@@ -33,7 +33,7 @@
   animation-duration: var(--modal-duration);
   background: #ff927a;
   /* background: var(--secondaryBgColor); */
-  border-radius: 10px;
+  border-radius: 0.25rem;
   overflow: hidden;
   position: relative;
   color: #fafafa;
@@ -80,7 +80,7 @@ textarea {
   outline: none;
   margin: 0;
   width: 100%;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
   font-size: 1.25rem;
   height: 3rem;
   min-width: 100%;
@@ -123,7 +123,7 @@ textarea {
   background: #901C1C;
   /* background: var(--primaryBgColor); */
   display: block;
-  border-radius: 0.5rem;
+  border-radius: 0.25rem;
   font-size: 1rem;
   padding: 0.75rem 3.25rem;
   color: #fafafa;
@@ -131,6 +131,7 @@ textarea {
   cursor: pointer;
   border: 0;
   outline: 0;
+  height: 70px;
 }
 
 /* .btn-submit {

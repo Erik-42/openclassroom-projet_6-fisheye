@@ -77,7 +77,7 @@ function checkEmail() {
 const messageInput = document.getElementById("message");
 
 function checkMessage() {
-  const messageRegex = /^[a-zA-Z0-9]{10,1000}$/; // Condition pour un message valide
+  const messageRegex = /^[a-zA-Z0-9\s\S]{10,1000}$/; // Condition pour un message valide
 
   if (!messageRegex.test(messageInput.value.trim())) {
     addError(
@@ -91,7 +91,7 @@ function checkMessage() {
   }
 }
 // Gestion des erreurs //
-const formData = document.querySelectorAll(".formData");
+// const formData = document.querySelectorAll(".formData");
 
 // Ajout des erreurs en recuperant l'input concerné et le message correspondant
 function addError(input, message) {

@@ -7,11 +7,11 @@
   font-weight: bold;
   display: flex;
   max-width: 30rem;
-  z-index: 1;
+  /* z-index: 1; */
   position: relative;
   /* display: inline-block; */
-  width: 100%;
-  margin: 2rem 0;
+  /* width: 100%;
+  margin: 2rem 0; */
 }
 
 .photograph__media__sort a:hover {
@@ -37,59 +37,61 @@
   font-size: 1.125rem;
   font-weight: bold;
   border: none;
-  border-radius: 0.313rem;
+  border-radius: 0.25rem;
   width: 170px;
-  height: 59px;
+  height: 69px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
 }
 
-.dropdownBtn:hover,
-.dropdownBtn:focus {
+.dropdownBtn .dropdownSelector__list__option:hover,
+.dropdownBtn .dropdownSelector__list__option:focus {
   background-color: #d3573c;
   color: var(--defaultFontColor);
 }
-
+.divDropBtn{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
 .dropdownContent {
   display: none;
-  /* position: absolute; */
   background-color: #901c1c;
-  /* min-width: 160px;
-    overflow: auto; */
+
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   transition: background-color 0.3s ease-in-out;
-  /* width: 55%;
-    right: 0; */
-  border-radius: 0.313rem;
-  /* left: 0;
-  width: 50%;
-  top: 25px; */
+
+  border-radius: 0.25rem;
+ 
   margin: 0;
   padding: 0;
   position: relative;
-  left: -120px;
-  width: 123%;
-  top: 59px;
+  /* left: -152px; */
+  right: 152px;
+  /* width: 170px; */
+  top: 71px;
 }
 
 .dropdownSelector__list__option {
-  /* display: block; */
   display: flex;
   align-items: center;
-  flex-direction: row;
   justify-content: space-between;
-  list-style: none;
-  padding: 0.5rem 2rem 0.625rem 1rem;
-  color: white;
+  /* flex-direction: row;
+  justify-content: space-between; */
+  /* list-style: none; */
+  padding: 1.5rem 1rem;
+  /* color: white; */
+  gap: 2rem;
+  width: 170px;
 }
 
-.dropdownSelector__list__option a {
-  padding: 0.5rem 2rem 0.625rem 1rem;
+.dropdownSelector__list__link {
+  /* padding: 0.5rem 2rem 0.625rem 1rem; */
   color: #fafafa;
-  text-decoration: none;
+  
 }
 
 .fa-chevron-up:active {
@@ -110,8 +112,6 @@
 }
 
 .show {
-  /* display: block; */
   display: flex;
   flex-direction: column;
-  /* align-items: flex-start; */
 }

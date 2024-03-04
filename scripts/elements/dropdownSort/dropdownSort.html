@@ -13,6 +13,9 @@
 
 <body>
   <h2>Clickable Dropdown</h2>
+  <p>======</p>
+<p>======</p>
+<p>======</p>
 
   <div class="photograph__media">
 
@@ -20,28 +23,31 @@
           <span id="sortBy">Trier Par</span>
 
         <button  id="dropdownSelector" class="dropdownBtn" role="button">
+          <div class="divDropBtn">
             <span id="nameBtn">Popularité</span>
             <i class="fa-solid fa-chevron-down"></i>
-
+          </div>
             <ul id="dropdownSelector__list" class="dropdownContent" role="listbox">
-                <a id="popularity" class="dropdownSelector__list__option" role="option">
-                    <li class="dropdownSelector__list__option" id="btnPop" href="#popularité">Popularité</li>
-                    <i class="fa-solid fa-chevron-up"></i>
-                    </a>
-                <p class="dropdownSelector__list__line"></p>
-                <li id="date" class="dropdownSelector__list__option" role="option">
-                    <a class="dropdownSelector__list__option" id="btnDate" href="#date">Date</a>
+                <li id="popularity" class="dropdownSelector__list__option" role="option">
+                    <a class="dropdownSelector__list__link" id="btnPop" href="#popularité">Popularité</a>
                     <i class="fa-solid fa-chevron-up"></i>
                 </li>
                 <p class="dropdownSelector__list__line"></p>
+                <li id="date" class="dropdownSelector__list__option" role="option">
+                    <a class="dropdownSelector__list__link" id="btnDate" href="#date">Date</a>
+                    <!-- <i class="fa-solid fa-chevron-up"></i> -->
+                </li>
+                <p class="dropdownSelector__list__line"></p>
                 <li id="titre" class="dropdownSelector__list__option" role="option">
-                    <a class="dropdownSelector__list__option" id="btnTitre" href="#titre">Titre</a>
-                    <i class="fa-solid fa-chevron-up"></i>
+                    <a class="dropdownSelector__list__link" id="btnTitre" href="#titre">Titre</a>
+                    <!-- <i class="fa-solid fa-chevron-up"></i> -->
                 </li>
             </ul>
         </button>
         </div>
+  </div>
   <script src="./dropdownSort.js"></script>
+  <script src="../../pages/photographer/photographerPage.js" type="module"></script>
 </body>
 
 </html>
