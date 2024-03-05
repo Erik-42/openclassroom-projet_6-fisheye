@@ -34,9 +34,9 @@
 .photograph__media {
   margin: 0 3rem;
 }
-sc .photograph__media__sort {
+/* .photograph__media__sort {
   margin: 2rem 0;
-}
+} */
 
 .photograph__gallery {
   display: flex;
@@ -47,7 +47,7 @@ sc .photograph__media__sort {
   margin: 3rem;
 }
 
-.photograph__info {
+/* .photograph__info {
   background-color: var(--secondaryBgColor);
   width: 25rem;
   position: fixed;
@@ -73,7 +73,7 @@ sc .photograph__media__sort {
 }
 .photograph__info__price {
   margin: 1rem;
-}
+} */
 
 /* .modal {
   border-radius: 5px;

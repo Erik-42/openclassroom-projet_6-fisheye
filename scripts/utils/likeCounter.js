@@ -9,11 +9,14 @@ heartClick.addeventlistener('click', (e) =>{
       mediaTarget.indexof("photograph__gallery__card__photo__info__heart");
 
     if (heartBtn) {
-        let totalLikes = parseInt(document.getElementById('totalLikes').innerHTML);       
+        let totalLikes = parseInt(
+          document.getElementById("photograph__info__like__nbr").innerHTML
+        );       
         let counterLike = e.target.parentNode.firstElementChild.firstElementChild;
         let likeValue = parseInt(counterLike.innerHTML);
         let isLiked = -1 != mediaTarget.indexOf("isLiked");
-        document.getElementById('totalLikes').innerHTML = isLiked ? --totalLikes : ++totalLikes;
+        document.getElementById("photograph__info__like__nbr").innerHTML =
+          isLiked ? --totalLikes : ++totalLikes;
         counterLike.innerHTML = isLiked ? --likeValue : ++likeValue;
 
         if (isLiked) {
