@@ -6,14 +6,14 @@
  * @property {string} url image actuellement affiché
 
  */
-class LightboxModal3 {
+class LightboxModal {
     static init (){
-const links = Array.from (document.querySelectorAll('a[href$=".png"], a[href$=".jpg"],a[href$=".jpeg"]'))
+const links = Array.from (document.querySelectorAll('a[href$=".png"], a[href$=".jpg"],a[href$=".jpeg"],a[href$=".mp4"]'))
 const gallery = links.map(link=> link.getAttribute('href'))
 debugger
 links.forEach(link => link.addEventListener('click', e=>{
     e.preventDefault()
-    new LightboxModal3(e.currentTarget.getAttribute('href'),gallery)
+    new LightboxModal(e.currentTarget.getAttribute('href'),gallery)
 }))
     }
     /**
@@ -35,9 +35,9 @@ links.forEach(link => link.addEventListener('click', e=>{
     loadImage (url) {
         this.url = null
         const image = new Image();
-        const container = this.element.querySelector('lightboxModal3__container')
+        const container = this.element.querySelector('lightboxModal__container')
         const loader = document.createElement('div')
-        loader.classList.add('lightboxModal3__loader')
+        loader.classList.add('lightboxModal__loader')
         container.innerHTML = ""
         container.appendChild(loader)
         image.onload = () => {
@@ -64,7 +64,7 @@ links.forEach(link => link.addEventListener('click', e=>{
 
 
     /**
-    * ferme la lightboxModal3
+    * ferme la lightboxModal
     * @param {MouseEvent|KeyboardEvent} e
     */
     close(e){
@@ -105,34 +105,34 @@ links.forEach(link => link.addEventListener('click', e=>{
    */
     buildDOM(url) {
         const dom = document.createElement('div')
-        dom.classList.add('lightboxModal3')
+        dom.classList.add('lightboxModal')
         dom.innerHTML = `
-            <button class="lightboxModal3__close">Fermer</button>
-            <button class="lightboxModal3__next">Suivant</button>
-            <button class="lightboxModal3__prev">Précédent</button>
-            <div class="lightboxModal3__container">
-            <div class="lightboxModal3__loader"></div>
+            <button class="lightboxModal__close">Fermer</button>
+            <button class="lightboxModal__next">Suivant</button>
+            <button class="lightboxModal__prev">Précédent</button>
+            <div class="lightboxModal__container">
+            <div class="lightboxModal__loader"></div>
             <img src="${url}" alt="${url}">
             <!-- <img src="../../../assets/images/Sample Photos/Mimi/Animals_Rainbow.jpg" alt="Nora"> -->
 
             </div>`
-        dom.querySelector('.lightboxModal3__close').addEventListener('click', this.close.bind(this))
-         dom.querySelector('.lightboxModal3__next').addEventListener('click', this.next.bind(this))
-          dom.querySelector('.lightboxModal3__prev').addEventListener('click', this.prev.bind(this))
+        dom.querySelector('.lightboxModal__close').addEventListener('click', this.close.bind(this))
+         dom.querySelector('.lightboxModal__next').addEventListener('click', this.next.bind(this))
+          dom.querySelector('.lightboxModal__prev').addEventListener('click', this.prev.bind(this))
         return dom
 }
 }
 }
 /**
- * <aside id="lightboxModal3">
-            <button class="lightboxModal3__close">Fermer</button>
-            <button class="lightboxModal3__next">Suivant</button>
-            <button class="lightboxModal3__prev">Précédent</button>
-            <div class="lightboxModal3__container">
+ * <aside id="lightboxModal">
+            <button class="lightboxModal__close">Fermer</button>
+            <button class="lightboxModal__next">Suivant</button>
+            <button class="lightboxModal__prev">Précédent</button>
+            <div class="lightboxModal__container">
               <img src="../../../assets/images/Sample Photos/Mimi/Portrait_Nora.jpg" alt="Nora">
             </div>
         </aside> 
 */
 
-LightboxModal3.init()
+LightboxModal.init()
 
