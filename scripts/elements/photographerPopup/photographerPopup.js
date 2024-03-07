@@ -1,44 +1,30 @@
-// import { getPhotographers } from "../../utils/getData.js";
-import { getMediaAndName } from "../../utils/getMediaAndName.js";
-import { photographerTemplate } from "../../templates/photographerTemplate.js";
 
-export function additionLike(photographerId, data) {
-  // Filtrer les médias du photographe spécifié
-  const mediasPhotographe = getMediaAndName(photographerId, data);
-
-//   // Additionner les likes de chaque photo
-  const sommeLikes = mediasPhotographe.reduce(
-    (totalLikes, media) => totalLikes + media.likes,
+export function additionLike( medias) {
+  // Additionner les likes de chaque photo
+  
+  const sommeLikes = medias.reduce(
+    (totalLikes, media) => totalLikes + media.likes,0
   );
+  
   return sommeLikes;
 }
 
-// function ajoutLike() {
-//     let heart = document.querySelector(".photograph__info__like__heart");
-//     heart = addEventListener("click", (e) => {
-//       const totalLikesElement = document.getElementById("photograph__info__like__nbr");
-//       const currentLikes = parseInt(totalLikesElement.textContent);
-//       totalLikesElement.textContent = currentLikes + 1;
-//     });
+export function addPopupLike() {
+  const photographInfoLikeNbr = document.querySelector('.photograph__info__like__nbr')
+  const nbTotalLike = parseInt(photographInfoLikeNbr.innerText)
+  photographInfoLikeNbr.innerText = nbTotalLike+1
+}
 
-// }
-
-const photographerId = photographerId;
-const likesTotalPhotographe = additionLike(photographerId, data);
-
-console.log(photographerId);
-
-let photograph__popup = document.getElementById("photograph__popup");
-
-function popupPhotographer() {
+export function popupPhotographer(photographerPrice,medias) {
+  const likesTotalPhotographer = additionLike( medias);
   const popupStructure = `
          <div class="photograph__info__like"">
-          <div id="totalLikes" class="photograph__info__like__nbr">${likesTotalPhotographe}</div>
+          <div id="totalLikes" class="photograph__info__like__nbr">${likesTotalPhotographer}</div>
           <div class="photograph__info__like__heart">
           <i class="fas fa-heart"></i>
           </div>
         </div>
-        <div class="photograph__info__price">${photographerTemplate.price}/jour</div>
+        <div class="photograph__info__price">${photographerPrice}/jour</div>
         `;
 
   const container = document.createElement("div");
@@ -48,4 +34,4 @@ function popupPhotographer() {
 }
 
 
-photograph__popup.appendChild(popupPhotographer());
+

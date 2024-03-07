@@ -8,7 +8,7 @@ export function launchModal() {
 
 // Fermeture de la modale
 const closeBtn = document.querySelector(".closeBtn");
-closeBtn.addEventListener("click", resetModal);
+if(closeBtn) closeBtn.addEventListener("click", resetModal);
 
 
 // Reset du formulaire
@@ -109,7 +109,7 @@ function clearError(input) {
 
 // Soumission du formulaire //
 const submitForm = document.querySelector('form[name="reserve"]');
-submitForm.addEventListener("submit", onSubmit);
+if(submitForm) submitForm.addEventListener("submit", onSubmit);
 
 function onSubmit(event) {
   event.preventDefault();
@@ -142,7 +142,7 @@ function onSubmit(event) {
 const formValid = document.getElementById("formValid");
 const btnCloseModalValid = document.querySelector(".btn-closeModal");
 
-btnCloseModalValid.addEventListener("click", closeModalValid);
+if(btnCloseModalValid) btnCloseModalValid.addEventListener("click", closeModalValid);
 
 function closeModalValid() {
   formValid.style.display = "none"; //Effacement du formulaire validé

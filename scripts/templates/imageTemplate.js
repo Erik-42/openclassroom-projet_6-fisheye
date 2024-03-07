@@ -1,3 +1,4 @@
+import {addPopupLike} from '../elements/photographerPopup/photographerPopup.js'
 export function imageTemplate(data,photographerName) {
     const {
         id,
@@ -16,19 +17,38 @@ export function imageTemplate(data,photographerName) {
     function getMediaCardDOM() {
         const mediaCardStructure = `
         <img class="photograph__gallery__card__photo"
-          src="${picture}" alt="${title}">
-        <div class="photograph__gallery__card__photo__info">
-          <div class="photograph__gallery__card__photo__info__titre">${title}</div>
-          <div class="photograph__gallery__card__photo__info__like">
-            <div class="photograph__gallery__card__photo__info__nbr">${likes}</div>
-            <i class="photograph__gallery__card__photo__info__heart fas fa-heart"></i>
-          </div>
-        </div>
-        `;
+          src="${picture}" alt="${title}">`;
+
+        const photographGalleryCardPhotoInfo = document.createElement('div')
+        photographGalleryCardPhotoInfo.className = "photograph__gallery__card__photo__info"
+        const photographGalleryCardPhotoInfoTitre = document.createElement('div')
+        photographGalleryCardPhotoInfoTitre.className = "photograph__gallery__card__photo__info__titre"
+        photographGalleryCardPhotoInfoTitre.innerText = title
+        const photographGalleryCardPhotoInfoLike = document.createElement('div')
+        photographGalleryCardPhotoInfoLike.className = "photograph__gallery__card__photo__info__like"
+        const photographGalleryCardPhotoInfoNbr = document.createElement('div')
+        photographGalleryCardPhotoInfoNbr.className = "photograph__gallery__card__photo__info__nbr"
+        photographGalleryCardPhotoInfoNbr.innerText = likes
+        const photographGalleryCardPhotoInfoHeart = document.createElement('i')
+        photographGalleryCardPhotoInfoHeart.className = "photograph__gallery__card__photo__info__heart fas fa-heart"
+
+        photographGalleryCardPhotoInfo.appendChild(photographGalleryCardPhotoInfoTitre)
+        photographGalleryCardPhotoInfo.appendChild(photographGalleryCardPhotoInfoLike)
+        photographGalleryCardPhotoInfoLike.appendChild(photographGalleryCardPhotoInfoNbr)
+        photographGalleryCardPhotoInfoLike.appendChild(photographGalleryCardPhotoInfoHeart)
+
+
+        photographGalleryCardPhotoInfoLike.addEventListener('click',()=>{
+          const totalLikesElement = parseInt(photographGalleryCardPhotoInfoNbr.innerText)
+          photographGalleryCardPhotoInfoNbr.innerText =totalLikesElement+1
+          addPopupLike()   
+        })
+
 
     const container = document.createElement("div");
     container.classList.add("photograph__gallery__card");
     container.innerHTML = mediaCardStructure;
+    container.appendChild(photographGalleryCardPhotoInfo)
     return container
     }
    

@@ -14,8 +14,7 @@ import {
 import {
   launchModal
 } from '../../scripts/elements/contactModal/contactModal.js'
-// import {popup} from "../../scripts/elements/photographerPopup/photographerPopup.js"
-
+ import {popupPhotographer} from "../../scripts/elements/photographerPopup/photographerPopup.js"
 
 export const {
   medias,
@@ -54,8 +53,10 @@ export async function displayMedias(medias, photographerName) {
 
 
 async function init() {
+  const photographPopup = document.querySelector(".photograph__popup");
 
-
+  
+  photographPopup.appendChild(popupPhotographer(`${photographer.price} €`,medias));
   dropDownEvent()
 
 

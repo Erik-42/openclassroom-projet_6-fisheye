@@ -45,6 +45,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
+  position: relative;
 }
 
 .dropdownBtn .dropdownSelector__list__option:hover,
@@ -56,6 +57,8 @@
   display: flex;
   align-items: center;
   gap: 2rem;
+  justify-content: space-between;
+  width: 100%;
 }
 .dropdownContent {
   display: none;
@@ -69,11 +72,11 @@
  
   margin: 0;
   padding: 0;
-  position: relative;
-  /* left: -152px; */
-  right: 152px;
+  position: absolute;
+  left: 0;
+  /* right: 152px; */
   /* width: 170px; */
-  top: 71px;
+  top: 0;
 }
 
 .dropdownSelector__list__option {
