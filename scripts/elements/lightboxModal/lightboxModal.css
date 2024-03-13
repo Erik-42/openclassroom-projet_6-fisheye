@@ -1,15 +1,22 @@
-
-/* ===========lightbox3=============== */
-.images__container{
-display: grid;
-grid-template: "a a a" 40px
-"b c c" 40px
-"b c c" 40px /1fr 1fr 1fr
-
-
+body{
+  margin: 0;
 }
-#lightboxModal3{
-    /* display: none; */
+
+.images__container{
+padding: 16px;
+display: grid;
+justify-content: center;
+grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+grid-gap: 16px;
+}
+
+.images__container img{
+  display: block;
+  width: 100%;
+}
+
+#lightboxModal{
+    display: none;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -23,12 +30,12 @@ grid-template: "a a a" 40px
     z-index: 10;
     overflow: auto;
     animation: lightboxIn .5s;
-}
-.lightboxModal3.fadeOut {
-    opacity: 0;
     transition: .3s;
 }
-.lightboxModal3__container {
+.lightboxModal.fadeOut {
+    opacity: 0;
+}
+.lightboxModal__container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -36,9 +43,9 @@ grid-template: "a a a" 40px
     margin: 0 50px;
   }
 
-  .lightboxModal3__next, .lightboxModal3__prev {
+  .lightboxModal__next, .lightboxModal__prev {
     border: none;
-    background: url(../../../assets/icons/arrow.svg) center center / 16px 28px no-repeat;
+    background: url(../../../assets/icons/arrow.svg) center center / 100% 100% no-repeat;
     width: 50px;
     height: 100%;
     position: fixed;
@@ -47,16 +54,16 @@ grid-template: "a a a" 40px
     margin-top: -14px;
     z-index: 11;
   }
-  .lightboxModal3__next:hover, .lightboxModal3__prev:hover{
+  .lightboxModal__next:hover, .lightboxModal__prev:hover{
     opacity: 1;
   }
-  .lightboxModal3__prev {
+  .lightboxModal__prev {
     right: auto;
     left: 0;
     transform: rotate(180deg);
   }
 
-  .lightboxModal3__close{
+  .lightboxModal__close{
 width: 30px;
 height: 30px;
 border: none;
@@ -66,9 +73,10 @@ top: 20px;
 right:10px;
 opacity: .5;
 z-index: 12;
+text-indent: -3000px;
 }
 
-#lightboxModal3 button{
+#lightboxModal button{
 opacity: .5;
 cursor: pointer;
 transition: opacity .3s;
@@ -76,16 +84,16 @@ text-indent: -3000px;
 box-shadow: 10px 5px 5px black;
 }
 
-#lightboxModal3 button:hover{
+#lightboxModal button:hover{
     opacity: 1;
 }
-.lightboxModal3__container img{
+.lightboxModal__container img{
     max-width: 100%;
     height: auto;
     animation: lightboxIn .5s;
 
 }
-.lightboxModal3__container{
+.lightboxModal__container{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -93,7 +101,7 @@ box-shadow: 10px 5px 5px black;
     margin-right: 50px;
 min-height: 100vh;
 }
-.lightboxModal3__loader{
+.lightboxModal__loader{
     width: 38px;
     height: 38px;
     opacity: .5;
