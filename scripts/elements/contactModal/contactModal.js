@@ -73,6 +73,7 @@ function checkEmail() {
     return emailInput.value;
   }
 }
+
 // Test message
 const messageInput = document.getElementById("message");
 
@@ -90,6 +91,7 @@ function checkMessage() {
     return messageInput.value;
   }
 }
+
 // Gestion des erreurs //
 // Ajout des erreurs en recuperant l'input concerné et le message correspondant
 function addError(input, message) {

@@ -1,0 +1,39 @@
+@media screen and (max-width: 800px) {
+    .photographer_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.375rem;
+    margin-top: 4.25rem;
+}
+.photographer_section article {
+    width: 50%;
+    height: 50%;
+}
+
+.photographer_section_name {
+    font-size: 1.25rem;
+}
+}
+@media screen and (max-width: 600px) {
+    header{
+display: flex;
+flex-direction: column;
+    }
+}
+@media screen and (max-width: 480px) {
+.photographer_section_img {
+     height: 8.5rem;
+    width: 8.5rem;
+}
+h1{
+    font-size: 1.5em;
+}
+}
+@media screen and (max-width: 340px) {
+    .photographer_section {
+    grid-template-columns: 1fr;
+}
+h1{
+    font-size: 1em;
+}
+}

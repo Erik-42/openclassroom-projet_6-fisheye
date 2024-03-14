@@ -1,12 +1,10 @@
 import { displayMedias} from '../../pages/photographer/photographerPage.js'
-import { getMediaAndName} from '../utils/getMediaAndName.js'
 import {medias,photographer} from '../../pages/photographer/photographerPage.js'
 function clearHTMLMedia (htmlMedia) {
 
     while (htmlMedia.firstChild) {
         htmlMedia.removeChild(htmlMedia.lastChild)
     }
-
 }
 
 export async function sortMedia(value){

@@ -1,5 +1,3 @@
-import { imageTemplate } from "../templates/imageTemplate";
-import { videoTemplate } from "../templates/videoTemplate";
 import { mediaFactory } from "../utils/mediaFactory";
 
 export function likesPhoto(photographerId, likes) {

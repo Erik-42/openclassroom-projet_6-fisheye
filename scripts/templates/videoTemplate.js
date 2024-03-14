@@ -2,9 +2,7 @@ import { addPopupLike } from "../elements/photographerPopup/photographerPopup.js
 
 export function videoTemplate(data, photographerName) {
   const { id, photographerId, title, video, likes, date, price } = data;
-
   const videoSource = `../../assets/images/Sample Photos/${photographerName}/${video}`;
-
   function getMediaCardDOM() {
     const mediaCardStructure = `
     <a href="${videoSource}" class="photograph__gallery__card__photo">

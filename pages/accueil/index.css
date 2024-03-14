@@ -1,17 +1,19 @@
 .photographer_section {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 4.375rem;
-    margin-top: 6.25rem;
+    gap: 3.375rem;
+    margin-top: 4.25rem;
 }
 
 .photographer_section article {
     justify-self: center;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     text-align: center;
+    width: 100%;
+    height: 100%;
 }
 
 .photographer_section_img {
@@ -29,7 +31,7 @@
 }
 
 .photographer_section_city{
-     color: var(--primaryFontColor);
+    color: var(--fourthFontColor);
     font-size: 0.813rem;
     font-weight: 400;
 }
@@ -39,5 +41,5 @@
 }
 .photographer_section_price{
     font-size: 0.563rem;
-    color: rgba(117, 117, 117, 1);
+    color: rgb#757575;
 }

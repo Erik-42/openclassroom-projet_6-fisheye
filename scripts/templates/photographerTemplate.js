@@ -2,9 +2,7 @@ import { launchModal } from "../elements/contactModal/contactModal.js";
 
 export function photographerTemplate(data) {
   const { name, id, portrait, city, country, tagline, price } = data;
-
   const picture = `../../assets/photographers/photographers-ID-Photos/${portrait}`;
-
   function photographerId() {
     // Redirige vers la page photographer.html en passant l'ID comme paramètre
     window.location.href = `../../pages/photographer/photographerPage.html?id=${id}`;
@@ -65,12 +63,9 @@ export function photographerTemplate(data) {
             contactBtn.innerText = "Contactez-moi"
             contactBtn.addEventListener('click', launchModal)
 
-            // <button class="contact_button contact-me-btn" aria-label="Contact me" tabindex="1" >Contactez-moi</button>
-
 const divPortrait = document.createElement("div");
 divPortrait.className = "photographer_header__portrait";
 divPortrait.innerHTML = `<img src="${picture}" alt="portrait photographe" class="photographer_header__portrait__img" >`;
-
 
     const container = document.createElement("section");
     container.classList.add("photographer_header");

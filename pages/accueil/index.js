@@ -1,5 +1,4 @@
 import {photographerTemplate} from '../../scripts/templates/photographerTemplate.js'
-
 import {getPhotographers} from '../../scripts/utils/getData.js'
 
 async function displayData(photographers) {

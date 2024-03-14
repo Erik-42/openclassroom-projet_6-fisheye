@@ -13,7 +13,6 @@ grid-gap: 16px;
 .images__container img{
   display: block;
   width: 100%;
-  
 }
 
 #lightboxModal{
@@ -33,18 +32,20 @@ grid-gap: 16px;
     animation: lightboxIn .5s;
     transition: .3s;
 }
+
 .lightboxModal.fadeOut {
     opacity: 0;
 }
+
 .lightboxModal__container {
     display: flex;
     align-items: center;
     justify-content: center;
     max-height: 100vh;
     margin: 0 50px;
-  }
+}
 
-  .lightboxModal__next, .lightboxModal__prev {
+.lightboxModal__next, .lightboxModal__prev {
     border: none;
     background: url(../../../assets/icons/arrow.svg) center center / 100% 100% no-repeat;
     width: 50px;
@@ -54,17 +55,19 @@ grid-gap: 16px;
     right: 0;
     margin-top: -14px;
     z-index: 11;
-  }
-  .lightboxModal__next:hover, .lightboxModal__prev:hover{
+}
+
+.lightboxModal__next:hover, .lightboxModal__prev:hover{
     opacity: 1;
-  }
-  .lightboxModal__prev {
+}
+
+.lightboxModal__prev {
     right: auto;
     left: 0;
     transform: rotate(180deg);
-  }
+}
 
-  .lightboxModal__close{
+.lightboxModal__close{
 width: 30px;
 height: 30px;
 border: none;
@@ -88,12 +91,14 @@ box-shadow: 10px 5px 5px black;
 #lightboxModal button:hover{
     opacity: 1;
 }
-.lightboxModal__container img{
+
+.lightboxModal__container img, video{
     max-width: 100%;
     animation: lightboxIn .5s;
     max-height: 85vh;
     object-fit: contain;
 }
+
 .lightboxModal__container{
     display: flex;
     align-items: center;
@@ -102,13 +107,14 @@ box-shadow: 10px 5px 5px black;
     margin-right: 50px;
 min-height: 95vh;
 }
+
 .lightboxModal__loader{
     width: 80px;
     height: 80px;
     opacity: .5;
     background: url(../../../assets/icons/loader.svg) center center no-repeat;
-
 }
+
 @keyframes lightboxIn{
     from{opacity: 0;}
     to {opacity: 1}

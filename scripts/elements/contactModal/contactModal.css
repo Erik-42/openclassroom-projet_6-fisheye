@@ -87,8 +87,6 @@ textarea {
   max-width: 100%;
 }
 
-
-
 #formValid {
   display: none;
 }
@@ -214,13 +212,11 @@ textarea {
   transform: rotate(-45deg);
 }
 
-
 @keyframes modalopen {
   from {
     opacity: 0;
     transform: translateY(-150px);
   }
-
   to {
     opacity: 1;
   }

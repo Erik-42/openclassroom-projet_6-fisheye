@@ -1,5 +1,5 @@
 import { enableBodyScroll, disableBodyScroll } from "../../utils/body-scroll-lock.js";
-import {getMediaAndName} from "../../utils/getMediaAndName.js"
+// import {getMediaAndName} from "../../utils/getMediaAndName.js"
 import {mediaFactory} from "../../utils/mediaFactory.js"
 
 /**
@@ -10,13 +10,8 @@ import {mediaFactory} from "../../utils/mediaFactory.js"
 
 export class LightboxModal {
   static init(mediasCards) {
-    // const links = Array.from(
-    //   document.querySelectorAll(
-    //     'a[href$=".png"], a[href$=".jpg"],a[href$=".jpeg"],a[href$=".mp4"]'
-    //   )
-    // );
+ 
     const gallery = mediasCards.map((mediasCard) => mediasCard.querySelector(".photograph__gallery__card__photo").getAttribute("href"));
-    // debugger
     mediasCards.forEach((mediasCard) =>
     mediasCard.querySelector(".photograph__gallery__card__photo").addEventListener("click", (e) => {
         e.preventDefault();
@@ -24,6 +19,7 @@ export class LightboxModal {
       })
     );
   }
+
   /**
    * @param {string} url URL de l'image actuellement affichée
    * @param {string[]} images Chemin des images de la lightbox
@@ -35,7 +31,6 @@ export class LightboxModal {
     this.onKeyUp = this.onKeyUp.bind(this);
     document.body.appendChild(this.element);
     disableBodyScroll(this.element);
-
     document.addEventListener("keyup", this.onKeyUp);
   }
 
@@ -46,21 +41,18 @@ export class LightboxModal {
     let image 
     console.log(url,url.substring(url.length-4,url.length))
     this.url = null;
-    
-   const container = this.element.querySelector(".lightboxModal__container");
+    const container = this.element.querySelector(".lightboxModal__container");
     const loader = document.createElement("div");
     loader.classList.add("lightboxModal__loader");
     container.innerHTML = "";
     container.appendChild(loader);
    
-
     if(url.substring(url.length-4,url.length)=='.mp4'){
       console.log("video")
       image = document.createElement("video");
       image.controls = true
       container.removeChild(loader);
       container.appendChild(image);
-
     }else {
       image = new Image();
       image.onload = () => {
@@ -70,7 +62,6 @@ export class LightboxModal {
         this.url = url;
       };
     }
-    
     
     image.src = url;
     this.url = url;
@@ -159,17 +150,6 @@ export class LightboxModal {
     return dom;
   }
 }
-
-/**
- * <aside id="lightboxModal">
-            <button class="lightboxModal__close">Fermer</button>
-            <button class="lightboxModal__next">Suivant</button>
-            <button class="lightboxModal__prev">Précédent</button>
-            <div class="lightboxModal__container">
-              <img src="../../../assets/images/Sample Photos/Mimi Keel/Animals_Rainbow.jpg" alt="Nora">
-            </div>
-        </aside> 
-*/
 
 // LightboxModal.init()
 

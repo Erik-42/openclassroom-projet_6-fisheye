@@ -1,4 +1,5 @@
 import {addPopupLike} from '../elements/photographerPopup/photographerPopup.js'
+
 export function imageTemplate(data,photographerName) {
     const {
         id,
@@ -11,8 +12,6 @@ export function imageTemplate(data,photographerName) {
     } = data;
 
     const picture = `../../assets/images/Sample Photos/${photographerName}/${image}`;
-
-    
 
     function getMediaCardDOM() {
         const mediaCardStructure = `
@@ -38,13 +37,11 @@ export function imageTemplate(data,photographerName) {
         photographGalleryCardPhotoInfoLike.appendChild(photographGalleryCardPhotoInfoNbr)
         photographGalleryCardPhotoInfoLike.appendChild(photographGalleryCardPhotoInfoHeart)
 
-
         photographGalleryCardPhotoInfoLike.addEventListener('click',()=>{
           const totalLikesElement = parseInt(photographGalleryCardPhotoInfoNbr.innerText)
           photographGalleryCardPhotoInfoNbr.innerText =totalLikesElement+1
           addPopupLike()   
         })
-
 
     const container = document.createElement("div");
     container.classList.add("photograph__gallery__card");

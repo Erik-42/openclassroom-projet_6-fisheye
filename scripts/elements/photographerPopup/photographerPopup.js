@@ -1,7 +1,5 @@
-
 export function additionLike( medias) {
   // Additionner les likes de chaque photo
-  
   const sommeLikes = medias.reduce(
     (totalLikes, media) => totalLikes + media.likes,0
   );
