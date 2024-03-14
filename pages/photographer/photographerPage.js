@@ -15,7 +15,7 @@ import {
   launchModal
 } from '../../scripts/elements/contactModal/contactModal.js'
  import {popupPhotographer} from "../../scripts/elements/photographerPopup/photographerPopup.js"
-
+import {LightboxModal} from "../../scripts/elements/lightboxModal/lightboxModal.js"
 export const {
   medias,
   photographer
@@ -34,35 +34,26 @@ async function displayHeader(photographer) {
 export async function displayMedias(medias, photographerName) {
   const mediasContainer = document.querySelector(".photograph__gallery");
   mediasContainer.innerHTML = ""
+  const mediasCards = []
   medias.forEach(media => {
     const mediaPage = mediaFactory(media, photographerName);
     const mediaCard = mediaPage.getMediaCardDOM();
 
     mediasContainer.appendChild(mediaCard);
+    mediasCards.push(mediaCard)
   })
+  LightboxModal.init(mediasCards)
 
 }
-// export async function displayPopup(likes, photographerId) {
-//   const popupContainer = document.querySelector(".photograph__popup");
-//   popupContainer.innerHTML = "";
-
-
-
-//     popupContainer.appendChild();
-//   };
-
 
 async function init() {
   const photographPopup = document.querySelector(".photograph__popup");
-
-  
   photographPopup.appendChild(popupPhotographer(`${photographer.price} €`,medias));
   dropDownEvent()
-
-
-  //   displayData(photographers);
+  
   displayHeader(photographer);
   displayMedias(medias, photographer.name);
+  
 }
 
 init();

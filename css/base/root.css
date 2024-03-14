@@ -25,13 +25,11 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  /* height: 5.625rem; */
   margin: 1rem 3rem;
 }
 
 h1 {
   color: #901c1c;
-  /* margin-right: 6.25rem; */
 }
 
 ul {
@@ -40,5 +38,4 @@ ul {
 
 .logo {
   height: 3.125rem;
-  /* margin-left: 6.25rem; */
 }

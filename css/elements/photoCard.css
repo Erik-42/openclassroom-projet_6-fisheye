@@ -26,16 +26,10 @@
   font-weight: 900;
 }
 
-.photograph__gallery__card__photo__info__titre {
-}
-
 .photograph__gallery__card__photo__info__like {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   gap: 1rem;
 }
-.photograph__gallery__card__photo__info__nbr {
-}
-.photograph__gallery__card__photo__info__heart {
-}
+

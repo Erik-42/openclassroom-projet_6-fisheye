@@ -7,9 +7,11 @@ export function videoTemplate(data, photographerName) {
 
   function getMediaCardDOM() {
     const mediaCardStructure = `
+    <a href="${videoSource}" class="photograph__gallery__card__photo">
         <video>
         <source src="${videoSource}" />
-        </video>`;
+        </video>
+        </a>`;
 
     const photographGalleryCardPhotoInfo = document.createElement("div");
     photographGalleryCardPhotoInfo.className =

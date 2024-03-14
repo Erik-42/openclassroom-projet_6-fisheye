@@ -12,7 +12,6 @@ export function dropDownEvent() {
   btnPop.addEventListener('click', (e) => {
     e.preventDefault()
     nameBtn.innerText = 'Popularité'
-    // console.log('tri par popularité')
     sortMedia('popularity')
 
   })
@@ -20,7 +19,6 @@ export function dropDownEvent() {
   btnDate.addEventListener('click', (e) => {
     e.preventDefault()
     nameBtn.innerText = 'Date'
-    // console.log('tri par date')
     sortMedia('date')
 
   })
@@ -28,7 +26,6 @@ export function dropDownEvent() {
   btnTitre.addEventListener('click', (e) => {
     e.preventDefault()
     nameBtn.innerText = 'Titre'
-    // console.log('tri par titre')
     sortMedia('title')
 
   })

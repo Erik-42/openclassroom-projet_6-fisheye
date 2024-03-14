@@ -91,8 +91,6 @@ function checkMessage() {
   }
 }
 // Gestion des erreurs //
-// const formData = document.querySelectorAll(".formData");
-
 // Ajout des erreurs en recuperant l'input concerné et le message correspondant
 function addError(input, message) {
   const formData = input.parentElement;

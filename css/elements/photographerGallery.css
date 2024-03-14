@@ -5,16 +5,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.photograph__gallery__card {
-}
-.photograph__gallery__card__photo__info {
-}
-.photograph__gallery__card__photo__info__titre {
-}
-.photograph__gallery__card__photo__info__like {
-}
-.photograph__gallery__card__photo__info__nbr {
-}
+
 .photograph__gallery__card__photo__info__heart{
   cursor: pointer;
 }

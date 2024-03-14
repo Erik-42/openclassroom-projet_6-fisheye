@@ -14,5 +14,4 @@
 .contact_button:hover, :focus{
     background-color: var(--secondaryBgColor);
     color: var(--defaultFontColor);
-
 }
