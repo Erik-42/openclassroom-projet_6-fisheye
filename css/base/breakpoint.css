@@ -1,3 +1,47 @@
+@media screen and (max-width: 1090px) {
+    .photograph__gallery{
+        display: flex;
+        justify-content: center;
+    }
+    .photograph__media__sort{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+    }
+    .photographer_header {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        height: 33rem;
+    }
+    .photographer_header__info{
+        display: flex;
+        position: absolute;
+        top: 18rem;
+        align-items: center;
+    }
+    .photographer_header__name{
+        /* font-size: 3rem; */
+    }
+    .contact_button{
+        position: absolute;
+        top: 35rem;
+    }
+    .photographer_header__portrait{
+        position: absolute;
+        top: 9rem;
+    }
+    .photograph__info {
+        position: fixed;
+        top: 1rem;
+        height: 3rem;
+        width: 18rem;
+        font-size: larger;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .photographer_section {
     display: grid;
@@ -14,10 +58,44 @@
     font-size: 1.25rem;
 }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     header{
 display: flex;
 flex-direction: column;
+    }
+    .photographer_header__info{
+        /* font-size: 3rem; */
+        text-align: center;
+    }
+    .photographer_header__name{
+        font-size: 3rem;
+    }
+    .photographer_header__text {
+        /* text-align: center; */
+    }
+    .photographer_header__location{
+        font-size: 2rem;
+    }
+    .photograph__info {
+        align-items: center;
+        top: 5rem;
+        height: 2rem;
+        width: 15rem;
+        font-size: medium;
+    }
+    .content{
+        width: 90%;
+    }
+    .modal__header{
+        font-size: medium;
+        flex-direction: row;
+    }
+    .closeBtn{
+        width: 1em;
+    }
+    .modal__photographerName{
+font-size: x-large;
+flex-direction: row;
     }
 }
 @media screen and (max-width: 480px) {
@@ -28,6 +106,9 @@ flex-direction: column;
 h1{
     font-size: 1.5em;
 }
+.photographer_header__name{
+        font-size: 2rem;
+    }
 }
 @media screen and (max-width: 340px) {
     .photographer_section {

@@ -162,7 +162,8 @@ textarea {
 .formData[data-error]::after {
   content: attr(data-error);
   font-size: 1rem;
-  color: yellow;
+  font-weight: 600;
+  color: red;
   display: block;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
@@ -176,7 +177,7 @@ textarea {
 }
 
 .formData[data-error-visible=true] .text-control {
-  border: 0.25rem solid yellow;
+  border: 0.25rem solid red;
 }
 
 #message {

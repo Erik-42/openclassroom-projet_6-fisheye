@@ -78,12 +78,12 @@ function checkEmail() {
 const messageInput = document.getElementById("message");
 
 function checkMessage() {
-  const messageRegex = /^[a-zA-Z0-9\s\S]{10,1000}$/; // Condition pour un message valide
+  const messageRegex = /^[a-zA-Z0-9\s\S]{10,500}$/; // Condition pour un message valide
 
   if (!messageRegex.test(messageInput.value.trim())) {
     addError(
       messageInput,
-      "Entrez un message contenant au moins 10 caractéres et maximum 1000 caractéres."
+      "Entrez un message contenant entre 10 et 500 caractéres maximum."
     );
     return false;
   } else {
