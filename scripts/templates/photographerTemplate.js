@@ -47,31 +47,32 @@ export function photographerTemplate(data) {
 
   function getUserHeaderDOM() {
     const photographer_modal_name = document.querySelector(
-      ".modal__photographerName");
-      photographer_modal_name.innerText = name;
+      ".modal__photographerName"
+    );
+    photographer_modal_name.innerText = name;
     const photographerBannerBeginStructure = `
                 <div class="photographer_header__info">
-                    <h2 class = "photographer_header__name">${name}</h2>
-                    <p class="photographer_header__location">${city}, ${country}</p>
-                    <p class = "photographer_header__text" >${tagline}</p>
-                </div>`
+                    <h2 aria-label="Nom du photographe" class = "photographer_header__name">${name}</h2>
+                    <p aria-label="Localisation du photographe" class="photographer_header__location">${city}, ${country}</p>
+                    <p aria-label="Devise du photographe" class = "photographer_header__text" >${tagline}</p>
+                </div>`;
 
-            const contactBtn = document.createElement('button')
-            contactBtn.className = "contact_button contact-me-btn" 
-            contactBtn.ariaLabel = "Contact me"
-            contactBtn.tabIndex = "1"
-            contactBtn.innerText = "Contactez-moi"
-            contactBtn.addEventListener('click', launchModal)
+    const contactBtn = document.createElement("button");
+    contactBtn.className = "contact_button contact-me-btn";
+    contactBtn.ariaLabel = "Contactez moi";
+    contactBtn.tabIndex = "1";
+    contactBtn.innerText = "Contactez-moi";
+    contactBtn.addEventListener("click", launchModal);
 
-const divPortrait = document.createElement("div");
-divPortrait.className = "photographer_header__portrait";
-divPortrait.innerHTML = `<img src="${picture}" alt="portrait photographe" class="photographer_header__portrait__img" >`;
+    const divPortrait = document.createElement("div");
+    divPortrait.className = "photographer_header__portrait";
+    divPortrait.innerHTML = `<img aria-label="Portrait du photographe" src="${picture}" alt="portrait photographe" class="photographer_header__portrait__img" >`;
 
     const container = document.createElement("section");
     container.classList.add("photographer_header");
     container.innerHTML = photographerBannerBeginStructure;
-    container.appendChild(contactBtn)
-    container.appendChild(divPortrait)
+    container.appendChild(contactBtn);
+    container.appendChild(divPortrait);
     return container;
   }
   return {

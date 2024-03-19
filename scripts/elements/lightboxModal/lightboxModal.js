@@ -1,6 +1,8 @@
-import { enableBodyScroll, disableBodyScroll } from "../../utils/body-scroll-lock.js";
-// import {getMediaAndName} from "../../utils/getMediaAndName.js"
-import {mediaFactory} from "../../utils/mediaFactory.js"
+import {
+  enableBodyScroll,
+  disableBodyScroll,
+} from "../../utils/body-scroll-lock.js";
+import { mediaFactory } from "../../utils/mediaFactory.js";
 
 /**
  * @property {HTMLElement} element
@@ -10,13 +12,18 @@ import {mediaFactory} from "../../utils/mediaFactory.js"
 
 export class LightboxModal {
   static init(mediasCards) {
- 
-    const gallery = mediasCards.map((mediasCard) => mediasCard.querySelector(".photograph__gallery__card__photo").getAttribute("href"));
+    const gallery = mediasCards.map((mediasCard) =>
+      mediasCard
+        .querySelector(".photograph__gallery__card__photo")
+        .getAttribute("href")
+    );
     mediasCards.forEach((mediasCard) =>
-    mediasCard.querySelector(".photograph__gallery__card__photo").addEventListener("click", (e) => {
-        e.preventDefault();
-        new LightboxModal(e.currentTarget.getAttribute("href"), gallery);
-      })
+      mediasCard
+        .querySelector(".photograph__gallery__card__photo")
+        .addEventListener("click", (e) => {
+          e.preventDefault();
+          new LightboxModal(e.currentTarget.getAttribute("href"), gallery);
+        })
     );
   }
 
@@ -38,31 +45,30 @@ export class LightboxModal {
    * @param {string} url URL de l'image actuellement affichée
    */
   loadImage(url) {
-    let image 
-    console.log(url,url.substring(url.length-4,url.length))
+    let image;
+    console.log(url, url.substring(url.length - 4, url.length));
     this.url = null;
     const container = this.element.querySelector(".lightboxModal__container");
     const loader = document.createElement("div");
     loader.classList.add("lightboxModal__loader");
     container.innerHTML = "";
     container.appendChild(loader);
-   
-    if(url.substring(url.length-4,url.length)=='.mp4'){
-      console.log("video")
+
+    if (url.substring(url.length - 4, url.length) == ".mp4") {
+      console.log("video");
       image = document.createElement("video");
-      image.controls = true
+      image.controls = true;
       container.removeChild(loader);
       container.appendChild(image);
-    }else {
+    } else {
       image = new Image();
       image.onload = () => {
-        // console.log("Image Chargée");
         container.removeChild(loader);
         container.appendChild(image);
         this.url = url;
       };
     }
-    
+
     image.src = url;
     this.url = url;
   }
@@ -85,12 +91,11 @@ export class LightboxModal {
    * @param {MouseEvent|KeyboardEvent} e
    */
   close(e) {
-    // console.log('close')
     e.preventDefault();
-     this.element.classList.add("fadeOut");
+    this.element.classList.add("fadeOut");
     enableBodyScroll(this.element);
     window.setTimeout(() => {
-      this.element.style.display='none';
+      this.element.style.display = "none";
     }, 500);
     document.removeEventListener("keyup", this.onKeyUp);
   }
@@ -99,7 +104,6 @@ export class LightboxModal {
    * @param {MouseEvent|KeyboardEvent} e
    */
   next(e) {
-    // console.log('next')
     e.preventDefault();
     let i = this.images.findIndex((image) => image == this.url);
     if (i == this.images.length - 1) {
@@ -112,13 +116,11 @@ export class LightboxModal {
    * @param {MouseEvent|KeyboardEvent} e
    */
   prev(e) {
-    // console.log('prev',this.images,this.url)
     e.preventDefault();
     let i = this.images.findIndex((image) => image == this.url);
     if (i == 0) {
       i = this.images.length;
     }
-    // console.log(i,this.images[i - 1])
     this.loadImage(this.images[i - 1]);
   }
 
@@ -127,13 +129,12 @@ export class LightboxModal {
    * @return {HTMLElement}
    */
   buildDOM(url) {
-    // console.log(url)
-    const dom = document.getElementById('lightboxModal')
-    dom.style.display='block'
+    const dom = document.getElementById("lightboxModal");
+    dom.style.display = "block";
     dom.innerHTML = `
-            <button class="lightboxModal__close" tabindex="4">Fermer</button>
-            <button class="lightboxModal__next" tabindex="2">Suivant</button>
-            <button class="lightboxModal__prev" tabindex="3">Précédent</button>
+            <button class="lightboxModal__close" aria-label="Fermer la lightbox" tabindex="4">Fermer</button>
+            <button class="lightboxModal__next" aria-label="Photo suivante" tabindex="2">Suivant</button>
+            <button class="lightboxModal__prev" aria-label="Photo précédente" tabindex="3">Précédent</button>
             <div class="lightboxModal__container" tabindex="1">
                 <img src="${url}" alt="${mediaFactory.title}">
             </div>`;
@@ -150,6 +151,3 @@ export class LightboxModal {
     return dom;
   }
 }
-
-// LightboxModal.init()
-

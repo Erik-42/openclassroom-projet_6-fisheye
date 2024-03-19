@@ -1,6 +1,6 @@
-.dropdownMenu {
+/* .dropdownMenu {
   background-color: darkcyan;
-}
+} */
 
 .photograph__media__sort {
   font-size: 1.125rem;
@@ -49,7 +49,7 @@
   color: var(--defaultFontColor);
 }
 
-.divDropBtn{
+.divDropBtn {
   display: flex;
   align-items: center;
   gap: 2rem;

@@ -1,121 +1,130 @@
-body{
+body {
   margin: 0;
 }
 
-.images__container{
-padding: 16px;
-display: grid;
-justify-content: center;
-grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-grid-gap: 16px;
+.images__container {
+  padding: 16px;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 16px;
 }
 
-.images__container img{
+.images__container img {
   display: block;
   width: 100%;
 }
 
-#lightboxModal{
-    display: none;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* background-color: var(--defaultBgColor); */
-    padding: 1em 0;
-    background-color: rgba(0,0,0, .9);
-    z-index: 10;
-    overflow: auto;
-    animation: lightboxIn .5s;
-    transition: .3s;
+#lightboxModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: var(--defaultBgColor); */
+  padding: 1em 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 10;
+  overflow: auto;
+  animation: lightboxIn 0.5s;
+  transition: 0.3s;
 }
 
 .lightboxModal.fadeOut {
-    opacity: 0;
+  opacity: 0;
 }
 
 .lightboxModal__container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-height: 100vh;
-    margin: 0 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 100vh;
+  margin: 0 50px;
 }
 
-.lightboxModal__next, .lightboxModal__prev {
-    border: none;
-    background: url(../../../assets/icons/arrow.svg) center center / 100% 100% no-repeat;
-    width: 50px;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    right: 0;
-    margin-top: -14px;
-    z-index: 11;
+.lightboxModal__next,
+.lightboxModal__prev {
+  border: none;
+  background: url(../../../assets/icons/arrow.svg) center center / 100% 100%
+    no-repeat;
+  width: 50px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: -14px;
+  z-index: 11;
 }
 
-.lightboxModal__next:hover, .lightboxModal__prev:hover{
-    opacity: 1;
+.lightboxModal__next:hover,
+.lightboxModal__prev:hover {
+  opacity: 1;
 }
 
 .lightboxModal__prev {
-    right: auto;
-    left: 0;
-    transform: rotate(180deg);
+  right: auto;
+  left: 0;
+  transform: rotate(180deg);
 }
 
-.lightboxModal__close{
-width: 30px;
-height: 30px;
-border: none;
-background: url(../../../assets/icons/close.svg) center center / 100% 100% no-repeat transparent;
-position: fixed;
-top: 20px;
-right:10px;
-opacity: .5;
-z-index: 12;
-text-indent: -3000px;
+.lightboxModal__close {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: url(../../../assets/icons/close.svg) center center / 100% 100%
+    no-repeat transparent;
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  opacity: 0.5;
+  z-index: 12;
+  text-indent: -3000px;
 }
 
-#lightboxModal button{
-opacity: .5;
-cursor: pointer;
-transition: opacity .3s;
-text-indent: -3000px;
-box-shadow: 10px 5px 5px black;
+#lightboxModal button {
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.3s;
+  text-indent: -3000px;
+  box-shadow: 10px 5px 5px black;
 }
 
-#lightboxModal button:hover{
+#lightboxModal button:hover {
+  opacity: 1;
+}
+
+.lightboxModal__container img,
+video {
+  max-width: 100%;
+  animation: lightboxIn 0.5s;
+  max-height: 85vh;
+  object-fit: contain;
+}
+
+.lightboxModal__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 50px;
+  margin-right: 50px;
+  min-height: 95vh;
+}
+
+.lightboxModal__loader {
+  width: 80px;
+  height: 80px;
+  opacity: 0.5;
+  background: url(../../../assets/icons/loader.svg) center center no-repeat;
+}
+
+@keyframes lightboxIn {
+  from {
+    opacity: 0;
+  }
+  to {
     opacity: 1;
-}
-
-.lightboxModal__container img, video{
-    max-width: 100%;
-    animation: lightboxIn .5s;
-    max-height: 85vh;
-    object-fit: contain;
-}
-
-.lightboxModal__container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 50px;
-    margin-right: 50px;
-min-height: 95vh;
-}
-
-.lightboxModal__loader{
-    width: 80px;
-    height: 80px;
-    opacity: .5;
-    background: url(../../../assets/icons/loader.svg) center center no-repeat;
-}
-
-@keyframes lightboxIn{
-    from{opacity: 0;}
-    to {opacity: 1}
+  }
 }

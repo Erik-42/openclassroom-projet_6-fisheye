@@ -31,13 +31,13 @@
   max-width: 33.5rem;
   animation-name: modalopen;
   animation-duration: var(--modal-duration);
-  background: #ff927a;
-  /* background: var(--secondaryBgColor); */
+  /* background: #ff927a; */
+  background: var(--secondaryBgColor);
   border-radius: 0.25rem;
   overflow: hidden;
   position: relative;
-  color: #fafafa;
-  /* color: var(--tertiaryFontColor); */
+  /* color: #fafafa; */
+  color: var(--tertiaryFontColor);
   padding: 1rem;
 }
 
@@ -104,9 +104,8 @@ textarea {
   height: 100%;
   width: 100%;
   overflow: auto;
-  background-color: #d3573c;
-  /* background-color: var(--secondaryBgColor); */
-
+  /* background-color: #ff927a; */
+  background-color: var(--secondaryBgColor);
 }
 
 .modalValidForm h4,
@@ -118,14 +117,14 @@ textarea {
 .btn-submit,
 .btn-signup,
 .btn-closeModal {
-  background: #901C1C;
-  /* background: var(--primaryBgColor); */
+  /* background: #901c1c; */
+  background: var(--primaryBgColor);
   display: block;
   border-radius: 0.25rem;
   font-size: 1rem;
   padding: 0.75rem 3.25rem;
-  color: #fafafa;
-  /* color: var(--tertiaryFontColor); */
+  /* color: #fafafa; */
+  color: var(--tertiaryFontColor);
   cursor: pointer;
   border: 0;
   outline: 0;
@@ -139,8 +138,8 @@ textarea {
 .btn-submit:hover,
 .btn-signup:hover,
 .btn-closeModal:hover {
-  background: #d3573c;
-  /* background: var(--secondaryBgColor); */
+  /* background: #d3573c; */
+  background: var(--secondaryBgColor);
   color: var(--defaultFontColor);
   color: var(--);
 }
@@ -172,11 +171,11 @@ textarea {
   transition: 0.3s;
 }
 
-.formData[data-error-visible=true]::after {
+.formData[data-error-visible="true"]::after {
   opacity: 1;
 }
 
-.formData[data-error-visible=true] .text-control {
+.formData[data-error-visible="true"] .text-control {
   border: 0.25rem solid red;
 }
 
@@ -202,7 +201,7 @@ textarea {
   content: " ";
   height: 2rem;
   width: 0.25rem;
-  background-color: #fafafa;
+  background-color: var(--tertiaryFontColor);
 }
 
 .close::before {

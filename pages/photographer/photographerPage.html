@@ -54,7 +54,7 @@
         <button class="contact_button contact-me-btn" aria-label="Contact me" tabindex="1">Contactez-moi
         </button>
         <div class="photographer_header__portrait">
-          <img class="photographer_header__portrait__img" src="../../assets/photographers/account.png" alt="logo account">
+          <img class="photographer_header__portrait__img" src="../../assets/photographers/account.png" alt="Portrait photographe">
         </div>
       </section>
     </div>
@@ -62,24 +62,24 @@
       <div class="photograph__media">
 
         <div class="photograph__media__sort">
-          <span id="sortBy">Trier Par</span>
+          <span aria-label="Trier par" id="sortBy">Trier Par</span>
 
-        <button  id="dropdownSelector" class="dropdownBtn" role="button" tabindex="2">
+        <button aria-label="Filtre de tri" id="dropdownSelector" class="dropdownBtn" role="button" tabindex="2">
           <div class="divDropBtn">
             <span id="nameBtn">Popularité</span>
             <i class="fa-solid fa-chevron-down"></i>
           </div>
             <ul id="dropdownSelector__list" class="dropdownContent" role="listbox">
-                <li id="popularity" class="dropdownSelector__list__option" role="option" tabindex="3">
+                <li aria-label="Filtre par popularité" id="popularity" class="dropdownSelector__list__option" role="option" tabindex="3">
                     <a class="dropdownSelector__list__link" id="btnPop" href="#popularité">Popularité</a>
                     <i class="fa-solid fa-chevron-up"></i>
                 </li>
                 <p class="dropdownSelector__list__line"></p>
-                <li id="date" class="dropdownSelector__list__option" role="option" tabindex="4">
+                <li aria-label="Filtre par date" id="date" class="dropdownSelector__list__option" role="option" tabindex="4">
                     <a class="dropdownSelector__list__link" id="btnDate" href="#date">Date</a>
                 </li>
                 <p class="dropdownSelector__list__line"></p>
-                <li id="titre" class="dropdownSelector__list__option" role="option" tabindex="5">
+                <li aria-label="Filtre par titre" id="titre" class="dropdownSelector__list__option" role="option" tabindex="5">
                     <a class="dropdownSelector__list__link" id="btnTitre" href="#titre">Titre</a>
                 </li>
             </ul>
@@ -97,7 +97,7 @@
       <div class="content">
         <header class="modal__header">
                 <h2>Contactez-moi</h2>
-                <img class="closeBtn" src="../../../assets/icons/close.svg" tabindex="6">
+                <img aria-label="Fermer le formulaire" class="closeBtn" src="../../../assets/icons/close.svg" tabindex="6">
             </header>
         <h3 class="modal__photographerName"></h3>
 
@@ -106,22 +106,22 @@
             <!-- Infos User -->
             <div class="formData">
               <label for="first">Prénom</label><br>
-              <input class="text-control" type="text" id="first" name="first" minlength="2" aria-label="Your firstname" tabindex="1"><br>
+              <input class="text-control" type="text" id="first" name="first" minlength="2" aria-label="saisissez votre prénom" tabindex="1"><br>
             </div>
             <div class="formData">
               <label for="last">Nom</label><br>
-              <input class="text-control" type="text" id="last" name="last" aria-label="Your lastname" tabindex="2"><br>
+              <input class="text-control" type="text" id="last" name="last" aria-label="Saisissez votre nom" tabindex="2"><br>
             </div>
             <div class="formData">
               <label for="email">E-mail</label><br>
-              <input class="text-control" type="email" id="email" name="email" aria-label="Your email" tabindex="3"><br>
+              <input class="text-control" type="email" id="email" name="email" aria-label="Saisissez votre e-mail" tabindex="3"><br>
             </div>
             <div class="formData">
                   <label form="message" for="message">Votre message</label><br>
-                  <textarea class="text-control" type="text" id="message" name="message" minlength="10" maxlength="1000" aria-label="Your message" tabindex="4"></textarea><br>
+                  <textarea class="text-control" type="text" id="message" name="message" minlength="10" maxlength="1000" aria-label="Saisissez votre message" tabindex="4"></textarea><br>
 			        </div>
 
-            <button class="btn-submit" type="submit" aria-label="button send" tabindex="5">Envoyer</button>
+            <button class="btn-submit" type="submit" aria-label="Bouton envoyer le formulaire" tabindex="5">Envoyer</button>
           </form>
 
           <!-- Modale formulaire validé -->
@@ -129,7 +129,7 @@
             <div class="modalValidForm">
               <h4 class="valid">Merci !</h4>
               <p>Votre message a été envoyé.</p>
-              <button class="btn-closeModal" tabindex="1">Fermer</button>
+              <button aria-label="Bouton fermer le formulaire" class="btn-closeModal" tabindex="1">Fermer</button>
             </div>
           </div>
 
