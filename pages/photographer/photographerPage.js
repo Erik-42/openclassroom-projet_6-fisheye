@@ -1,15 +1,14 @@
-import {photographerTemplate} from '../../scripts/templates/photographerTemplate.js'
-import {mediaFactory} from "../../scripts/utils/mediaFactory.js"
-import {dropDownEvent} from "../../scripts/elements/dropdownSort/dropdownSort.js"
-import {getMediaAndName} from '../../scripts/utils/getMediaAndName.js'
-// import {launchModal} from '../../scripts/elements/contactModal/contactModal.js'
-import {popupPhotographer} from "../../scripts/elements/photographerPopup/photographerPopup.js"
-import {LightboxModal} from "../../scripts/elements/lightboxModal/lightboxModal.js"
-export const {medias, photographer} = await getMediaAndName()
+import { photographerTemplate } from "../../scripts/templates/photographerTemplate.js";
+import { mediaFactory } from "../../scripts/utils/mediaFactory.js";
+import { dropDownEvent } from "../../scripts/elements/dropdownSort/dropdownSort.js";
+import { getMediaAndName } from "../../scripts/utils/getMediaAndName.js";
+import { popupPhotographer } from "../../scripts/elements/photographerPopup/photographerPopup.js";
+import { LightboxModal } from "../../scripts/elements/lightboxModal/lightboxModal.js";
+export const { medias, photographer } = await getMediaAndName();
 
 async function displayHeader(photographer) {
   const photographersHeader = document.querySelector(".photographer_container");
-  photographersHeader.innerHTML = ""
+  photographersHeader.innerHTML = "";
   const photographerPage = new photographerTemplate(photographer);
   const photographerBanner = photographerPage.getUserHeaderDOM();
   photographersHeader.appendChild(photographerBanner);
@@ -17,21 +16,23 @@ async function displayHeader(photographer) {
 
 export async function displayMedias(medias, photographerName) {
   const mediasContainer = document.querySelector(".photograph__gallery");
-  mediasContainer.innerHTML = ""
-  const mediasCards = []
-  medias.forEach(media => {
+  mediasContainer.innerHTML = "";
+  const mediasCards = [];
+  medias.forEach((media) => {
     const mediaPage = mediaFactory(media, photographerName);
     const mediaCard = mediaPage.getMediaCardDOM();
     mediasContainer.appendChild(mediaCard);
-    mediasCards.push(mediaCard)
-  })
-  LightboxModal.init(mediasCards)
+    mediasCards.push(mediaCard);
+  });
+  LightboxModal.init(mediasCards);
 }
 
 async function init() {
   const photographPopup = document.querySelector(".photograph__popup");
-  photographPopup.appendChild(popupPhotographer(`${photographer.price} €`,medias));
-  dropDownEvent()
+  photographPopup.appendChild(
+    popupPhotographer(`${photographer.price} €`, medias)
+  );
+  dropDownEvent();
   displayHeader(photographer);
   displayMedias(medias, photographer.name);
 }

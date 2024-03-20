@@ -22,9 +22,7 @@
         top: 18rem;
         align-items: center;
     }
-    .photographer_header__name{
-        /* font-size: 3rem; */
-    }
+    
     .contact_button{
         position: absolute;
         top: 35rem;
@@ -64,15 +62,12 @@ display: flex;
 flex-direction: column;
     }
     .photographer_header__info{
-        /* font-size: 3rem; */
         text-align: center;
     }
     .photographer_header__name{
         font-size: 3rem;
     }
-    .photographer_header__text {
-        /* text-align: center; */
-    }
+    
     .photographer_header__location{
         font-size: 2rem;
     }
