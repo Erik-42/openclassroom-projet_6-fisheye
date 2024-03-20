@@ -33,10 +33,10 @@
   <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="../../css/style.css" rel="stylesheet" type="text/css" />
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link href="../../css/style.css" rel="stylesheet" type="text/css">
 
-<script src="../../pages/photographer/photographerPage.js" type="module" defer></script>
+<script src="../../pages/photographer/photographerPage.js" type="module"></script>
 
 </head>
 
@@ -49,26 +49,26 @@
 
     <div class="photographer_container">
 
-      <section class="photographer_header">
+      <div class="photographer_header">
       
         <button class="contact_button contact-me-btn" aria-label="Contact me" tabindex="1">Contactez-moi
         </button>
         <div class="photographer_header__portrait">
           <img class="photographer_header__portrait__img" src="../../assets/photographers/account.png" alt="Portrait photographe">
         </div>
-      </section>
+      </div>
     </div>
 
       <div class="photograph__media">
 
         <div class="photograph__media__sort">
-          <span aria-label="Trier par" id="sortBy">Trier Par</span>
+          <span id="sortBy">Trier Par</span>
 
-        <button aria-label="Filtre de tri" id="dropdownSelector" class="dropdownBtn" role="button" tabindex="2">
-          <div class="divDropBtn">
+        <button aria-label="Filtre de tri" id="dropdownSelector" class="dropdownBtn" tabindex="2">
+          <span class="divDropBtn">
             <span id="nameBtn">Popularité</span>
             <i class="fa-solid fa-chevron-down"></i>
-          </div>
+          </span>
             <ul id="dropdownSelector__list" class="dropdownContent" role="listbox">
                 <li aria-label="Filtre par popularité" id="popularity" class="dropdownSelector__list__option" role="option" tabindex="3">
                     <a class="dropdownSelector__list__link" id="btnPop" href="#popularité">Popularité</a>
@@ -97,12 +97,12 @@
       <div class="content">
         <header class="modal__header">
                 <h2>Contactez-moi</h2>
-                <img aria-label="Fermer le formulaire" class="closeBtn" src="../../../assets/icons/close.svg" tabindex="6">
+                <img aria-label="Fermer le formulaire" class="closeBtn" src="../../../assets/icons/close_white.svg" alt="fermer" tabindex="6">
             </header>
         <h3 class="modal__photographerName"></h3>
 
         <div class="modal-body">
-          <form name="reserve" action="" method="get">
+          <form name="reserve" method="get">
             <!-- Infos User -->
             <div class="formData">
               <label for="first">Prénom</label><br>
@@ -117,8 +117,8 @@
               <input class="text-control" type="email" id="email" name="email" aria-label="Saisissez votre e-mail" tabindex="3"><br>
             </div>
             <div class="formData">
-                  <label form="message" for="message">Votre message</label><br>
-                  <textarea class="text-control" type="text" id="message" name="message" minlength="10" maxlength="1000" aria-label="Saisissez votre message" tabindex="4"></textarea><br>
+                  <label for="message">Votre message</label><br>
+                  <textarea class="text-control" id="message" name="message" minlength="10" maxlength="1000" aria-label="Saisissez votre message" tabindex="4"></textarea><br>
 			        </div>
 
             <button class="btn-submit" type="submit" aria-label="Bouton envoyer le formulaire" tabindex="5">Envoyer</button>

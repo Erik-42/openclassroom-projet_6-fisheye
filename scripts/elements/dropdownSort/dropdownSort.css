@@ -42,6 +42,9 @@
   padding: 1rem;
   position: relative;
 }
+.dropdownBtn:hover{
+    background: var(--secondaryBgColor);
+}
 
 .dropdownBtn .dropdownSelector__list__option:hover,
 .dropdownBtn .dropdownSelector__list__option:focus {
