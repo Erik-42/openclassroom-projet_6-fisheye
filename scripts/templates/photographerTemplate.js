@@ -17,6 +17,7 @@ export function photographerTemplate(data) {
 
     const img = document.createElement("img");
     img.setAttribute("src", picture);
+    img.setAttribute("alt", "portrait de " + name);
     img.classList.add("photographer_section_img");
 
     const h2Name = document.createElement("h2");
@@ -66,7 +67,7 @@ export function photographerTemplate(data) {
 
     const divPortrait = document.createElement("div");
     divPortrait.className = "photographer_header__portrait";
-    divPortrait.innerHTML = `<img aria-label="Portrait du photographe" src="${picture}" alt="portrait photographe" class="photographer_header__portrait__img" >`;
+    divPortrait.innerHTML = `<img aria-label="Portrait du photographe" src="${picture}" alt="portrait de ${name}" class="photographer_header__portrait__img" >`;
 
     const container = document.createElement("section");
     container.classList.add("photographer_header");

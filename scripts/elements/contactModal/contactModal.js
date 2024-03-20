@@ -9,7 +9,7 @@ export function launchModal() {
 // Fermeture de la modale
 const closeBtn = document.querySelector(".closeBtn");
 if(closeBtn) closeBtn.addEventListener("click", resetModal);
-
+// if(closeBtn) closeBtn.addEventListener(e.key == "Escape", resetModal);
 
 // Reset du formulaire
 function resetModal() {
