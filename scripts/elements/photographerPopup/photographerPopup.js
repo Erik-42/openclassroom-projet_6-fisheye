@@ -22,7 +22,7 @@ export function popupPhotographer(photographerPrice, medias) {
          <div class="photograph__info__like"">
           <div aria-label="Like total du photographe" id="totalLikes" class="photograph__info__like__nbr">${likesTotalPhotographer}</div>
           <div class="photograph__info__like__heart">
-          <i class="fas fa-heart"></i>
+          <i aria-labbel="cliquer sur le coeur pour ajouter un like à cette photo" class="fas fa-heart"></i>
           </div>
         </div>
         <div aria-label="Tarif journalier photographe" class="photograph__info__price">${photographerPrice}/jour</div>

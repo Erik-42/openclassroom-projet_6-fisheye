@@ -1,5 +1,5 @@
 export async function getPhotographers() {
-        const localeURL = '../../data/photographersData.json';
+        const localeURL = './data/photographersData.json';
 
         try {
             const response = await fetch(localeURL);

@@ -7,7 +7,7 @@ export function videoTemplate(data, photographerName) {
     const mediaCardStructure = `
     <a href="${videoSource}" class="photograph__gallery__card__photo">
       <video>
-        <source src="${videoSource}" alt="${title}">
+        <source src="${videoSource}" alt="Le titre de la vidéo est ${title}">
       </video>
     </a>`;
 

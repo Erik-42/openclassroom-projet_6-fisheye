@@ -16,7 +16,7 @@ export function imageTemplate(data,photographerName) {
     function getMediaCardDOM() {
         const mediaCardStructure = `
         <a class="photograph__gallery__card__photo" href="${picture}">
-        <img src="${picture}" alt="${title}">
+        <img src="${picture}" alt="Le titre de la photo est ${title}">
         </a>`;
 
         const photographGalleryCardPhotoInfo = document.createElement('div')

@@ -33,7 +33,7 @@ export function photographerTemplate(data) {
     tag.classList.add("photographer_section_tagline");
 
     const prix = document.createElement("p");
-    prix.textContent = price + ` / jour`;
+    prix.textContent = price + `€ / jour`;
     prix.classList.add("photographer_section_price");
 
     linkPhotographerPage.appendChild(img);
@@ -67,7 +67,7 @@ export function photographerTemplate(data) {
 
     const divPortrait = document.createElement("div");
     divPortrait.className = "photographer_header__portrait";
-    divPortrait.innerHTML = `<img aria-label="Portrait du photographe" src="${picture}" alt="portrait de ${name}" class="photographer_header__portrait__img" >`;
+    divPortrait.innerHTML = `<img src="${picture}" alt="Photo de ${name}" class="photographer_header__portrait__img" >`;
 
     const container = document.createElement("section");
     container.classList.add("photographer_header");
