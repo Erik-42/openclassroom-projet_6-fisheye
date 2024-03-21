@@ -132,11 +132,12 @@ export class LightboxModal {
     const dom = document.getElementById("lightboxModal");
     dom.style.display = "block";
     dom.innerHTML = `
-            <button class="lightboxModal__close" aria-label="Fermer la lightbox" tabindex="4">Fermer</button>
-            <button class="lightboxModal__next" aria-label="Photo suivante" tabindex="2">Suivant</button>
-            <button class="lightboxModal__prev" aria-label="Photo précédente" tabindex="3">Précédent</button>
-            <div class="lightboxModal__container" tabindex="1">
+            <button class="lightboxModal__close" aria-label="Fermer la lightbox" tabindex="3">Fermer</button>
+            <button class="lightboxModal__next" aria-label="Photo suivante" tabindex="1">Suivant</button>
+            <button class="lightboxModal__prev" aria-label="Photo précédente" tabindex="2">Précédent</button>
+            <div class="lightboxModal__container">
                 <img src="${url}" alt="${mediaFactory.title}">
+                <h3 class="lightmodal_titre">titre photo</h3>
             </div>`;
 
     dom
