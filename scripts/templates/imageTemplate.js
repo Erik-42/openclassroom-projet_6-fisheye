@@ -33,7 +33,7 @@ export function imageTemplate(data,photographerName,tabindex) {
         photographGalleryCardPhotoInfoNbr.innerText = likes
         const photographGalleryCardPhotoInfoHeart = document.createElement('i')
         photographGalleryCardPhotoInfoHeart.className = "photograph__gallery__card__photo__info__heart fas fa-heart"
-        photographGalleryCardPhotoInfoHeart.setAttribute =""
+        photographGalleryCardPhotoInfoHeart.setAttribute ('aria-label',"Coeur Cliquez pour liker la photo")
 
         photographGalleryCardPhotoInfo.appendChild(photographGalleryCardPhotoInfoTitre)
         photographGalleryCardPhotoInfo.appendChild(photographGalleryCardPhotoInfoLike)

@@ -7,7 +7,7 @@ export function videoTemplate(data, photographerName,tabindex) {
     const mediaCardStructure = `
     <a tabindex="${tabindex}" href="${videoSource}" class="photograph__gallery__card__photo">
       <video>
-        <source src="${videoSource}" alt="Le titre de la vidéo est ${title}">
+        <source src="${videoSource}" aria_label="Le titre de la vidéo est ${title}">
       </video>
       <span class="noshow">Le titre de la vidéo est ${title}</span>
     </a>`;
@@ -28,9 +28,10 @@ export function videoTemplate(data, photographerName,tabindex) {
     photographGalleryCardPhotoInfoNbr.className =
       "photograph__gallery__card__photo__info__nbr";
     photographGalleryCardPhotoInfoNbr.innerText = likes;
-    const photographGalleryCardPhotoInfoHeart = document.createElement("i");
+    const photographGalleryCardPhotoInfoHeart = document.createElement("span");
     photographGalleryCardPhotoInfoHeart.className =
       "photograph__gallery__card__photo__info__heart fas fa-heart";
+    photographGalleryCardPhotoInfoHeart.setAttribute("aria-label", "Coeur Cliquez pour liker la vidéo");
 
     photographGalleryCardPhotoInfo.appendChild(
       photographGalleryCardPhotoInfoTitre

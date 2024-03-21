@@ -17,7 +17,7 @@ export function photographerTemplate(data) {
 
     const img = document.createElement("img");
     img.setAttribute("src", picture);
-    img.setAttribute("alt", "portrait de " + name);
+    img.setAttribute("alt", "photo de " + name);
     img.classList.add("photographer_section_img");
 
     const h2Name = document.createElement("h2");
@@ -53,9 +53,9 @@ export function photographerTemplate(data) {
     photographer_modal_name.innerText = name;
     const photographerBannerBeginStructure = `
                 <div class="photographer_header__info">
-                    <h2 aria-label="Nom du photographe" class = "photographer_header__name">${name}</h2>
-                    <p aria-label="Localisation du photographe" class="photographer_header__location">${city}, ${country}</p>
-                    <p aria-label="Devise du photographe" class = "photographer_header__text" >${tagline}</p>
+                    <h2 aria-label="le nom du photographe est ${name}" class = "photographer_header__name">${name}</h2>
+                    <h3 aria-label="la localisation du photographe est ${city}, ${country}" class="photographer_header__location">${city}, ${country}</h3>
+                    <p aria-label="la devise du photographe est ${tagline}" class = "photographer_header__text" >${tagline}</p>
                 </div>`;
 
     const contactBtn = document.createElement("button");
