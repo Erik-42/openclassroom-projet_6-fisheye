@@ -162,8 +162,7 @@ textarea {
   content: attr(data-error);
   font-size: 1rem;
   font-weight: 600;
-  color: red;
-  display: block;
+  color: yellow;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   text-align: left;
@@ -176,7 +175,7 @@ textarea {
 }
 
 .formData[data-error-visible="true"] .text-control {
-  border: 0.25rem solid red;
+  border: 0.25rem solid yellow;
 }
 
 #message {
