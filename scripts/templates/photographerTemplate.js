@@ -2,10 +2,10 @@ import { launchModal } from "../elements/contactModal/contactModal.js";
 
 export function photographerTemplate(data) {
   const { name, id, portrait, city, country, tagline, price } = data;
-  const picture = `../../assets/photographers/photographers-ID-Photos/${portrait}`;
+  const picture = `https://erik-42.github.io/openclassroom-fisheye/assets/photographers/photographers-ID-Photos/${portrait}`;
   function photographerId() {
     // Redirige vers la page photographer.html en passant l'ID comme paramètre
-    window.location.href = `../../pages/photographer/photographerPage.html?id=${id}`;
+    window.location.href = `https://erik-42.github.io/openclassroom-fisheye/pages/photographer/photographerPage.html?id=${id}`;
   }
 
   function getUserCardDOM() {
