@@ -1,5 +1,5 @@
 export async function getPhotographers() {
-        const localeURL = './data/photographersData.json';
+        const localeURL = 'https://erik-42.github.io/openclassroom-fisheye/data/photographersData.json';
 
         try {
             const response = await fetch(localeURL);

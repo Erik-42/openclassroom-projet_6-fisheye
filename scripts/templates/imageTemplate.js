@@ -11,7 +11,7 @@ export function imageTemplate(data,photographerName) {
         price
     } = data;
 
-    const picture = `../../assets/images/Sample Photos/${photographerName}/${image}`;
+    const picture = `https://erik-42.github.io/openclassroom-fisheye/assets/images/Sample Photos/${photographerName}/${image}`;
 
     function getMediaCardDOM() {
         const mediaCardStructure = `
