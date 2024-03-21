@@ -61,7 +61,7 @@ export function photographerTemplate(data) {
     const contactBtn = document.createElement("button");
     contactBtn.className = "contact_button contact-me-btn";
     contactBtn.ariaLabel = "Contactez moi";
-    contactBtn.tabIndex = "1";
+    contactBtn.tabIndex = "2";
     contactBtn.innerText = "Contactez-moi";
     contactBtn.addEventListener("click", launchModal);
 

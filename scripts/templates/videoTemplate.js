@@ -1,14 +1,15 @@
 import { addPopupLike } from "../elements/photographerPopup/photographerPopup.js";
 
-export function videoTemplate(data, photographerName) {
+export function videoTemplate(data, photographerName,tabindex) {
   const { id, photographerId, title, video, likes, date, price } = data;
   const videoSource = `https://erik-42.github.io/openclassroom-fisheye/assets/images/Sample Photos/${photographerName}/${video}`;
   function getMediaCardDOM() {
     const mediaCardStructure = `
-    <a href="${videoSource}" class="photograph__gallery__card__photo">
+    <a tabindex="${tabindex}" href="${videoSource}" class="photograph__gallery__card__photo">
       <video>
         <source src="${videoSource}" alt="Le titre de la vidéo est ${title}">
       </video>
+      <span class="noshow">Le titre de la vidéo est ${title}</span>
     </a>`;
 
     const photographGalleryCardPhotoInfo = document.createElement("div");
@@ -18,7 +19,9 @@ export function videoTemplate(data, photographerName) {
     photographGalleryCardPhotoInfoTitre.className =
       "photograph__gallery__card__photo__info__titre";
     photographGalleryCardPhotoInfoTitre.innerText = title;
-    const photographGalleryCardPhotoInfoLike = document.createElement("div");
+    const photographGalleryCardPhotoInfoLike = document.createElement("a");
+    photographGalleryCardPhotoInfoLike.href="#"
+    photographGalleryCardPhotoInfoLike.setAttribute('tabindex',parseInt(tabindex+1)) 
     photographGalleryCardPhotoInfoLike.className =
       "photograph__gallery__card__photo__info__like";
     const photographGalleryCardPhotoInfoNbr = document.createElement("div");
@@ -42,7 +45,8 @@ export function videoTemplate(data, photographerName) {
       photographGalleryCardPhotoInfoHeart
     );
 
-    photographGalleryCardPhotoInfoLike.addEventListener("click", () => {
+    photographGalleryCardPhotoInfoLike.addEventListener("click", (e) => {
+      e.preventDefault()
       const totalLikesElement = parseInt(
         photographGalleryCardPhotoInfoNbr.innerText
       );

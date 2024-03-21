@@ -1,6 +1,6 @@
 import {addPopupLike} from '../elements/photographerPopup/photographerPopup.js'
 
-export function imageTemplate(data,photographerName) {
+export function imageTemplate(data,photographerName,tabindex) {
     const {
         id,
         photographerId,
@@ -15,7 +15,7 @@ export function imageTemplate(data,photographerName) {
 
     function getMediaCardDOM() {
         const mediaCardStructure = `
-        <a class="photograph__gallery__card__photo" href="${picture}">
+        <a tabindex="${tabindex}" class="photograph__gallery__card__photo" href="${picture}">
         <img src="${picture}" alt="Le titre de la photo est ${title}">
         </a>`;
 
@@ -24,20 +24,24 @@ export function imageTemplate(data,photographerName) {
         const photographGalleryCardPhotoInfoTitre = document.createElement('div')
         photographGalleryCardPhotoInfoTitre.className = "photograph__gallery__card__photo__info__titre"
         photographGalleryCardPhotoInfoTitre.innerText = title
-        const photographGalleryCardPhotoInfoLike = document.createElement('div')
+        const photographGalleryCardPhotoInfoLike = document.createElement('a')
+        photographGalleryCardPhotoInfoLike.href="#"
+        photographGalleryCardPhotoInfoLike.setAttribute('tabindex',parseInt(tabindex+1)) 
         photographGalleryCardPhotoInfoLike.className = "photograph__gallery__card__photo__info__like"
         const photographGalleryCardPhotoInfoNbr = document.createElement('div')
         photographGalleryCardPhotoInfoNbr.className = "photograph__gallery__card__photo__info__nbr"
         photographGalleryCardPhotoInfoNbr.innerText = likes
         const photographGalleryCardPhotoInfoHeart = document.createElement('i')
         photographGalleryCardPhotoInfoHeart.className = "photograph__gallery__card__photo__info__heart fas fa-heart"
+        photographGalleryCardPhotoInfoHeart.setAttribute =""
 
         photographGalleryCardPhotoInfo.appendChild(photographGalleryCardPhotoInfoTitre)
         photographGalleryCardPhotoInfo.appendChild(photographGalleryCardPhotoInfoLike)
         photographGalleryCardPhotoInfoLike.appendChild(photographGalleryCardPhotoInfoNbr)
         photographGalleryCardPhotoInfoLike.appendChild(photographGalleryCardPhotoInfoHeart)
 
-        photographGalleryCardPhotoInfoLike.addEventListener('click',()=>{
+        photographGalleryCardPhotoInfoLike.addEventListener('click',(e)=>{
+            e.preventDefault()
           const totalLikesElement = parseInt(photographGalleryCardPhotoInfoNbr.innerText)
           photographGalleryCardPhotoInfoNbr.innerText =totalLikesElement+1
           addPopupLike()   

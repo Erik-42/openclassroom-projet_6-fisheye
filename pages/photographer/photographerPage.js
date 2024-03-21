@@ -18,11 +18,13 @@ export async function displayMedias(medias, photographerName) {
   const mediasContainer = document.querySelector(".photograph__gallery");
   mediasContainer.innerHTML = "";
   const mediasCards = [];
+  let tabindex = 4
   medias.forEach((media) => {
-    const mediaPage = mediaFactory(media, photographerName);
+    const mediaPage = mediaFactory(media, photographerName,tabindex);
     const mediaCard = mediaPage.getMediaCardDOM();
     mediasContainer.appendChild(mediaCard);
     mediasCards.push(mediaCard);
+    tabindex+=2
   });
   LightboxModal.init(mediasCards);
 }
