@@ -79,17 +79,15 @@ body {
   position: fixed;
   top: 20px;
   right: 10px;
-  /* opacity: 0.5; */
   z-index: 12;
   text-indent: -3000px;
 }
 
 #lightboxModal button {
-  /* opacity: 0.5; */
   cursor: pointer;
   transition: opacity 0.3s;
   text-indent: -3000px;
-  /* box-shadow: 10px 5px 5px black; */
+  color: transparent;
 }
 
 #lightboxModal button:hover {
