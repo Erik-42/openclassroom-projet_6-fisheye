@@ -60,11 +60,11 @@
     </div>
 
       <div class="photograph__media">
-
+        <!-- Dropdown pour les filtres -->
         <div class="photograph__media__sort">
           <span id="sortBy">Trier Par</span>
 
-        <button aria-label="Filtre de tri" id="dropdownSelector" class="dropdownBtn" tabindex="3">
+        <a aria-label="Filtre de tri" id="dropdownSelector" class="dropdownBtn" tabindex="3">
           <span class="divDropBtn">
             <span id="nameBtn">Popularité</span>
             <span class="fa-solid fa-chevron-down"></span>
@@ -83,7 +83,7 @@
                     <a class="dropdownSelector__list__link" id="btnTitre" href="#titre">Titre</a>
                 </li>
             </ul>
-        </button>
+          </a>
         </div>
         
         <div class="photograph__gallery"></div>
@@ -93,6 +93,7 @@
 
       <div id="lightboxModal"></div>
 
+      <!-- Modale formulaire -->
       <aside class="bground">
       <div class="content">
         <header class="modal__header">
@@ -100,7 +101,6 @@
                 <img aria-label="Fermer le formulaire" class="closeBtn" src="https://erik-42.github.io/openclassroom-fisheye/assets/icons/close_white.svg" alt="fermer" tabindex="6">
             </header>
         <h3 class="modal__photographerName"></h3>
-
         <div class="modal-body">
           <form name="reserve" method="get">
             <!-- Infos User -->
