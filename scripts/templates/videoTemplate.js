@@ -1,4 +1,4 @@
-import { addPopupLike } from "../elements/photographerPopup/photographerPopup";
+import { addPopupLike } from "../elements/photographerPopup/photographerPopup.js";
 
 export function videoTemplate(data, photographerName, tabindex) {
   const { id, photographerId, title, video, likes, date, price } = data;

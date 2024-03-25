@@ -1,4 +1,4 @@
-import { launchModal } from "../elements/contactModal/contactModal";
+import { launchModal } from "../elements/contactModal/contactModal.js";
 
 export function photographerTemplate(data) {
   const { name, id, portrait, city, country, tagline, price } = data;

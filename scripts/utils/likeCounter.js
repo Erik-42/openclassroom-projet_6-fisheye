@@ -1,4 +1,4 @@
-import { mediaFactory } from "./mediaFactory";
+import { mediaFactory } from "./mediaFactory.js";
 
 export function likesPhoto(photographerId, likes) {
   // Additionner les likes

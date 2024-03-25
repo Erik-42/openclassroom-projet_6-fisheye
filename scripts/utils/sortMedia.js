@@ -2,7 +2,7 @@ import {
   displayMedias,
   medias,
   photographer,
-} from "../../pages/photographer/photographerPage";
+} from "../../pages/photographer/photographerPage.js";
 
 function clearHTMLMedia(htmlMedia) {
   while (htmlMedia.firstChild) {

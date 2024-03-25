@@ -1,5 +1,5 @@
-import { imageTemplate } from "../templates/imageTemplate";
-import { videoTemplate } from "../templates/videoTemplate";
+import { imageTemplate } from "../templates/imageTemplate.js";
+import { videoTemplate } from "../templates/videoTemplate.js";
 
 export function mediaFactory(media, photographerName, tabindex) {
   if (media.image) {

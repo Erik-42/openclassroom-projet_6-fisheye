@@ -1,4 +1,4 @@
-import { addPopupLike } from "../elements/photographerPopup/photographerPopup";
+import { addPopupLike } from "../elements/photographerPopup/photographerPopup.js";
 
 export function imageTemplate(data, photographerName, tabindex) {
   const { id, photographerId, title, image, likes, date, price } = data;

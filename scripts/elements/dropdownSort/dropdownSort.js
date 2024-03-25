@@ -1,4 +1,4 @@
-import { sortMedia } from "../../utils/sortMedia";
+import { sortMedia } from "../../utils/sortMedia.js";
 
 export function dropDownEvent() {
   const nameBtn = document.getElementById("nameBtn");
