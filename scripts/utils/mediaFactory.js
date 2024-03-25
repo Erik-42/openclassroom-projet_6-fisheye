@@ -1,9 +1,10 @@
-import { imageTemplate } from "../templates/imageTemplate.js";
-import { videoTemplate } from "../templates/videoTemplate.js";
+import {imageTemplate} from '../../scripts/templates/imageTemplate.js'
+import {videoTemplate} from '../../scripts/templates/videoTemplate.js'
 
-export function mediaFactory(media, photographerName, tabindex) {
+export function mediaFactory(media, photographerName,tabindex) {
   if (media.image) {
-    return new imageTemplate(media, photographerName, tabindex);
+    return new imageTemplate(media, photographerName,tabindex);
+  } else {
+    return new videoTemplate(media, photographerName,tabindex);
   }
-  return new videoTemplate(media, photographerName, tabindex);
 }

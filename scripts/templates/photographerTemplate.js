@@ -17,31 +17,34 @@ export function photographerTemplate(data) {
 
     const img = document.createElement("img");
     img.setAttribute("src", picture);
-    img.setAttribute("alt", `photo de ${name}`);
+    img.setAttribute("alt", "photo de " + name);
     img.classList.add("photographer_section_img");
 
     const h2Name = document.createElement("h2");
     h2Name.textContent = name;
     h2Name.classList.add("photographer_section_name");
-    h2Name.setAttribute("aria-label", `Le photographe se nomme ${name}`);
+    h2Name.setAttribute("aria-label", "Le photographe se nomme " + name)
 
     const cityLocation = document.createElement("h3");
-    cityLocation.textContent = `${city}, ${country}`;
+    cityLocation.textContent = city + ", " + country;
     cityLocation.classList.add("photographer_section_city");
     cityLocation.setAttribute(
       "aria-label",
-      `localisation du photographe ${city}, ${country}`,
+      "localisation du photographe " + city + ", " + country
     );
 
     const tag = document.createElement("p");
     tag.textContent = tagline;
     tag.classList.add("photographer_section_tagline");
-    tag.setAttribute("aria-label", `devise du photographe ${tagline}`);
+    tag.setAttribute("aria-label", "devise du photographe " + tagline);
 
     const prix = document.createElement("p");
-    prix.textContent = `${price}€ / jour`;
+    prix.textContent = price + `€ / jour`;
     prix.classList.add("photographer_section_price");
-    prix.setAttribute("aria-label", `tarif du photographe ${price}€ / jour`);
+    prix.setAttribute(
+      "aria-label",
+      "tarif du photographe " + price + `€ / jour`
+   );
 
     linkPhotographerPage.appendChild(img);
     linkPhotographerPage.appendChild(h2Name);
@@ -55,7 +58,7 @@ export function photographerTemplate(data) {
 
   function getUserHeaderDOM() {
     const photographer_modal_name = document.querySelector(
-      ".modal__photographerName",
+      ".modal__photographerName"
     );
     photographer_modal_name.innerText = name;
     const photographerBannerBeginStructure = `

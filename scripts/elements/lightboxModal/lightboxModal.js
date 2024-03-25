@@ -15,7 +15,7 @@ export class LightboxModal {
     const gallery = mediasCards.map((mediasCard) =>
       mediasCard
         .querySelector(".photograph__gallery__card__photo")
-        .getAttribute("href"),
+        .getAttribute("href")
     );
     mediasCards.forEach((mediasCard) =>
       mediasCard
@@ -23,7 +23,7 @@ export class LightboxModal {
         .addEventListener("click", (e) => {
           e.preventDefault();
           new LightboxModal(e.currentTarget.getAttribute("href"), gallery);
-        }),
+        })
     );
   }
 

@@ -1,5 +1,5 @@
 // Gestion de la modale //
-// ouverture modale
+//ouverture modale
 const modalbg = document.querySelector(".bground");
 
 export function launchModal() {
@@ -8,16 +8,15 @@ export function launchModal() {
 
 // Fermeture de la modale
 const closeBtn = document.querySelector(".closeBtn");
-if (closeBtn) closeBtn.addEventListener("click", resetModal);
-if (closeBtn)
-  document.body.addEventListener("keydown", (e) => {
-    if (e.key == "Escape") resetModal();
-  });
+if(closeBtn) closeBtn.addEventListener("click", resetModal);
+if(closeBtn) document.body.addEventListener("keydown",(e)=>{
+  if(e.key == "Escape") resetModal()
+});
 
 // Reset du formulaire
 function resetModal() {
   clearAllErrors(); // Suppression de toutes les erreurs
-  document.forms.reserve.reset(); // Reset du formulaire
+  document.forms["reserve"].reset(); // Reset du formulaire
   modalbg.style.display = "none"; // Rend modale invisible
 }
 
@@ -41,9 +40,10 @@ function checkFirstName() {
   if (!prenomRegex.test(firstNameInput.value.trim())) {
     addError(firstNameInput, "Entrez au moins 2 caractères pour le prénom.");
     return false;
+  } else {
+    clearError(firstNameInput);
+    return firstNameInput.value;
   }
-  clearError(firstNameInput);
-  return firstNameInput.value;
 }
 
 // Test du Nom
@@ -55,9 +55,10 @@ function checkLastName() {
   if (!nomRegex.test(lastNameInput.value.trim())) {
     addError(lastNameInput, "Entrez au moins 2 caractères pour le nom.");
     return false;
+  } else {
+    clearError(lastNameInput);
+    return lastNameInput.value;
   }
-  clearError(lastNameInput);
-  return lastNameInput.value;
 }
 
 // Test email
@@ -69,9 +70,10 @@ function checkEmail() {
   if (!emailRegex.test(emailInput.value.trim())) {
     addError(emailInput, "Entrez une adresse email valide.");
     return false;
+  } else {
+    clearError(emailInput);
+    return emailInput.value;
   }
-  clearError(emailInput);
-  return emailInput.value;
 }
 
 // Test message
@@ -83,12 +85,13 @@ function checkMessage() {
   if (!messageRegex.test(messageInput.value.trim())) {
     addError(
       messageInput,
-      "Entrez un message contenant entre 10 et 500 caractéres maximum.",
+      "Entrez un message contenant entre 10 et 500 caractéres maximum."
     );
     return false;
+  } else {
+    clearError(messageInput);
+    return messageInput.value;
   }
-  clearError(messageInput);
-  return messageInput.value;
 }
 
 // Gestion des erreurs //
@@ -96,7 +99,7 @@ function checkMessage() {
 function addError(input, message) {
   const formData = input.parentElement;
   formData.setAttribute("data-error-visible", true);
-  formData.setAttribute("data-error", message); // Ajout de l'attribut data-error avec le message au formData
+  formData.setAttribute("data-error", message); //Ajout de l'attribut data-error avec le message au formData
 }
 
 // Suppression des erreurs en recuperant l'input concerné
@@ -108,12 +111,12 @@ function clearError(input) {
 
 // Soumission du formulaire //
 const submitForm = document.querySelector('form[name="reserve"]');
-if (submitForm) submitForm.addEventListener("submit", onSubmit);
+if(submitForm) submitForm.addEventListener("submit", onSubmit);
 
 function onSubmit(event) {
   event.preventDefault();
 
-  // controle de la validiter des champs des champs du formulaire individuellement
+  //controle de la validiter des champs des champs du formulaire individuellement
   const resultCheckInput = {
     firstname: checkFirstName(),
     lastname: checkLastName(),
@@ -122,7 +125,13 @@ function onSubmit(event) {
   };
 
   // Controle si tous les champs sont valide
-  if (checkFirstName() && checkLastName() && checkEmail() && checkMessage()) {
+  if (
+    checkFirstName() &&
+    checkLastName() &&
+    checkEmail() &&
+    checkMessage()
+  ) {
+
     console.log(resultCheckInput);
 
     formValid.style.display = "block";
@@ -131,15 +140,14 @@ function onSubmit(event) {
   }
 }
 
-// Close modal valid
+//Close modal valid
 const formValid = document.getElementById("formValid");
 const btnCloseModalValid = document.querySelector(".btn-closeModal");
 
-if (btnCloseModalValid)
-  btnCloseModalValid.addEventListener("click", closeModalValid);
+if(btnCloseModalValid) btnCloseModalValid.addEventListener("click", closeModalValid);
 
 function closeModalValid() {
-  formValid.style.display = "none"; // Effacement du formulaire validé
-  modalbg.style.display = "none"; // Effacement de la modale
-  resetModal(); // Reset de tous les champs du formulaire d'inscription
+  formValid.style.display = "none"; //Effacement du formulaire validé
+  modalbg.style.display = "none"; //Effacement de la modale
+  resetModal(); //Reset de tous les champs du formulaire d'inscription
 }
