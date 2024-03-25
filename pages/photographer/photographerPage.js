@@ -1,9 +1,9 @@
-import { photographerTemplate } from "../../scripts/templates/photographerTemplate.js";
-import { mediaFactory } from "../../scripts/utils/mediaFactory.js";
-import { dropDownEvent } from "../../scripts/elements/dropdownSort/dropdownSort.js";
-import { getMediaAndName } from "../../scripts/utils/getMediaAndName.js";
-import { popupPhotographer } from "../../scripts/elements/photographerPopup/photographerPopup.js";
-import { LightboxModal } from "../../scripts/elements/lightboxModal/lightboxModal.js";
+import { photographerTemplate } from "../../scripts/templates/photographerTemplate";
+import { mediaFactory } from "../../scripts/utils/mediaFactory";
+import { dropDownEvent } from "../../scripts/elements/dropdownSort/dropdownSort";
+import { getMediaAndName } from "../../scripts/utils/getMediaAndName";
+import { popupPhotographer } from "../../scripts/elements/photographerPopup/photographerPopup";
+import { LightboxModal } from "../../scripts/elements/lightboxModal/lightboxModal";
 export const { medias, photographer } = await getMediaAndName();
 
 async function displayHeader(photographer) {

@@ -1,4 +1,4 @@
-import { getPhotographers } from "./getData.js";
+import { getPhotographers } from "./getData";
 
 export async function getMediaAndName() {
   const url = new URL(window.location);

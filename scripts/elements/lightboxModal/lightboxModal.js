@@ -1,8 +1,8 @@
 import {
   enableBodyScroll,
   disableBodyScroll,
-} from "../../utils/body-scroll-lock.js";
-import { mediaFactory } from "../../utils/mediaFactory.js";
+} from "../../utils/body-scroll-lock";
+import { mediaFactory } from "../../utils/mediaFactory";
 
 /**
  * @property {HTMLElement} element
