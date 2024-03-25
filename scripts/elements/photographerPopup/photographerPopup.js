@@ -2,7 +2,7 @@ export function additionLike(medias) {
   // Additionner les likes de chaque photo
   const sommeLikes = medias.reduce(
     (totalLikes, media) => totalLikes + media.likes,
-    0
+    0,
   );
 
   return sommeLikes;
@@ -10,7 +10,7 @@ export function additionLike(medias) {
 
 export function addPopupLike() {
   const photographInfoLikeNbr = document.querySelector(
-    ".photograph__info__like__nbr"
+    ".photograph__info__like__nbr",
   );
   const nbTotalLike = parseInt(photographInfoLikeNbr.innerText);
   photographInfoLikeNbr.innerText = nbTotalLike + 1;

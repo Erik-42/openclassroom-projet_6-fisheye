@@ -72,7 +72,7 @@ const setOverflowHidden = (options) => {
         window
           .getComputedStyle(document.body)
           .getPropertyValue("padding-right"),
-        10
+        10,
       );
       previousBodyPaddingRight = document.body.style.paddingRight;
       document.body.style.paddingRight = `${
@@ -132,7 +132,7 @@ const setPositionFixed = () =>
               document.body.style.top = -(scrollY + bottomBarHeight);
             }
           }),
-        300
+        300,
       );
     }
   });
@@ -188,7 +188,7 @@ export const disableBodyScroll = (targetElement, options) => {
   if (!targetElement) {
     // eslint-disable-next-line no-console
     console.error(
-      "disableBodyScroll unsuccessful - targetElement must be provided when calling disableBodyScroll on IOS devices."
+      "disableBodyScroll unsuccessful - targetElement must be provided when calling disableBodyScroll on IOS devices.",
     );
     return;
   }
@@ -229,7 +229,7 @@ export const disableBodyScroll = (targetElement, options) => {
       document.addEventListener(
         "touchmove",
         preventDefault,
-        hasPassiveEvents ? { passive: false } : undefined
+        hasPassiveEvents ? { passive: false } : undefined,
       );
       documentListenerAdded = true;
     }
@@ -248,7 +248,7 @@ export const clearAllBodyScrollLocks = () => {
       document.removeEventListener(
         "touchmove",
         preventDefault,
-        hasPassiveEvents ? { passive: false } : undefined
+        hasPassiveEvents ? { passive: false } : undefined,
       );
       documentListenerAdded = false;
     }
@@ -270,7 +270,7 @@ export const enableBodyScroll = (targetElement) => {
   if (!targetElement) {
     // eslint-disable-next-line no-console
     console.error(
-      "enableBodyScroll unsuccessful - targetElement must be provided when calling enableBodyScroll on IOS devices."
+      "enableBodyScroll unsuccessful - targetElement must be provided when calling enableBodyScroll on IOS devices.",
     );
     return;
   }
@@ -285,7 +285,7 @@ export const enableBodyScroll = (targetElement) => {
       document.removeEventListener(
         "touchmove",
         preventDefault,
-        hasPassiveEvents ? { passive: false } : undefined
+        hasPassiveEvents ? { passive: false } : undefined,
       );
       documentListenerAdded = false;
     }

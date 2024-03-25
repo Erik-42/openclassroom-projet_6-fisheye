@@ -3,8 +3,11 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
+.eslintrc.json
 .gitignore
 .vscode
+package.json
+package-lock.json
 # User-specific files
 *.rsuser
 *.suo
