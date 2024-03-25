@@ -6,6 +6,7 @@ import { popupPhotographer } from "../../scripts/elements/photographerPopup/phot
 import { LightboxModal } from "../../scripts/elements/lightboxModal/lightboxModal.js";
 export const { medias, photographer } = await getMediaAndName();
 
+// affiche le header photographe
 async function displayHeader(photographer) {
   const photographersHeader = document.querySelector(".photographer_container");
   photographersHeader.innerHTML = "";
@@ -14,6 +15,7 @@ async function displayHeader(photographer) {
   photographersHeader.appendChild(photographerBanner);
 }
 
+// affiche la galerie photographe
 export async function displayMedias(medias, photographerName) {
   const mediasContainer = document.querySelector(".photograph__gallery");
   mediasContainer.innerHTML = "";

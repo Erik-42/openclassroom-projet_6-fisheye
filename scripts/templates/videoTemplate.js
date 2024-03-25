@@ -2,7 +2,9 @@ import { addPopupLike } from "../elements/photographerPopup/photographerPopup.js
 
 export function videoTemplate(data, photographerName,tabindex) {
   const { id, photographerId, title, video, likes, date, price } = data;
+  
   const videoSource = `https://erik-42.github.io/openclassroom-fisheye/assets/images/Sample Photos/${photographerName}/${video}`;
+  
   function getMediaCardDOM() {
     const mediaCardStructure = `
     <a tabindex="${tabindex}" href="${videoSource}" class="photograph__gallery__card__photo">

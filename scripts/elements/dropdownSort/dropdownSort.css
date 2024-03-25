@@ -1,7 +1,3 @@
-/* .dropdownMenu {
-  background-color: darkcyan;
-} */
-
 .photograph__media__sort {
   font-size: 1.125rem;
   font-weight: bold;
@@ -98,7 +94,6 @@
 }
 
 .dropdownSelector__list__line {
-  /* border: 0.125rem solid var(--tertiaryFontColor); */
   border: 0.125rem solid #fafafa;
   width: 85%;
   margin: 0 1rem;

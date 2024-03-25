@@ -1,7 +1,7 @@
 import { displayMedias} from '../../pages/photographer/photographerPage.js'
 import {medias,photographer} from '../../pages/photographer/photographerPage.js'
-function clearHTMLMedia (htmlMedia) {
 
+function clearHTMLMedia (htmlMedia) {
     while (htmlMedia.firstChild) {
         htmlMedia.removeChild(htmlMedia.lastChild)
     }

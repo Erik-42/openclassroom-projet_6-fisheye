@@ -34,9 +34,7 @@
   color: var(--primaryFontColor);
   background-color: var(--defultBgColor);
 }
-.photograph__gallery__card__photo__info__like:focus {
-  background-color: none;
-}
+
 .noshow {
   display: none;
 }
