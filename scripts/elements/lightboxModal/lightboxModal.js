@@ -43,7 +43,6 @@ export class LightboxModal {
    */
   loadImage(url) {
     let image;
-    console.log(url, url.substring(url.length - 4, url.length));
     this.url = null;
     const container = this.element.querySelector(".lightboxModal__container");
     const loader = document.createElement("div");
@@ -52,7 +51,6 @@ export class LightboxModal {
     container.appendChild(loader);
 
     if (url.substring(url.length - 4, url.length) == ".mp4") {
-      console.log("video");
       image = document.createElement("video");
       image.controls = true;
       container.removeChild(loader);
