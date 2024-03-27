@@ -1,4 +1,9 @@
-import { enableBodyScroll, disableBodyScroll } from "../../utils/body-scroll-lock.js";
+import {
+  enableBodyScroll,
+  disableBodyScroll,
+} from "../../utils/body-scroll-lock.js";
+import { imageTemplate } from "../../templates/imageTemplate.js";
+// import { videoTemplate } from "../../scripts/templates/videoTemplate.js";
 import { mediaFactory } from "../../utils/mediaFactory.js";
 
 /**
@@ -12,7 +17,7 @@ export class LightboxModal {
     const gallery = mediasCards.map((mediasCard) =>
       mediasCard
         .querySelector(".photograph__gallery__card__photo")
-        .getAttribute("href")
+        .getAttribute("href"),
     );
     mediasCards.forEach((mediasCard) =>
       mediasCard
@@ -20,7 +25,7 @@ export class LightboxModal {
         .addEventListener("click", (e) => {
           e.preventDefault();
           new LightboxModal(e.currentTarget.getAttribute("href"), gallery);
-        })
+        }),
     );
   }
 
@@ -131,10 +136,11 @@ export class LightboxModal {
             <button class="lightboxModal__next" aria-label="Photo suivante" tabindex="1">Suivant</button>
             <button class="lightboxModal__prev" aria-label="Photo précédente" tabindex="2">Précédent</button>
             <div class="lightboxModal__container">
-                <img src="${url}" alt="${mediaFactory.title}">
-                <h3 class="lightmodal_titre">titre photo</h3>
-            </div>`;
-
+                <img src="${url}" alt="Le titre de la photo est ${mediaFactory.title}">
+            </div>
+            <h3 class="lightmodal_titre">titre photo ${mediaFactory.title}</h3>`;
+    console.log(mediaFactory.media);
+    console.log(imageTemplate);
     dom
       .querySelector(".lightboxModal__close")
       .addEventListener("click", this.close.bind(this));

@@ -27,7 +27,7 @@ body {
   padding: 1em 0;
   background-color: rgba(255, 255, 255, 1);
   z-index: 10;
-  overflow: auto;
+  overflow: hidden;
   animation: lightboxIn 0.5s;
   transition: 0.3s;
 }
@@ -115,9 +115,15 @@ video {
   height: 80px;
   opacity: 0.5;
   background: url(../../../assets/icons/loader.svg) center center no-repeat;
+  color: black;
+  box-shadow: 1rem 0.5rem 0.5rem grey;
 }
 .lightmodal_titre{
   color: var(--primaryFontColor);
+  display: flex;
+    justify-content: center;
+    margin: 0 50px;
+    font-size: 2rem;
 }
 
 @keyframes lightboxIn {

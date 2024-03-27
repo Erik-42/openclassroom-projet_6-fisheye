@@ -4,6 +4,7 @@ import { dropDownEvent } from "../../scripts/elements/dropdownSort/dropdownSort.
 import { getMediaAndName } from "../../scripts/utils/getMediaAndName.js";
 import { popupPhotographer } from "../../scripts/elements/photographerPopup/photographerPopup.js";
 import { LightboxModal } from "../../scripts/elements/lightboxModal/lightboxModal.js";
+
 export const { medias, photographer } = await getMediaAndName();
 
 // affiche le header photographe
@@ -20,13 +21,13 @@ export async function displayMedias(medias, photographerName) {
   const mediasContainer = document.querySelector(".photograph__gallery");
   mediasContainer.innerHTML = "";
   const mediasCards = [];
-  let tabindex = 4
+  let tabindex = 4;
   medias.forEach((media) => {
-    const mediaPage = mediaFactory(media, photographerName,tabindex);
+    const mediaPage = mediaFactory(media, photographerName, tabindex);
     const mediaCard = mediaPage.getMediaCardDOM();
     mediasContainer.appendChild(mediaCard);
     mediasCards.push(mediaCard);
-    tabindex+=2
+    tabindex += 2;
   });
   LightboxModal.init(mediasCards);
 }
@@ -34,7 +35,7 @@ export async function displayMedias(medias, photographerName) {
 async function init() {
   const photographPopup = document.querySelector(".photograph__popup");
   photographPopup.appendChild(
-    popupPhotographer(`${photographer.price} €`, medias)
+    popupPhotographer(`${photographer.price} €`, medias),
   );
   dropDownEvent();
   displayHeader(photographer);

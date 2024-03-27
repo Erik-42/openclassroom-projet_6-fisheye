@@ -1,29 +1,31 @@
-import { displayMedias} from '../../pages/photographer/photographerPage.js'
-import {medias,photographer} from '../../pages/photographer/photographerPage.js'
+import {
+  displayMedias,
+  medias,
+  photographer,
+} from "../../pages/photographer/photographerPage.js";
 
-function clearHTMLMedia (htmlMedia) {
-    while (htmlMedia.firstChild) {
-        htmlMedia.removeChild(htmlMedia.lastChild)
-    }
+function clearHTMLMedia(htmlMedia) {
+  while (htmlMedia.firstChild) {
+    htmlMedia.removeChild(htmlMedia.lastChild);
+  }
 }
 
-export async function sortMedia(value){
-    const sectionMedia = document.querySelector(".photograph__gallery");
-    clearHTMLMedia(sectionMedia)
-    
-    switch(value){
-        case 'popularity':
-            medias.sort((a, b) => b.likes - a.likes);
-            break
+export async function sortMedia(value) {
+  const sectionMedia = document.querySelector(".photograph__gallery");
+  clearHTMLMedia(sectionMedia);
 
-        case 'date':
-            medias.sort((a, b) => new Date(b.date) - new Date(a.date));
-            break
+  switch (value) {
+    case "popularity":
+      medias.sort((a, b) => b.likes - a.likes);
+      break;
 
-        case 'title':
-            medias.sort((a, b) => a.title.localeCompare(b.title));
-            break
-    }
+    case "date":
+      medias.sort((a, b) => new Date(b.date) - new Date(a.date));
+      break;
 
-displayMedias(medias,photographer.name)
+    case "title":
+      medias.sort((a, b) => a.title.localeCompare(b.title));
+      break;
+  }
+  displayMedias(medias, photographer.name);
 }
