@@ -30,7 +30,5 @@ export function dropDownEvent() {
 }
 
 function dropdownMenu() {
-  const dropdownList = document
-    .getElementById("dropdownSelector__list")
-    .classList.toggle("show");
+document.getElementById("dropdownSelector__list").classList.toggle("show");
 }

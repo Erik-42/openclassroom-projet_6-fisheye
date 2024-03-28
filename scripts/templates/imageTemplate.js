@@ -7,7 +7,7 @@ export function imageTemplate(data, photographerName, tabindex) {
 
   function getMediaCardDOM() {
     const mediaCardStructure = `
-        <a tabindex="${tabindex}" class="photograph__gallery__card__photo" href="${picture}">
+        <a tabindex="${tabindex}" class="photograph__gallery__card__photo" href="${picture}" data-title="${title}">
         <img src="${picture}" alt="Le titre de la photo est ${title}">
         </a>`;
 

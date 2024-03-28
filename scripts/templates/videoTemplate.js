@@ -7,7 +7,7 @@ export function videoTemplate(data, photographerName, tabindex) {
 
   function getMediaCardDOM() {
     const mediaCardStructure = `
-    <a tabindex="${tabindex}" href="${videoSource}" class="photograph__gallery__card__photo">
+    <a tabindex="${tabindex}" href="${videoSource}" class="photograph__gallery__card__photo" data-title="${title}">
       <video>
         <source src="${videoSource}" aria_label="Le titre de la vidéo est ${title}">
       </video>

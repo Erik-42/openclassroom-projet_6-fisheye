@@ -4,7 +4,7 @@ function ajoutLike() {
   let heart = document.querySelector(
     ".photograph__gallery__card__photo__info__heart",
   );
-  heart = addEventListener("click", (e) => {
+  heart.addEventListener("click", () => {
     const totalLikesElement = document.getElementById(
       "photograph__gallery__card__photo__info__nbr",
     );
